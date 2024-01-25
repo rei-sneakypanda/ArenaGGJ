@@ -10,13 +10,28 @@ public interface ICondition<in T>
 }
 
 [Serializable]
-public class AlwaysTrueCondition : ICondition<EntitySO>
+public class AlwaysSameCondition : ICondition<EntitySO>
 {
+    [SerializeField] private bool _isAlwaysTrue;
     public bool IsTrueFor(EntitySO args)
     {
-        return true;
+        return _isAlwaysTrue;
     }
 }
+
+[Serializable]
+public class CheckEqualEntity : ICondition<EntitySO>
+{
+    [SerializeField]private EntitySO _selfEntity;
+    [SerializeField]
+    private bool _isEqual;
+
+    public bool IsTrueFor(EntitySO args)
+    {
+        return _isEqual ? args == _selfEntity : args != _selfEntity;
+    }
+}
+
 
 [Serializable]
 public abstract class ConditionalValue<TArgs, TValue> : ICondition<TArgs>

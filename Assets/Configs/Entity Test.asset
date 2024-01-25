@@ -20,10 +20,41 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: InteractionPackage
+      Entry: 7
+      Data: 0|InteractionPackage, Assembly-CSharp
+    - Name: Tags
+      Entry: 6
+      Data: 
+    - Name: Delay
+      Entry: 4
+      Data: 0
+    - Name: StartInteraction
+      Entry: 7
+      Data: 1|StayInPlace, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 0
+    - Name: _condition
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: EndInteraction
+      Entry: 6
+      Data: 
+    - Name: UpdateInteraction
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   Image: {fileID: 0}
   Prefab: {fileID: 0}
   Name: 
+  Tags: {fileID: 0}
   Stats:
   - StatType: 0
     StartingValue: 0
