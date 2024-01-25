@@ -9,8 +9,7 @@ using System.Collections.Generic;
         private float _startingValue;
         private float _value;
         public Stat(StatType stat, float val)
-        {
-        StatType = stat;
+        { StatType = stat;
             _startingValue = val;
             Value = StartValue;
         }
@@ -36,19 +35,16 @@ using System.Collections.Generic;
         }
     }
 
-
     public class StatHandler : IStatHandler
     {
         private readonly Dictionary<StatType, IStat> _statDictionary;
-        public StatHandler(params Stat[] stat)
+        public StatHandler(params StatEditor[] statEditor)
         {
-            //int statCount = statSO.Length;
-            //_statDictionary = new Dictionary<StatType, IStat>(statCount);
-            //for (int i = 0; i < statCount; i++)
-            //{
-            //    StatSO stat = statSO[i];
-            //    _statDictionary.Add(stat, new Stat(stat));
-            //}
+            _statDictionary = new Dictionary<StatType, IStat>(statEditor.Length);
+            foreach (var stat in statEditor)
+            {
+                _statDictionary.Add(stat.StatType, new Stat(stat.StatType, stat.StartingValue));
+            }
         }
 
         public IStat this[StatType stat]
