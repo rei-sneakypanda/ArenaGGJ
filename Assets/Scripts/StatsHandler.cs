@@ -38,7 +38,7 @@ using System.Collections.Generic;
     public class StatHandler : IStatHandler
     {
         private readonly Dictionary<StatType, IStat> _statDictionary;
-        public StatHandler(params StatEditor[] statEditor)
+        public StatHandler(params StatTemplate[] statEditor)
         {
             _statDictionary = new Dictionary<StatType, IStat>(statEditor.Length);
             foreach (var stat in statEditor)

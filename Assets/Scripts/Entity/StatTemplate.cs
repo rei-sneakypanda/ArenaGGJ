@@ -1,5 +1,5 @@
 [System.Serializable]
-public class StatEditor
+public class StatTemplate
 {
     public StatType StatType;
     public float StartingValue;

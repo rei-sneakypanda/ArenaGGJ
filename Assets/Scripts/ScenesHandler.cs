@@ -14,8 +14,15 @@ public interface ISceneHandler
     UniTask LoadSceneSingle(int sceneIndex);
 }
 
+public class SceneConst
+{
+    public const int MAIN_MENU = 0;
+    public const int GAME = 1;
+}
+
 public class SceneHandler : ISceneHandler
 {
+    
     /// <summary>
     /// Both single and additive
     /// </summary>
