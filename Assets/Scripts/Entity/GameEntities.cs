@@ -59,7 +59,7 @@ public class GameEntities : MonoBehaviour
                 continue;
             }
 
-            if (_maximumDistanceFromCenter > Vector3.Distance(gameEntity.transform.position, centerPos))
+            if (Vector3.Distance(gameEntity.transform.position, centerPos) > _maximumDistanceFromCenter)
             {
                 Destroy(gameEntity.gameObject);
             }
