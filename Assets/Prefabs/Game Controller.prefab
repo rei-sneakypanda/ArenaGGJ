@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1099288488205906818}
   - component: {fileID: 7224713759826892175}
   - component: {fileID: 1849627395645837606}
+  - component: {fileID: 5400479511046216888}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -89,3 +90,17 @@ MonoBehaviour:
   _playerOneSpawnKey: 101
   _playerTwoRerollKey: 117
   _playerTwoSpawnKey: 105
+--- !u!114 &5400479511046216888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061876917592494012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716703aaa49b22946be4213e55894767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerInputController1: {fileID: 0}
+  _playerInputController2: {fileID: 0}

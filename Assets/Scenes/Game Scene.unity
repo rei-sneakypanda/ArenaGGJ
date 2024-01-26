@@ -411,6 +411,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &828890981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9202692564250746238, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb8208044820f24883eac2a1660c545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &986632968
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +742,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 127
+--- !u!114 &1520935906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2079247827790852736, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb8208044820f24883eac2a1660c545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1691178904
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,6 +953,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 1849627395645837606, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4648391080510737572, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: m_RootOrder
@@ -984,6 +1013,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5400479511046216888, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _playerInputController1
+      value: 
+      objectReference: {fileID: 828890981}
+    - target: {fileID: 5400479511046216888, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _playerInputController2
+      value: 
+      objectReference: {fileID: 1520935906}
     - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _gameEntities
