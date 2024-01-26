@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41fac6e8-1deb-4b5a-b8ad-21b70fa05af8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyInteraction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/InputController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/InputController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/SpawnInteraction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/SpawnInteraction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArenaGGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArenaGGJ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entity Test.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entity Test.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KinematicCharacterController/ExampleCharacter/Prefabs/ExampleCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KinematicCharacterController/ExampleCharacter/Prefabs/ExampleCamera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Nappin/PhysicsCharacterController/Scripts/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nappin/PhysicsCharacterController/Scripts/CharacterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Entities/BaseEntity.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Entities/BaseEntity.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game Controller.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/ApplyStatEffectInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/ApplyStatEffectInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyInteraction.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/EntityAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/EntityAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/IBaseInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/IBaseInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/InteractingContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/InteractingContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/InteractionPackage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/InteractionPackage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/MovementHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/MovementHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/PushObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/PushObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +119,7 @@
       <updated>1706210760436</updated>
       <workItem from="1706210763106" duration="10057000" />
       <workItem from="1706221400454" duration="20780000" />
-      <workItem from="1706261431532" duration="9024000" />
+      <workItem from="1706261431532" duration="13948000" />
     </task>
     <servers />
   </component>
@@ -158,109 +136,83 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/GameEntities.cs</url>
-          <line>27</line>
+          <line>30</line>
           <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\GameEntities.cs" initialLine="27" containingFunctionPresentation="Method 'Update'">
             <startOffsets>
-              <option value="768" />
-              <option value="841" />
+              <option value="799" />
+              <option value="881" />
             </startOffsets>
             <endOffsets>
-              <option value="841" />
-              <option value="841" />
+              <option value="881" />
+              <option value="881" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>67</line>
+          <line>54</line>
           <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="72" containingFunctionPresentation="Method 'Spawn'">
             <startOffsets>
-              <option value="2242" />
+              <option value="1602" />
             </startOffsets>
             <endOffsets>
-              <option value="2432" />
+              <option value="1700" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>65</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="65" containingFunctionPresentation="Method 'Spawn'">
-            <startOffsets>
-              <option value="2112" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2224" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>73</line>
+          <line>58</line>
           <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="78" containingFunctionPresentation="Method 'Spawn'">
             <startOffsets>
-              <option value="2442" />
+              <option value="1710" />
             </startOffsets>
             <endOffsets>
-              <option value="2476" />
+              <option value="1744" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>75</line>
+          <line>60</line>
           <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="79" containingFunctionPresentation="Method 'Spawn'">
             <startOffsets>
-              <option value="2494" />
+              <option value="1762" />
             </startOffsets>
             <endOffsets>
-              <option value="2568" />
+              <option value="1836" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs</url>
-          <line>30</line>
+          <line>37</line>
           <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\GameEntity.cs" initialLine="30" containingFunctionPresentation="Method 'Init'">
             <startOffsets>
-              <option value="1078" />
+              <option value="1495" />
             </startOffsets>
             <endOffsets>
-              <option value="1166" />
+              <option value="1583" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>53</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="53" containingFunctionPresentation="Method 'Spawn'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/PushObject.cs</url>
+          <line>37</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\PushObject.cs" initialLine="37" containingFunctionPresentation="Method 'Interact'">
             <startOffsets>
-              <option value="1649" />
+              <option value="1048" />
             </startOffsets>
             <endOffsets>
-              <option value="1989" />
+              <option value="1155" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>58</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="58" containingFunctionPresentation="Lambda expression inside Method 'Spawn'">
-            <startOffsets>
-              <option value="1876" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1973" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="101" />
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

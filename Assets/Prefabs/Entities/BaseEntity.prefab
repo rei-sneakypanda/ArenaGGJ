@@ -221,13 +221,10 @@ MonoBehaviour:
       Data: 1|PushObjectSelf, Assembly-CSharp
     - Name: _force
       Entry: 4
-      Data: 10000
+      Data: 50
     - Name: _transformDirectionType
       Entry: 3
       Data: 4
-    - Name: _forceMode
-      Entry: 3
-      Data: 1
     - Name: 
       Entry: 8
       Data: 

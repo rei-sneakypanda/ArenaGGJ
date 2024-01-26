@@ -126,6 +126,8 @@ namespace PhysicsCharacterController
         [Tooltip("Head reference")]
         public Transform headPoint;
 
+        private Vector3 _internalVelocityAdd = Vector3.zero;
+        
         [Space(10)] [Tooltip("Input reference")] [SerializeField]
         private bool _isReadingInput;
         public InputReader input;
@@ -243,6 +245,10 @@ namespace PhysicsCharacterController
 
             //events
             UpdateEvents();
+            
+            //add velocity
+            rigidbody.velocity += _internalVelocityAdd;
+            _internalVelocityAdd = Vector3.zero;
         }
 
 
@@ -296,7 +302,11 @@ namespace PhysicsCharacterController
             isTouchingStep = tmpStep;
         }
 
-
+        public void AddVelocity(Vector3 velocity)
+        {
+            _internalVelocityAdd += velocity;
+        }
+        
         private void CheckWall()
         {
             bool tmpWall = false;

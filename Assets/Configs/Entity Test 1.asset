@@ -55,25 +55,13 @@ MonoBehaviour:
       Data: 10
     - Name: StartInteraction
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 4|SpawnInteraction, Assembly-CSharp
-    - Name: _spawnAmount
-      Entry: 3
-      Data: 1
-    - Name: _probablity
-      Entry: 4
-      Data: 0.685
-    - Name: _entityToSpawn
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -83,55 +71,19 @@ MonoBehaviour:
       Data: 
     - Name: MainInteraction
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
-      Entry: 7
-      Data: 6|ApplyStatEffectInteraction, Assembly-CSharp
-    - Name: _effectTarget
-      Entry: 3
-      Data: 1
-    - Name: _statType
-      Entry: 3
-      Data: 0
-    - Name: _value
-      Entry: 4
-      Data: 20
-    - Name: _probablity
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
-      Entry: 7
-      Data: 7|WaitDelayBetweenInteractions, Assembly-CSharp
-    - Name: _duration
-      Entry: 4
-      Data: 2
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
-      Entry: 7
-      Data: 8|ApplyStatEffectInteraction, Assembly-CSharp
-    - Name: _effectTarget
-      Entry: 3
-      Data: 1
-    - Name: _statType
-      Entry: 3
-      Data: 0
-    - Name: _value
-      Entry: 4
-      Data: -10
-    - Name: _probablity
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -141,22 +93,13 @@ MonoBehaviour:
       Data: 
     - Name: EndInteraction
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+      Data: 5|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 10|DestroyInteraction, Assembly-CSharp
-    - Name: _effectTarget
-      Entry: 3
-      Data: 0
-    - Name: _probablity
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
