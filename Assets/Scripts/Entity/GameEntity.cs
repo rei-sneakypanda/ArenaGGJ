@@ -8,7 +8,22 @@ using UnityEngine;
 
 public class GameEntity : SerializedMonoBehaviour
 {
-    public int TeamId { get; set; }
+    
+    private int _teamId;
+
+    public int TeamId
+    {
+        get => _teamId;
+        set
+        {
+            if (value != _teamId)
+            {
+                _teamId = value;
+                InitMaterials();
+            }
+        }
+    }
+
     [SerializeField] private EntityAnimator entityAnimator;
     
     private EntitySO _entitySO;
@@ -77,7 +92,6 @@ public class GameEntity : SerializedMonoBehaviour
         _entitySO = entitySO;
         _statHandler = new StatHandler(entitySO.Stats.ToArray());
         _intervalInteractionSelf = entitySO.IntervalInteractionSelf.Select(x => new TimeLoopInteraction(x)).ToList();
-        InitMaterials();
         transform.position = position;
         transform.rotation = rotation;
         _destroyHandler.Init();
