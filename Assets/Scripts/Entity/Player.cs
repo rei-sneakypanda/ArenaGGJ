@@ -8,6 +8,7 @@ public class Player
     private int _teamID;
     private ReactiveProperty<EntitySO> _currentEntity = new();
     public IReadOnlyReactiveProperty<EntitySO> CurrentEntity => _currentEntity;
+    public IReadOnlyReactiveProperty<int> PlayerScore => _playerScore;
     
     public int TeamID => _teamID;
     
