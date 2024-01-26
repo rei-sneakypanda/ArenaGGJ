@@ -42,8 +42,6 @@ public class DestroyHandler : SerializedMonoBehaviour
                 await interaction.Interact(_gameEntity);
             }
 
-            await entityAnimator.PlayDestroyAnimation();
-
             GameEntities.Instance.RemoveEntity(_gameEntity);
         }
         catch (Exception e)

@@ -21,6 +21,7 @@ public class GameEntity : SerializedMonoBehaviour
     public Transform ForwardTransform => _forwardTransform ? _forwardTransform : transform;
     public Transform SpawnLocation => _spawnLocation ? _spawnLocation : transform;
     public MovementHandler MovementHandler  => _movementHandler;
+    public EntityAnimator EntityAnimator => entityAnimator;
     public DestroyHandler DestroyHandler => _destroyHandler;
     public InteractingContainer InteractingObjects;
     public StatHandler StatHandler => _statHandler;
@@ -60,7 +61,6 @@ public class GameEntity : SerializedMonoBehaviour
         _movementHandler.Init();
         InteractingObjects.BlockForDuration(entitySO.TimeTillCanInteract)
             .Forget();
-        await entityAnimator.PlaySpawnAnimation();
         
         try
         {
