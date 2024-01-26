@@ -12,6 +12,7 @@ public class GameEntity : SerializedMonoBehaviour
     [SerializeField] private EntityAnimator entityAnimator;
     
     private EntitySO _entitySO;
+    [ShowInInspector,ReadOnly]
     private StatHandler _statHandler = new();
     [SerializeField] private MovementHandler _movementHandler;
     [SerializeField] private DestroyHandler _destroyHandler;
