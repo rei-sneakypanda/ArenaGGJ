@@ -15,29 +15,80 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: InteractionPackage
+    - Name: _interactionPackage
       Entry: 7
-      Data: 0|InteractionPackage, Assembly-CSharp
-    - Name: Tags
-      Entry: 6
+      Data: 0|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|InteractionPackage, Assembly-CSharp
+    - Name: OtherEntities
+      Entry: 7
+      Data: 2|EntitySO[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 13
       Data: 
-    - Name: Delay
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _canInteractWithSameTeam
+      Entry: 5
+      Data: false
+    - Name: BlockDuration
       Entry: 4
       Data: 0
     - Name: StartInteraction
+      Entry: 6
+      Data: 
+    - Name: MainInteraction
       Entry: 7
-      Data: 1|StayInPlace, Assembly-CSharp
+      Data: 3|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 4|PushObject, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 0
+    - Name: _force
+      Entry: 4
+      Data: 50
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|WaitDelayBetweenInteractions, Assembly-CSharp
     - Name: _duration
       Entry: 4
-      Data: 0
-    - Name: _condition
-      Entry: 6
+      Data: 1.77
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
@@ -45,16 +96,20 @@ MonoBehaviour:
     - Name: EndInteraction
       Entry: 6
       Data: 
-    - Name: UpdateInteraction
-      Entry: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
+  Tags: {fileID: 0}
   Image: {fileID: 0}
   Prefab: {fileID: 0}
   Name: 
-  Tags: {fileID: 0}
+  Description: 
   Stats:
   - StatType: 0
     StartingValue: 0
