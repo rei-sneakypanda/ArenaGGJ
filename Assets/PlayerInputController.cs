@@ -60,6 +60,11 @@ public class PlayerInputController : MonoBehaviour
     
     private void OnSpawnRequested()
     {
+        if (_currentRerollTime < _allowedRerollTime)
+        {
+            return;
+        }
+        
         Spawner.Instance.Spawn(_player.CurrentEntity.Value, _player.TeamID).Forget();
         _player.SetRandomEntity();
         _currentRerollTime = 0;
