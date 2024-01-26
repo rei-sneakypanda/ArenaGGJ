@@ -7,8 +7,11 @@ using UnityEngine;
 
 public class GameEntities : MonoBehaviour
 {
-
     [SerializeField] private float _maximumDistanceFromCenter;
+    [SerializeField] private List<EntitySO> _allPossibleEntities;
+    
+    public IReadOnlyList<EntitySO> AllPossibleEntities => _allPossibleEntities;
+    
     public static GameEntities Instance { get; private set; }
 
     private HashSet<GameEntity> _allEntities = new();
@@ -59,7 +62,7 @@ public class GameEntities : MonoBehaviour
                 continue;
             }
 
-            if (_maximumDistanceFromCenter > Vector3.Distance(gameEntity.transform.position, centerPos))
+            if (Vector3.Distance(gameEntity.transform.position, centerPos) > _maximumDistanceFromCenter)
             {
                 Destroy(gameEntity.gameObject);
             }
@@ -82,43 +85,26 @@ public class GameEntities : MonoBehaviour
     }
 }
 
-public class PlayersManager : MonoBehaviour
-{
-    private Player _playerOne = new(1);
-    private Player _playerTwo = new(2);
-
-    // [SerializeField] private 
-    
-    
-    // private void Awake()
-    // {
-    //     InputController.OnPlayerOneReroll += RerollPlayerOne;
-    //     InputController.OnPlayerTwoReroll += RerollPlayerTwo;
-    //     InputController.OnPlayerOneSpawn += SpawnPlayerOne;
-    //     InputController.OnPlayerTwoSpawn += SpawnPlayerTwo;
-    // }
-    //
-    // private void RerollPlayerOne()
-    // {
-    //     SetRandomEntity
-    // }
-}
-
 public class Player
 {
     private ReactiveProperty<int> _playerScore = new(0);
     private int _teamID;
     private ReactiveProperty<EntitySO> _currentEntity = new();
+    public IReadOnlyReactiveProperty<EntitySO> CurrentEntity => _currentEntity;
+    
     public int TeamID => _teamID;
     
     public Player(int id)
     {
         _teamID = id;
+        SetRandomEntity();
     }
 
-    public void SetRandomEntity(EntitySO[] allEntities)
+    public void SetRandomEntity()
     {
-        _currentEntity.Value = allEntities.Where(x => x != _currentEntity.Value).ToArray()[UnityEngine.Random.Range(0, allEntities.Length - 1)];
+        _currentEntity.Value = GameEntities.Instance.AllPossibleEntities
+            .Except(_currentEntity.Value == null ? Enumerable.Empty<EntitySO>() : new []{ _currentEntity.Value})
+            .OrderBy(_ => Random.value)
+            .First();
     }
-    
 }
