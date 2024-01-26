@@ -11,7 +11,7 @@ using UnityEngine.Serialization;
 public class GameEntity : SerializedMonoBehaviour
 {
     public int TeamId { get; set; }
-    [SerializeField] private AnimatorController _animatorController;
+    [FormerlySerializedAs("_animatorController"),SerializeField] private EntityAnimator entityAnimator;
     
     private EntitySO _entitySO;
     private StatHandler _statHandler = new();
@@ -27,7 +27,7 @@ public class GameEntity : SerializedMonoBehaviour
         transform.position = position;
         transform.rotation = rotation;
         
-        await _animatorController.PlaySpawnAnimation();
+        await entityAnimator.PlaySpawnAnimation();
     }
     
 }
@@ -41,7 +41,7 @@ public class DestroyHandler : MonoBehaviour
     [SerializeField] private EntitySO entity;
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private float _particleSystemDuration;
-    [SerializeField] private AnimatorController _animatorController;
+    [FormerlySerializedAs("_animatorController"),SerializeField] private EntityAnimator entityAnimator;
     public CancellationTokenSource CancellationTokenSource => _cancellationTokenSource;
 
     public async UniTask DestroySelf()
@@ -52,7 +52,7 @@ public class DestroyHandler : MonoBehaviour
         }
 
         _flag = true;
-        await _animatorController.PlayDestroyAnimation();
+        await entityAnimator.PlayDestroyAnimation();
         GameEntities.Instance.RemoveEntity(_gameEntity);
         
         Destroy(gameObject);
@@ -67,7 +67,7 @@ public class DestroyHandler : MonoBehaviour
 
     private void Reset()
     {
-        _animatorController = GetComponent<AnimatorController>();
+        entityAnimator = GetComponent<EntityAnimator>();
         _gameEntity = GetComponent<GameEntity>(); 
     }
 }

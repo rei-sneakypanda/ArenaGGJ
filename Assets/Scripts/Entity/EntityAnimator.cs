@@ -2,7 +2,7 @@ using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class AnimatorController : MonoBehaviour
+public class EntityAnimator : MonoBehaviour
 {
     private static readonly int IsSpawning = Animator.StringToHash("Spawn");
     private static readonly int IsDestroyed = Animator.StringToHash("Destroyed");
