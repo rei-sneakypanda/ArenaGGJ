@@ -170,7 +170,7 @@ MonoBehaviour:
   fallMultiplier: 1.7
   holdJumpMultiplier: 5
   frictionAgainstFloor: 0.189
-  frictionAgainstWall: 0.082
+  frictionAgainstWall: 0.01
   canLongJump: 0
   groundCheckerThrashold: 0.54
   slopeCheckerThrashold: 0.53

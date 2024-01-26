@@ -723,10 +723,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 1099288488205906818, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _entitySO1
+      value: 
+      objectReference: {fileID: 11400000, guid: 72dc37487dd5f2448b8754a2f154447d,
+        type: 2}
     - target: {fileID: 1849627395645837606, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849627395645837606, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _playerOneSpawnKey
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849627395645837606, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _playerTwoSpawnKey
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849627395645837606, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _playerOneRerollKey
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849627395645837606, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _playerTwoRerollKey
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 4648391080510737572, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}

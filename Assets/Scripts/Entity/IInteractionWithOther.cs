@@ -26,22 +26,27 @@ public class TimeLoopInteractionTemplate
 
 public class TimeLoopInteraction
 {
-private readonly TimeLoopInteractionTemplate _timeLoopInteractionTemplate;
-
-public TimeLoopInteraction(TimeLoopInteractionTemplate timeLoopInteractionTemplate)
-{
-    _timeLoopInteractionTemplate = timeLoopInteractionTemplate;
-}
+    private readonly TimeLoopInteractionTemplate _timeLoopInteractionTemplate;
     private float _counter = 0;
+    private bool _flag;
+    public TimeLoopInteraction(TimeLoopInteractionTemplate timeLoopInteractionTemplate)
+    {
+        _timeLoopInteractionTemplate = timeLoopInteractionTemplate;
+    }
 
     public async UniTask Tick(float tickTime, GameEntity entity)
     {
         if (_counter < entity.StatHandler[_timeLoopInteractionTemplate.StatIntervalType].StatValue.Value)
         {
             _counter += tickTime;
+            _flag = false;
             return;
         }
 
+        if (_flag)
+            return;
+
+        _flag = true;
         await Interaction(entity);
         _counter = 0;
     }

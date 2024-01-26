@@ -75,7 +75,7 @@ public class EntitySO : TagSO
         bool containTag = false;
         bool isSame = tag.GetInstanceID() == entity.GetInstanceID();
         
-        if (entity.Tags.Tags.Any() && !isSame)
+        if ((entity.Tags?.Tags?.Any() ?? false) && !isSame)
         {
             foreach (var t in entity.Tags.Tags)
             {
@@ -101,7 +101,7 @@ public class EntitySO : TagSO
 
         var isNotSame =tag.GetInstanceID() != entity.GetInstanceID();
         var doesNotContainTag = true;
-        if (isNotSame && entity.Tags.Tags.Any())
+        if (isNotSame && (entity.Tags?.Tags?.Any() ?? false))
         {
             foreach (var t in entity.Tags.Tags)
             {

@@ -44,7 +44,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 3|ApplyStatEffectInteraction, Assembly-CSharp
@@ -86,7 +86,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|SpawnInteraction, Assembly-CSharp
+      Data: 5|PlayAnimationOnSelf, Assembly-CSharp
+    - Name: _animationType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|SpawnInteraction, Assembly-CSharp
     - Name: _spawnAmount
       Entry: 3
       Data: 1
@@ -119,7 +128,7 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12

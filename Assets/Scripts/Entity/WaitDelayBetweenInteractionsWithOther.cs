@@ -19,3 +19,20 @@ public class WaitDelayBetweenInteractionsWithOther : IInteractionWithOther
         }
     }
 }
+[Serializable]
+public class WaitDelayBetweenInteractions : IInteractionOnSelf
+{
+    
+    [SerializeField, Range(0, 10f)] private float _duration;
+    public async UniTask Interact(GameEntity entity)
+    {
+        try
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(_duration), cancellationToken: entity.destroyCancellationToken);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+}
