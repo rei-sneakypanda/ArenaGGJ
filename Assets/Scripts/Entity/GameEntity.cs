@@ -18,6 +18,9 @@ public class GameEntity : SerializedMonoBehaviour
     [SerializeField] private DestroyHandler _destroyHandler;
     [SerializeField] private Transform _spawnLocation;
     [SerializeField] private Transform _forwardTransform;
+    [SerializeField] private Material[] _materials;
+
+    public SkinnedMeshRenderer[] SkinnedMeshRenderers;
     
     [OdinSerialize,HideInInspector] private List<TimeLoopInteraction> _intervalInteractionSelf;
     public Transform ForwardTransform => _forwardTransform ? _forwardTransform : transform;
@@ -51,13 +54,29 @@ public class GameEntity : SerializedMonoBehaviour
         }
     }
 
+    [Button]
+    private void GetAllSkinnedMAterials()
+    {
+        SkinnedMeshRenderers = transform.GetComponentsInChildren<SkinnedMeshRenderer>().ToArray();
+    }
+    
+    private void InitMaterials()
+    {
+        int teamID = TeamId - 1;
+        
+        foreach (var sMR in SkinnedMeshRenderers)
+        {
+            sMR.material = _materials[teamID];
+        }
+    }
+    
     public async UniTask Init(int teamID, Vector3 position, Quaternion rotation, EntitySO entitySO)
     {
         TeamId = teamID;
         _entitySO = entitySO;
         _statHandler = new StatHandler(entitySO.Stats.ToArray());
         _intervalInteractionSelf = entitySO.IntervalInteractionSelf.Select(x => new TimeLoopInteraction(x)).ToList();
-        
+        InitMaterials();
         transform.position = position;
         transform.rotation = rotation;
         _destroyHandler.Init();
