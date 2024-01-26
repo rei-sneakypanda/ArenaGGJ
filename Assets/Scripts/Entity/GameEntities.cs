@@ -21,6 +21,7 @@ public class GameEntities : MonoBehaviour
         Instance = this;
     }
     
+    #if UNITY_EDITOR
     [SerializeField] private EntitySO _entitySO1;
     [SerializeField] private EntitySO _entitySO2;
     
@@ -37,6 +38,7 @@ public class GameEntities : MonoBehaviour
         }
     }
     
+    #endif
     private void OnDestroy()
     {
         foreach (var gameEntity in _allEntities)

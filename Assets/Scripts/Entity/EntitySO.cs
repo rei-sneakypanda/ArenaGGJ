@@ -13,13 +13,21 @@ public class EntitySO : TagSO
     [TabGroup("General")]
     [PreviewField(75f)] public Sprite Image;
     [TabGroup("General")]
-    [PreviewField(75f)] public GameEntity Prefab;
-    [TabGroup("Spawn")]
-    public float TimeTillCanInteract = 1.25f;
-    [TabGroup("General")]
     public string Name;
     [TextArea]    [TabGroup("General")]
     public string Description;
+    
+    [TabGroup("General")]
+    [PreviewField(75f)]
+    [ShowInInspector]
+    public GameObject PrefabView => Prefab.gameObject;
+    [TabGroup("General")]
+   public GameEntity Prefab;
+
+    
+    
+    [TabGroup("Spawn")]
+    public float TimeTillCanInteract = 1.25f;
 
 [TabGroup("Stats")]
     public List<StatTemplate> Stats;
