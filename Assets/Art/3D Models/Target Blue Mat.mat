@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tower
+  m_Name: Target Blue Mat
   m_Shader: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -124,7 +124,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 755812ff1698146b8ae5d36b0a340e78, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -268,12 +268,12 @@ Material:
     - _N_F_STIAL: 0
     - _N_F_STIS: 0
     - _NoisyOutlineIntensity: 0
-    - _NormalMapIntensity: -0.22
+    - _NormalMapIntensity: -1
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Oper: 0
     - _OutlineExtrudeMethod: 1
-    - _OutlineWidth: 0.05
+    - _OutlineWidth: 0.2
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _OverallShadowColorPower: 1
@@ -291,7 +291,7 @@ Material:
     - _ReflectionIntensity: 0
     - _ReflectionRoughtness: 0
     - _RenderingMode: 0
-    - _RimLigInt: 0.56
+    - _RimLigInt: 0.234
     - _RimLightColorPower: 2.6
     - _RimLightInLight: 1
     - _RimLightSoftness: 1
@@ -354,10 +354,10 @@ Material:
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.38615483, g: 0.35510856, b: 0.7924528, a: 1}
-    - _OutlineColor: {r: 0.025892619, g: 0.023718402, b: 0.122641504, a: 1}
+    - _MainColor: {r: 0.15477037, g: 0.21577233, b: 0.8867924, a: 1}
+    - _OutlineColor: {r: 0, g: 0.0140814055, b: 0.24528301, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
-    - _OverallShadowColor: {r: 0.29112527, g: 0.2783464, b: 0.4245283, a: 1}
+    - _OverallShadowColor: {r: 0.28511038, g: 0.28812414, b: 0.4056604, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
