@@ -40,7 +40,11 @@ public class MovementHandler : MonoBehaviour
     {
         _characterController.movementSpeed = val;
     }
-    
+
+    public void AddVelocity(Vector3 dir)
+    {
+        _characterController.AddVelocity(dir);
+    }    
     private void Update()
     {
         if (_isTurning)

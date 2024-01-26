@@ -32,13 +32,10 @@ public class PushObjects : IInteractionWithOther
     {
         [SerializeField] private float _force;
         [SerializeField] private TransformDirectionType _transformDirectionType;
-        [SerializeField] private ForceMode _forceMode = ForceMode.Impulse;
         
         public UniTask Interact(GameEntity entity)
         {
-            // entity.MovementHandler.Rigidbody.AddForce(
-            //     _transformDirectionType.GetDirection(entity.ForwardTransform) * _force, _forceMode); 
-            //
+            entity.MovementHandler.AddVelocity(_transformDirectionType.GetDirection(entity.ForwardTransform) * _force);
             return UniTask.CompletedTask; 
         }
     }
