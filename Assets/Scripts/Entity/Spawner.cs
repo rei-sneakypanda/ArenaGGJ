@@ -5,6 +5,7 @@ using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.Pool;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
@@ -40,34 +41,18 @@ public class Spawner : MonoBehaviour
     {
         Instance = null;
     }
-
+    
     public async UniTask Spawn(EntitySO entitySO, int teamID)
     {
         var currentSpawnPosition = teamID == 1 ? _firstPlayerCannonTarget.position : _secondPlayerCannonTarget.position;
-        var endSpawnPoint = teamID == 1 ? _firstPlayerCannonTarget : _secondPlayerCannonTarget;
-        
-        var cannonBall = _cannonBalls.Get();
-        cannonBall.transform.position = currentSpawnPosition;
-        cannonBall.Rigidbody.AddForce((endSpawnPoint.position - currentSpawnPosition).normalized * _shootingForce, ForceMode.Impulse);
-        IDisposable disposable = null;
-        
-        disposable = cannonBall.GetComponent<Collider>().OnCollisionEnterAsObservable()
-            .Subscribe(x =>
-            {
-                disposable?.Dispose();
-                _cannonBalls.Release(cannonBall);
-                Spawn(entitySO, teamID, currentSpawnPosition, Quaternion.identity)
-                    .Forget();
-            });
+        await Spawn(entitySO, teamID, currentSpawnPosition, Quaternion.Euler(0, Random.value * 360, 0));
     }
 
     public async UniTask Spawn(EntitySO entitySO, int teamID, Vector3 position, Quaternion rotation)
     {
-        var currentSpawnPosition = teamID == 1 ? _firstPlayerCannonTarget.position : _secondPlayerCannonTarget.position;
-        
         var instance = Instantiate(
             original: entitySO.Prefab,
-            currentSpawnPosition,
+            position: position,
             rotation,
             parent: teamID == 1 ? _teamOneParent : _teamTwoParent);
 
