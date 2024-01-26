@@ -12,7 +12,7 @@ public class InteractionPackage
 {
     public TagSO Tag;
 
-    public bool _isTargetingSameTeam;
+    public EffectTarget _targetEffect;
     
     public float BlockDuration;
     
@@ -20,7 +20,21 @@ public class InteractionPackage
 
     public bool CanInteract(GameEntity entity, GameEntity otherEntity)
     {
-        var canInteractWithSameTeam = _isTargetingSameTeam ? entity.TeamId == otherEntity.TeamId : entity.TeamId != otherEntity.TeamId;
+        var canInteractWithSameTeam = false;
+
+        switch (_targetEffect)
+        {
+            case EffectTarget.Both:
+                canInteractWithSameTeam = true;
+                break;
+            case EffectTarget.Other:
+                canInteractWithSameTeam = entity.TeamId != otherEntity.TeamId;
+                break;
+            
+            case EffectTarget.Self:
+                canInteractWithSameTeam = entity.TeamId == otherEntity.TeamId;
+                break;
+        }
         
         return canInteractWithSameTeam && Tag == otherEntity.EntitySO;
     }
