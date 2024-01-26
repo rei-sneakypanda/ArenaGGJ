@@ -1,88 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &778210833722391786
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3746852358161243711}
-  - component: {fileID: 6213852673724709204}
-  - component: {fileID: 6862756285439769925}
-  m_Layer: 0
-  m_Name: Box Mesh
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3746852358161243711
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778210833722391786}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4638048015356644222}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6213852673724709204
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778210833722391786}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6862756285439769925
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778210833722391786}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2712678275449169222
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,8 +27,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3746852358161243711}
+  m_Children: []
   m_Father: {fileID: 1907155736547246179}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -159,7 +75,6 @@ GameObject:
   - component: {fileID: 1938647222419256391}
   - component: {fileID: 3803137578658648635}
   - component: {fileID: 7959981960591920664}
-  - component: {fileID: 1712523719689882639}
   - component: {fileID: 1921741683032333462}
   - component: {fileID: 1838784006060231285}
   - component: {fileID: 8855709599156361827}
@@ -215,19 +130,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|PushObjectSelf, Assembly-CSharp
-    - Name: _force
-      Entry: 4
-      Data: 50
-    - Name: _transformDirectionType
-      Entry: 3
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -236,88 +139,11 @@ MonoBehaviour:
       Data: 
     - Name: _intervalInteractionSelf
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[TimeLoopInteraction, Assembly-CSharp]],
+      Data: 1|System.Collections.Generic.List`1[[TimeLoopInteraction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|TimeLoopInteraction, Assembly-CSharp
-    - Name: StatTimeType
-      Entry: 3
-      Data: 7
-    - Name: _interactionOnSelves
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 5|AddScoreInteraction, Assembly-CSharp
-    - Name: _addAmount
-      Entry: 3
-      Data: 1
-    - Name: _probablity
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 6|TimeLoopInteraction, Assembly-CSharp
-    - Name: StatTimeType
-      Entry: 3
-      Data: 9
-    - Name: _interactionOnSelves
-      Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 8|ApplyStatEffectInteraction, Assembly-CSharp
-    - Name: _statType
-      Entry: 3
-      Data: 2
-    - Name: _useExistingValueAsValue
-      Entry: 5
-      Data: true
-    - Name: _statTypeValue
-      Entry: 3
-      Data: 8
-    - Name: _value
-      Entry: 4
       Data: 0
-    - Name: _probablity
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -403,7 +229,7 @@ MonoBehaviour:
   characterCamera: {fileID: 0}
   characterModel: {fileID: 2712678275449169222}
   characterModelRotationSmooth: 0.1
-  meshCharacter: {fileID: 778210833722391786}
+  meshCharacter: {fileID: 0}
   meshCharacterCrouch: {fileID: 0}
   headPoint: {fileID: 4368575231114422732}
   _isReadingInput: 0
@@ -480,10 +306,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameEntity: {fileID: 42126372561479382}
-  Animator: {fileID: 1712523719689882639}
+  Animator: {fileID: 0}
   _spawnAnimationDuration: 1
   _destroyAnimationDuration: 1
   _interactingAnimationDuration: 1
+  _reactingAnimationDuration: 0
 --- !u!54 &7959981960591920664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -511,27 +338,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1712523719689882639
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5321665548386945095}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!136 &1921741683032333462
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -612,7 +418,17 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: _destroyInteractionSelf
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   _gameEntity: {fileID: 42126372561479382}
   entity: {fileID: 0}
