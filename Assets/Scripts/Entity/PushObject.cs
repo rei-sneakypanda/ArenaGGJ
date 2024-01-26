@@ -26,8 +26,7 @@ public class PushObjects : IInteractionWithOther
     }
 }
 
-
-   [Serializable]
+[Serializable]
     public class PushObjectSelf : IInteractionOnSelf
     {
         [SerializeField] private float _force;
