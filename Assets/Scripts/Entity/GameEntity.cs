@@ -18,7 +18,8 @@ public class GameEntity : SerializedMonoBehaviour
     [SerializeField] private DestroyHandler _destroyHandler;
     [SerializeField] private Transform _spawnLocation;
     [SerializeField] private Transform _forwardTransform;
-    [SerializeField] private Material[] _materials;
+    [SerializeField] private Material _teamOneMat;
+    [SerializeField] private Material _teamTwoMat;
 
     public SkinnedMeshRenderer[] SkinnedMeshRenderers;
     
@@ -62,11 +63,11 @@ public class GameEntity : SerializedMonoBehaviour
     
     private void InitMaterials()
     {
-        int teamID = TeamId - 1;
+       var mat = TeamId == 1 ? _teamOneMat : _teamTwoMat;
         
         foreach (var sMR in SkinnedMeshRenderers)
         {
-            sMR.material = _materials[teamID];
+            sMR.material = mat;
         }
     }
     
