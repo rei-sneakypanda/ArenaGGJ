@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 1921741683032333462}
   - component: {fileID: 1838784006060231285}
   - component: {fileID: 8855709599156361827}
+  - component: {fileID: 4223850118041544789}
   m_Layer: 0
   m_Name: BaseEntity
   m_TagString: Untagged
@@ -210,6 +211,7 @@ MonoBehaviour:
     SerializationNodes: []
   entityAnimator: {fileID: 3803137578658648635}
   _movementHandler: {fileID: 1838784006060231285}
+  _destroyHandler: {fileID: 4223850118041544789}
   InteractingObjects: {fileID: 8855709599156361827}
 --- !u!114 &1938647222419256391
 MonoBehaviour:
@@ -364,7 +366,7 @@ MonoBehaviour:
   Animator: {fileID: 1712523719689882639}
   _spawnAnimationDuration: 1
   _destroyAnimationDuration: 1
-  _interactingAnimationDuration: 5
+  _interactingAnimationDuration: 1
 --- !u!54 &7959981960591920664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -469,4 +471,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactionRadius: 2
   _gameEntity: {fileID: 42126372561479382}
+  IsInteractiveable: 0
   _toDrawGizmos: 1
+--- !u!114 &4223850118041544789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321665548386945095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce9657c67fc46a6b65f43df7519d57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEntity: {fileID: 42126372561479382}
+  _animator: {fileID: 3803137578658648635}
+  entity: {fileID: 0}
+  _particleSystem: {fileID: 0}
+  _particleSystemDuration: 0
+  entityAnimator: {fileID: 3803137578658648635}

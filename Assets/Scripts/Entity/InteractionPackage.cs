@@ -76,7 +76,7 @@ public class InteractionPackage
         }
         catch (Exception e)
         {
-            Debug.LogError(e);
+            // ignored
         }
 
         void Cancel()

@@ -252,7 +252,6 @@ namespace PhysicsCharacterController
         {
             prevGrounded = isGrounded;
             isGrounded = Physics.CheckSphere(transform.position - new Vector3(0, originalColliderHeight / 2f, 0), groundCheckerThrashold, groundMask);
-            Debug.Log(isGrounded, this);
         }
 
 
@@ -498,6 +497,11 @@ namespace PhysicsCharacterController
             {
                 var lookPos = -wallNormal;
                 lookPos.y = 0;
+                if (lookPos == Vector3.zero)
+                {
+                    return;
+                }
+                
                 var rotation = Quaternion.LookRotation(lookPos);
                 characterModel.transform.rotation = rotation;
             }

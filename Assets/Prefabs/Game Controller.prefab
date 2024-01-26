@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4648391080510737572}
   - component: {fileID: 1099288488205906818}
+  - component: {fileID: 7224713759826892175}
+  - component: {fileID: 1849627395645837606}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -44,12 +46,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 463ac47dae954c63ae71e9013d66606a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
+  _maximumDistanceFromCenter: 20
+  _entitySO1: {fileID: 11400000, guid: 0470441e1ce0eac4384ced4158291f68, type: 2}
+  _entitySO2: {fileID: 11400000, guid: 0470441e1ce0eac4384ced4158291f68, type: 2}
+--- !u!114 &7224713759826892175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061876917592494012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b4699e714f47bcb5c2429f39112dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teamOneParent: {fileID: 0}
+  _teamTwoParent: {fileID: 0}
+  _firstPlayerCannon: {fileID: 0}
+  _secondPlayerCannon: {fileID: 0}
+  _firstPlayerCannonTarget: {fileID: 0}
+  _secondPlayerCannonTarget: {fileID: 0}
+  _gameEntities: {fileID: 0}
+  _shootingObject: {fileID: 0}
+  _shootingForce: 100
+--- !u!114 &1849627395645837606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061876917592494012}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298a7666750243f4a7f96cd5d2cfa49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerOneRerollKey: 119
+  _playerOneSpawnKey: 101
+  _playerTwoRerollKey: 117
+  _playerTwoSpawnKey: 105

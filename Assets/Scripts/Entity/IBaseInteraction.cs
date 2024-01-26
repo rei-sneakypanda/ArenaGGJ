@@ -1,28 +1,14 @@
-using System;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 public interface IBaseInteraction
 {
     public UniTask Interact(GameEntity entity, GameEntity otherEntity);
 }
-[Serializable]
-public class SpawnInteraction : IBaseInteraction
+
+public static class ProbabilityExtensions
 {
-    [SerializeField] private int _spawnAmount;
-    
-    [SerializeField] private EntitySO _entityToSpawn;
-
-    public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
+    public static bool GenerateRNDOption(this float chance)
     {
-        for (var i = 0; i < _spawnAmount; i++)
-        {
-            if (entity == null || entity.gameObject == null)
-                return;
-
-            var position = entity.transform.position;
-            GameEntities.Instance.SpawnObject(entity.TeamId, _entityToSpawn, position, Quaternion.identity);
-            await UniTask.Delay(TimeSpan.FromSeconds(entity.StatHandler[StatType.SpawnTime].StatValue.Value));
-        }
+        return UnityEngine.Random.Range(0,1f) <= chance;
     }
 }
