@@ -17,7 +17,6 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 78debec9c5867e341a9968f523cae167, type: 2}
-    - {fileID: 11400000, guid: 1e2e43065903f804aabbb1c006dc27c4, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -124,98 +123,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 7|InteractionPackage, Assembly-CSharp
-    - Name: Tag
-      Entry: 10
-      Data: 1
-    - Name: _targetEffect
-      Entry: 3
       Data: 0
-    - Name: BlockDuration
-      Entry: 4
-      Data: 0
-    - Name: MainInteraction
-      Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 9|PushObjects, Assembly-CSharp
-    - Name: _effectTarget
-      Entry: 3
-      Data: 0
-    - Name: _pushObjectSelf
-      Entry: 7
-      Data: 10|PushObjectSelf, Assembly-CSharp
-    - Name: _force
-      Entry: 4
-      Data: 20
-    - Name: _transformDirectionType
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _pushObjectOther
-      Entry: 7
-      Data: 11|PushObjectSelf, Assembly-CSharp
-    - Name: _force
-      Entry: 4
-      Data: 50
-    - Name: _transformDirectionType
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 12|AddScoreInteractionWithOther, Assembly-CSharp
-    - Name: _effectTarget
-      Entry: 3
-      Data: 1
-    - Name: _addScoreInteractionSelf
-      Entry: 7
-      Data: 13|AddScoreInteraction, Assembly-CSharp
-    - Name: _useExistingStatAsValue
-      Entry: 5
-      Data: false
-    - Name: _addAmount
-      Entry: 3
-      Data: 30
-    - Name: _statTypeValue
-      Entry: 3
-      Data: 0
-    - Name: _probablity
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _addScoreInteractionOther
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 

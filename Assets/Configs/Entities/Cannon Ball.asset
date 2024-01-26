@@ -22,11 +22,33 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: _spawnInteractionSelf
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|PushObjectSelf, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 50
+    - Name: _transformDirectionType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: _intervalInteractionSelf
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[TimeLoopInteractionTemplate, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.List`1[[TimeLoopInteractionTemplate, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -42,48 +64,11 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 2|InteractionPackage, Assembly-CSharp
-    - Name: Tag
-      Entry: 6
-      Data: 
-    - Name: _targetEffect
-      Entry: 3
       Data: 0
-    - Name: BlockDuration
-      Entry: 4
-      Data: 10
-    - Name: MainInteraction
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -98,16 +83,16 @@ MonoBehaviour:
   TimeTillCanInteract: 2
   Stats:
   - StatType: 0
-    StartingValue: 10
+    StartingValue: 0
   - StatType: 2
     StartingValue: 100
   - StatType: 6
     StartingValue: 2
   - StatType: 8
-    StartingValue: 1
+    StartingValue: 0
   - StatType: 9
-    StartingValue: 1
+    StartingValue: 0
   - StatType: 7
-    StartingValue: 1
+    StartingValue: 0
   - StatType: 10
-    StartingValue: 1
+    StartingValue: 0
