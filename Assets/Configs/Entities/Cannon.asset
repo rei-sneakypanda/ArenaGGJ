@@ -31,7 +31,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|TimeLoopInteractionTemplate, Assembly-CSharp
@@ -44,7 +44,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 1
     - Name: 
       Entry: 7
       Data: 3|ApplyStatEffectInteraction, Assembly-CSharp
@@ -67,8 +67,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 7
-      Data: 4|AddScoreInteraction, Assembly-CSharp
+      Data: 4|TimeLoopInteractionTemplate, Assembly-CSharp
+    - Name: StatIntervalType
+      Entry: 3
+      Data: 10
+    - Name: _interactionOnSelves
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|AddScoreInteraction, Assembly-CSharp
     - Name: _useExistingStatAsValue
       Entry: 5
       Data: true
@@ -85,17 +107,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 5|PlayAnimationOnSelf, Assembly-CSharp
-    - Name: _animationType
-      Entry: 3
-      Data: 2
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|SpawnInteraction, Assembly-CSharp
+      Data: 7|TimeLoopInteractionTemplate, Assembly-CSharp
+    - Name: StatIntervalType
+      Entry: 3
+      Data: 6
+    - Name: _interactionOnSelves
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 9|SpawnInteraction, Assembly-CSharp
     - Name: _spawnAmount
       Entry: 3
       Data: 1
@@ -105,6 +140,15 @@ MonoBehaviour:
     - Name: _entityToSpawn
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|PlayAnimationOnSelf, Assembly-CSharp
+    - Name: _animationType
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -128,7 +172,7 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 11|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
