@@ -12,6 +12,9 @@ public class EntitySO : TagSO
     [PreviewField(75f)] public Sprite Image;
     [PreviewField(75f)] public GameEntity Prefab;
 
+    public float TimeTillCanInteract = 1.25f;
+    
+    
     public string Name;
     [TextArea]
     public string Description;

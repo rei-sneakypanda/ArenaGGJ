@@ -61,7 +61,8 @@ public class StatHandler : IStatHandler
         Mass = 4,
         Scale = 5,
         SpawnTime,
-ScoreOverTime
+ScoreOverTime,
+
     }
     public interface IStat
     {

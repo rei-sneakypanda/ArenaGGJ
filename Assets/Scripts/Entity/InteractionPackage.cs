@@ -5,13 +5,14 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class InteractionPackage
 {
     public EntitySO[] OtherEntities;
 
-    public bool _canInteractWithSameTeam;
+     public bool IsInteractingOther;
     
     public float BlockDuration;
     
@@ -21,17 +22,17 @@ public class InteractionPackage
 
     public bool CanInteract(GameEntity entity, GameEntity otherEntity)
     {
-        var canInteractWithSameTeam = _canInteractWithSameTeam ? entity.TeamId == otherEntity.TeamId : entity.TeamId != otherEntity.TeamId;
+        var canInteractWithSameTeam = IsInteractingOther ? entity.TeamId != otherEntity.TeamId : entity.TeamId == otherEntity.TeamId;
         return canInteractWithSameTeam && OtherEntities.Contains(otherEntity.EntitySO);
     }
 
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
-        if (otherEntity == null
-            || entity.InteractingObjects.InteractingEntities.Contains(otherEntity))
+        if (otherEntity == null)
+        {
             return;
-
-        entity.InteractingObjects.Add(otherEntity, BlockDuration).Forget();
+        }
+        
         try
         {
             if (StartInteraction != null && StartInteraction.Any())
@@ -51,6 +52,7 @@ public class InteractionPackage
         }
         catch (Exception e)
         {
+            // ignored
         }
     }
 

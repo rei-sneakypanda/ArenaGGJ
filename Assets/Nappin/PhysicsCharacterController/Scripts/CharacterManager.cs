@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.Serialization;
 
 namespace PhysicsCharacterController
 {
@@ -125,9 +125,9 @@ namespace PhysicsCharacterController
         public GameObject meshCharacterCrouch;
         [Tooltip("Head reference")]
         public Transform headPoint;
-        [Space(10)]
 
-        [Tooltip("Input reference")]
+        [Space(10)] [Tooltip("Input reference")] [SerializeField]
+        private bool _isReadingInput;
         public InputReader input;
         [Space(10)]
 
@@ -181,7 +181,7 @@ namespace PhysicsCharacterController
         private bool isJumping = false;
         private bool isCrouch = false;
 
-        private Vector2 axisInput;
+        public Vector2 AxisInput;
         private bool jump;
         private bool jumpHold;
         private bool sprint;
@@ -191,12 +191,11 @@ namespace PhysicsCharacterController
         public float targetAngle;
         private Rigidbody rigidbody;
         private CapsuleCollider collider;
-        private float originalColliderHeight;
+        private float originalColliderHeight => collider.height;
 
         private Vector3 currVelocity = Vector3.zero;
         private float turnSmoothVelocity;
         private bool lockRotation = false;
-
 
         /**/
 
@@ -205,7 +204,6 @@ namespace PhysicsCharacterController
         {
             rigidbody = this.GetComponent<Rigidbody>();
             collider = this.GetComponent<CapsuleCollider>();
-            originalColliderHeight = collider.height;
 
             SetFriction(frictionAgainstFloor, true);
             currentLockOnSlope = lockOnSlope;
@@ -214,12 +212,15 @@ namespace PhysicsCharacterController
 
         private void Update()
         {
-            //input
-            axisInput = input.axisInput;
-            jump = input.jump;
-            jumpHold = input.jumpHold;
-            sprint = input.sprint;
-            crouch = input.crouch;
+            if (_isReadingInput)
+            {
+                //input
+                AxisInput = input.axisInput;
+                jump = input.jump;
+                jumpHold = input.jumpHold;
+                sprint = input.sprint;
+                crouch = input.crouch;
+            }
         }
 
 
@@ -251,6 +252,7 @@ namespace PhysicsCharacterController
         {
             prevGrounded = isGrounded;
             isGrounded = Physics.CheckSphere(transform.position - new Vector3(0, originalColliderHeight / 2f, 0), groundCheckerThrashold, groundMask);
+            Debug.Log(isGrounded, this);
         }
 
 
@@ -475,9 +477,9 @@ namespace PhysicsCharacterController
             float crouchMultiplier = 1f;
             if (isCrouch) crouchMultiplier = crouchSpeedMultiplier;
 
-            if (axisInput.magnitude > movementThrashold)
+            if (AxisInput.magnitude > movementThrashold)
             {
-                targetAngle = Mathf.Atan2(axisInput.x, axisInput.y) * Mathf.Rad2Deg + characterCamera.transform.eulerAngles.y;
+                targetAngle = Mathf.Atan2(AxisInput.x, AxisInput.y) * Mathf.Rad2Deg;
 
                 if (!sprint) rigidbody.velocity = Vector3.SmoothDamp(rigidbody.velocity, forward * movementSpeed * crouchMultiplier, ref currVelocity, dampSpeedUp);
                 else rigidbody.velocity = Vector3.SmoothDamp(rigidbody.velocity, forward * sprintSpeed * crouchMultiplier, ref currVelocity, dampSpeedUp);

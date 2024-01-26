@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1799763665920511132}
   - component: {fileID: 2359758460805273776}
   - component: {fileID: 9086096020209990470}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Target Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 4223936152474048158}
   - component: {fileID: 5844120238012885061}
   - component: {fileID: 5708825106127828373}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Target Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8238671665369432044}
   - component: {fileID: 3446601947104302560}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Targets CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2458833910148979788}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arena Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,6 +373,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a9951a101440c5a47b687746aaa7f674, type: 2}
+    - target: {fileID: -6879515087914944181, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -5424353180761627559, guid: 849f6370b2b66ef4a9192eb6effba534,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -383,26 +388,71 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a9951a101440c5a47b687746aaa7f674, type: 2}
+    - target: {fileID: -4588412724507716966, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1677767499073216854, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -1335118076879587171, guid: 849f6370b2b66ef4a9192eb6effba534,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f25812ffc1bb7d5488908535afff02fe, type: 2}
+    - target: {fileID: -1177893133988849625, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -1144902768221078010, guid: 849f6370b2b66ef4a9192eb6effba534,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f25812ffc1bb7d5488908535afff02fe, type: 2}
+    - target: {fileID: -527209162142556355, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 825315384961692430, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 849f6370b2b66ef4a9192eb6effba534,
         type: 3}
       propertyPath: m_Name
       value: Arena MDL 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083598361154882600, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991004460279073148, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3931409554646841530, guid: 849f6370b2b66ef4a9192eb6effba534,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f25812ffc1bb7d5488908535afff02fe, type: 2}
+    - target: {fileID: 6053573338839642472, guid: 849f6370b2b66ef4a9192eb6effba534,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7112699018290875663, guid: 849f6370b2b66ef4a9192eb6effba534,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

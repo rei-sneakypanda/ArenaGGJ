@@ -582,6 +582,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1167343975003827671, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816673475929251296, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2458833910148979788, guid: bd198b4a53ab248428cb9f06010b8ac9,
         type: 3}
       propertyPath: m_RootOrder
@@ -637,10 +647,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3173047614997748620, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197096107730606260, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929127946784422323, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305489258571261842, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356486633611405773, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195687618439891873, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626474011569744449, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6162538525956432832, guid: bd198b4a53ab248428cb9f06010b8ac9,
         type: 3}
       propertyPath: m_Name
       value: Arena Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162538525956432832, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342034790470093366, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850951658999975099, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257177738621478388, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135364200311408134, guid: bd198b4a53ab248428cb9f06010b8ac9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

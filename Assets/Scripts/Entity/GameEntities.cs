@@ -12,6 +12,7 @@ public class GameEntities : MonoBehaviour
 
     private HashSet<GameEntity> _allEntities = new();
 
+    public IReadOnlyCollection<GameEntity> GameEntitiesCollection => new HashSet<GameEntity>(_allEntities);
     private void Awake()
     {
         Instance = this;
@@ -21,7 +22,7 @@ public class GameEntities : MonoBehaviour
     {
         foreach (var gameEntity in _allEntities)
         {
-            if (gameEntity.gameObject != null)
+            if ( gameEntity != null && gameEntity.gameObject != null)
             {
                 Destroy(gameEntity.gameObject);
             }
@@ -50,12 +51,14 @@ public class GameEntities : MonoBehaviour
 
     public void SpawnObject(int teamID, EntitySO entitySO, Vector3 position, Quaternion rotation)
     {
-        Instantiate(
+       var instance =  Instantiate(
                 original: entitySO.Prefab,
                 position,
                 rotation,
-                parent: teamID == 1 ? _teamOneParent : _teamTwoParent)
-            .Init(teamID, position, rotation, entitySO)
+                parent: teamID == 1 ? _teamOneParent : _teamTwoParent);
+
+       AddEntity(instance);
+            instance.Init(teamID, position, rotation, entitySO)
             .Forget();
     }
 

@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +28,114 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|InteractionPackage, Assembly-CSharp
+    - Name: OtherEntities
+      Entry: 7
+      Data: 2|EntitySO[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: IsInteractingOther
+      Entry: 5
+      Data: false
+    - Name: BlockDuration
+      Entry: 4
+      Data: 10
+    - Name: StartInteraction
+      Entry: 6
+      Data: 
+    - Name: MainInteraction
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 4|ApplyStatEffectInteraction, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 1
+    - Name: _statType
+      Entry: 3
+      Data: 0
+    - Name: _value
+      Entry: 4
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|WaitDelayBetweenInteractions, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 8.31
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|ApplyStatEffectInteraction, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 1
+    - Name: _statType
+      Entry: 3
+      Data: 0
+    - Name: _value
+      Entry: 4
+      Data: -10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: EndInteraction
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|SpawnInteraction, Assembly-CSharp
+    - Name: _spawnAmount
+      Entry: 3
+      Data: 3
+    - Name: _entityToSpawn
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -37,11 +145,12 @@ MonoBehaviour:
   Tags: {fileID: 11400000, guid: 9537d04850e42ae4ab3334433035cbcc, type: 2}
   Image: {fileID: 0}
   Prefab: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f, type: 3}
+  TimeTillCanInteract: 1.25
   Name: Test
   Description: 
   Stats:
   - StatType: 0
-    StartingValue: 0
+    StartingValue: 2
   - StatType: 1
     StartingValue: 0
   - StatType: 2
@@ -53,4 +162,4 @@ MonoBehaviour:
   - StatType: 5
     StartingValue: 0
   - StatType: 6
-    StartingValue: 0
+    StartingValue: 2
