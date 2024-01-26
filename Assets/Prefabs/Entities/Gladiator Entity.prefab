@@ -100,6 +100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gladiator Entity
       objectReference: {fileID: 0}
+    - target: {fileID: 8855709599156361827, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _interactionRadius
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -136,7 +141,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f2f934a62a4c08843a91c24c5cc49fc2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2f934a62a4c08843a91c24c5cc49fc2,
         type: 3}
@@ -178,11 +183,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7463301594481501560, guid: f2f934a62a4c08843a91c24c5cc49fc2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1237af68035db9c40a1eed59e4d7a4a9, type: 2}
+    - target: {fileID: -4682431869089886525, guid: f2f934a62a4c08843a91c24c5cc49fc2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1237af68035db9c40a1eed59e4d7a4a9, type: 2}
     - target: {fileID: 919132149155446097, guid: f2f934a62a4c08843a91c24c5cc49fc2,
         type: 3}
       propertyPath: m_Name
       value: gladiator_warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 2236237030686087061, guid: f2f934a62a4c08843a91c24c5cc49fc2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1237af68035db9c40a1eed59e4d7a4a9, type: 2}
+    - target: {fileID: 5433269313094510252, guid: f2f934a62a4c08843a91c24c5cc49fc2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1237af68035db9c40a1eed59e4d7a4a9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -214,7 +239,7 @@ Animator:
   m_GameObject: {fileID: 5243406258950390842}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 77ea6179e7392164ab5d3def7012d8eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 92e18945bb72fbc45aae3d2651ca6449, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
