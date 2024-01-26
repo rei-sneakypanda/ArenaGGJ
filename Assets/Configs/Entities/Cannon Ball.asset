@@ -94,7 +94,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 9873cc868bdc1db418ed20ca3febc7d6, type: 3}
   Name: Test
   Description: 
-  Prefab: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f, type: 3}
+  Prefab: {fileID: 2358648096638413424, guid: 774342e61a84ee747bb62a2f0951c021, type: 3}
   TimeTillCanInteract: 2
   Stats:
   - StatType: 0
