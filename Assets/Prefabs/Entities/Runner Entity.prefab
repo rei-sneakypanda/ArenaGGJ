@@ -100,6 +100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Runner Entity
       objectReference: {fileID: 0}
+    - target: {fileID: 8855709599156361827, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _interactionRadius
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -136,7 +141,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1e1191e6c292a4a4086874ac9cd8186d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e1191e6c292a4a4086874ac9cd8186d,
         type: 3}
