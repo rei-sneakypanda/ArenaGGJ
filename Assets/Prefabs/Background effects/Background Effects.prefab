@@ -31,7 +31,7 @@ Transform:
   - {fileID: 63808297786791211}
   - {fileID: 7610758482583819743}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5057462412623108705
 GameObject:
@@ -95,6 +95,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clouds
       objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290065816805491229, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290065816805491229, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290065816805491229, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 7675472418888461891, guid: f3a62541ea3554e73b817358068a3aa6,
         type: 3}
       propertyPath: m_RootOrder
@@ -149,6 +189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936845562661666385, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
