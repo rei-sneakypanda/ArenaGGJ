@@ -115,6 +115,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
+      propertyPath: _teamOneMat
+      value: 
+      objectReference: {fileID: 2100000, guid: f145c1f43d209db4eb60509b23e3c99a, type: 2}
+    - target: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _teamTwoMat
+      value: 
+      objectReference: {fileID: 2100000, guid: f145c1f43d209db4eb60509b23e3c99a, type: 2}
+    - target: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f,
