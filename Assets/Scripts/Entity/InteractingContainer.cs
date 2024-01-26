@@ -42,7 +42,7 @@ public class InteractingContainer : MonoBehaviour
 
     [SerializeField] private bool _toDrawGizmos;
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         if (!_toDrawGizmos || GameEntities.Instance == null)
         {

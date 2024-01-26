@@ -38,6 +38,30 @@ public class EntitySO : TagSO
             Stats.Add(new StatTemplate() { StatType = statType, StartingValue = 0 });
         }
     }
+    
+    public static bool operator ==(TagSO tag, EntitySO entity)
+    {
+        if (ReferenceEquals(tag, entity)) 
+            return true;
+        if (ReferenceEquals(tag, null)) 
+            return false;
+        if (ReferenceEquals(entity, null))
+            return false;
+        
+        return tag == entity || tag != entity.Tags;
+    }
+
+    public static bool operator !=(TagSO tag, EntitySO entity)
+    { 
+        if (ReferenceEquals(tag, entity)) 
+            return false;
+        if (ReferenceEquals(tag, null)) 
+            return true;
+        if (ReferenceEquals(entity, null))
+            return true;
+        
+        return tag != entity && tag != entity.Tags;
+    }
 }
 
 public enum EffectTarget

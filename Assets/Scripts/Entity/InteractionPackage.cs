@@ -10,9 +10,9 @@ using UnityEngine.Serialization;
 [Serializable]
 public class InteractionPackage
 {
-    public EntitySO[] OtherEntities;
+    public TagSO Tag;
 
-     public bool IsInteractingOther;
+    public bool _isTargetingSameTeam;
     
     public float BlockDuration;
     
@@ -20,8 +20,9 @@ public class InteractionPackage
 
     public bool CanInteract(GameEntity entity, GameEntity otherEntity)
     {
-        var canInteractWithSameTeam = IsInteractingOther ? entity.TeamId != otherEntity.TeamId : entity.TeamId == otherEntity.TeamId;
-        return canInteractWithSameTeam && OtherEntities.Contains(otherEntity.EntitySO);
+        var canInteractWithSameTeam = _isTargetingSameTeam ? entity.TeamId == otherEntity.TeamId : entity.TeamId != otherEntity.TeamId;
+        
+        return canInteractWithSameTeam && Tag == otherEntity.EntitySO;
     }
 
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
@@ -33,12 +34,10 @@ public class InteractionPackage
         
         try
         {
-
             if (MainInteraction != null && MainInteraction.Any())
             {
                 await Interact(MainInteraction, entity, otherEntity);
             }
-
         }
         catch (Exception e)
         {
