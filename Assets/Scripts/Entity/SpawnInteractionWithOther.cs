@@ -36,7 +36,7 @@ public class SpawnInteraction : IInteractionOnSelf
             if(!_probablity.GenerateRNDOption()) continue;
 
                 var position = entity.SpawnLocation.position;
-            Spawner.Instance.Spawn(_entityToSpawn, entity.TeamId, position, Quaternion.identity)
+            Spawner.Instance.Spawn(_entityToSpawn, entity.TeamId, position, entity.SpawnLocation.rotation)
                 .Forget();
             
             await UniTask.Delay(TimeSpan.FromSeconds(entity.StatHandler[StatType.SpawnTime].StatValue.Value));
