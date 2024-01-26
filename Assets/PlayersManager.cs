@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayersManager : MonoBehaviour
@@ -11,6 +8,7 @@ public class PlayersManager : MonoBehaviour
     
     public Player PlayerOne;
     public Player PlayerTwo;
+
 
     private void Awake()
     {
