@@ -61,7 +61,6 @@ public class GameEntity : SerializedMonoBehaviour
         _movementHandler.Init();
         InteractingObjects.BlockForDuration(entitySO.TimeTillCanInteract)
             .Forget();
-        await entityAnimator.PlaySpawnAnimation();
         
         try
         {
