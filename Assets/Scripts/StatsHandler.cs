@@ -55,14 +55,13 @@ public class StatHandler : IStatHandler
     public enum StatType
     {
         MovementSpeed = 0,
-        Score = 1,
         HP = 2,
         RotationSpeed = 3,
         Mass = 4,
         Scale = 5,
         SpawnTime,
-ScoreOverTime,
-
+        ScoreOverTime,
+        DamageReductionOverTime,
     }
     public interface IStat
     {

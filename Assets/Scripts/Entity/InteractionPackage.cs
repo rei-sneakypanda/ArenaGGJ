@@ -16,9 +16,9 @@ public class InteractionPackage
     
     public float BlockDuration;
     
-    [SerializeField] private List<IBaseInteraction> StartInteraction;
-    [SerializeField] private List<IBaseInteraction> MainInteraction;
-    [SerializeField] private List<IBaseInteraction> EndInteraction;
+    [SerializeField] private List<IInteractionWithOther> StartInteraction;
+    [SerializeField] private List<IInteractionWithOther> MainInteraction;
+    [SerializeField] private List<IInteractionWithOther> EndInteraction;
 
     public bool CanInteract(GameEntity entity, GameEntity otherEntity)
     {
@@ -56,7 +56,7 @@ public class InteractionPackage
         }
     }
 
-    private async UniTask Interact(List<IBaseInteraction> interactions, GameEntity entity, GameEntity otherEntity)
+    private async UniTask Interact(List<IInteractionWithOther> interactions, GameEntity entity, GameEntity otherEntity)
     {
         var cts = new CancellationTokenSource();
         using CompositeDisposable disposable = new();

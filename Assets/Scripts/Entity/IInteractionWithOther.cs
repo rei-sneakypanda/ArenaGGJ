@@ -1,8 +1,13 @@
 using Cysharp.Threading.Tasks;
 
-public interface IBaseInteraction
+public interface IInteractionWithOther
 {
     public UniTask Interact(GameEntity entity, GameEntity otherEntity);
+}
+
+public interface IInteractionOnSelf
+{
+    public UniTask Interact(GameEntity entity);
 }
 
 public static class ProbabilityExtensions

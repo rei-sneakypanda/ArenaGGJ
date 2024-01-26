@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
-using UniRx;
 using UnityEngine;
 
 public class GameEntities : MonoBehaviour
@@ -82,29 +81,5 @@ public class GameEntities : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(Vector3.zero, _maximumDistanceFromCenter);
-    }
-}
-
-public class Player
-{
-    private ReactiveProperty<int> _playerScore = new(0);
-    private int _teamID;
-    private ReactiveProperty<EntitySO> _currentEntity = new();
-    public IReadOnlyReactiveProperty<EntitySO> CurrentEntity => _currentEntity;
-    
-    public int TeamID => _teamID;
-    
-    public Player(int id)
-    {
-        _teamID = id;
-        SetRandomEntity();
-    }
-
-    public void SetRandomEntity()
-    {
-        _currentEntity.Value = GameEntities.Instance.AllPossibleEntities
-            .Except(_currentEntity.Value == null ? Enumerable.Empty<EntitySO>() : new []{ _currentEntity.Value})
-            .OrderBy(_ => Random.value)
-            .First();
     }
 }

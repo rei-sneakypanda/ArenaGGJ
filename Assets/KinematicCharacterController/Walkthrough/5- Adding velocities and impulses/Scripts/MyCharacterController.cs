@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using System;
+using UnityEngine.Serialization;
 
 namespace KinematicCharacterController.Walkthrough.AddingImpulses
 {
@@ -40,7 +41,7 @@ namespace KinematicCharacterController.Walkthrough.AddingImpulses
         public Vector3 Gravity = new Vector3(0, -30f, 0);
         public Transform MeshRoot;
 
-        private Vector3 _moveInputVector;
+        public Vector3 MoveInputVector;
         private Vector3 _lookInputVector;
         private bool _jumpRequested = false;
         private bool _jumpConsumed = false;
@@ -75,7 +76,7 @@ namespace KinematicCharacterController.Walkthrough.AddingImpulses
             Quaternion cameraPlanarRotation = Quaternion.LookRotation(cameraPlanarDirection, Motor.CharacterUp);
 
             // Move and look inputs
-            _moveInputVector = cameraPlanarRotation * moveInputVector;
+            MoveInputVector = cameraPlanarRotation * moveInputVector;
             _lookInputVector = cameraPlanarDirection;
 
             // Jumping input
@@ -125,8 +126,8 @@ namespace KinematicCharacterController.Walkthrough.AddingImpulses
                 currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, Motor.GroundingStatus.GroundNormal) * currentVelocity.magnitude;
 
                 // Calculate target velocity
-                Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
-                Vector3 reorientedInput = Vector3.Cross(Motor.GroundingStatus.GroundNormal, inputRight).normalized * _moveInputVector.magnitude;
+                Vector3 inputRight = Vector3.Cross(MoveInputVector, Motor.CharacterUp);
+                Vector3 reorientedInput = Vector3.Cross(Motor.GroundingStatus.GroundNormal, inputRight).normalized * MoveInputVector.magnitude;
                 targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;
 
                 // Smooth movement Velocity
@@ -135,9 +136,9 @@ namespace KinematicCharacterController.Walkthrough.AddingImpulses
             else
             {
                 // Add move input
-                if (_moveInputVector.sqrMagnitude > 0f)
+                if (MoveInputVector.sqrMagnitude > 0f)
                 {
-                    targetMovementVelocity = _moveInputVector * MaxAirMoveSpeed;
+                    targetMovementVelocity = MoveInputVector * MaxAirMoveSpeed;
 
                     // Prevent climbing on un-stable slopes with air movement
                     if (Motor.GroundingStatus.FoundAnyGround)
