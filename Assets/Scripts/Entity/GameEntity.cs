@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -16,8 +17,8 @@ public class GameEntity : SerializedMonoBehaviour
     [SerializeField] private DestroyHandler _destroyHandler;
     [SerializeField] private Transform _spawnLocation;
     [SerializeField] private Transform _forwardTransform;
-    [SerializeField] private List<IInteractionOnSelf> _spawnInteractionSelf;
-    [OdinSerialize] private List<TimeLoopInteraction> _intervalInteractionSelf;
+    
+    [OdinSerialize,HideInInspector] private List<TimeLoopInteraction> _intervalInteractionSelf;
     public Transform ForwardTransform => _forwardTransform ? _forwardTransform : transform;
     public Transform SpawnLocation => _spawnLocation ? _spawnLocation : transform;
     public MovementHandler MovementHandler  => _movementHandler;
@@ -29,7 +30,7 @@ public class GameEntity : SerializedMonoBehaviour
 
     private void Update()
     {
-        if (_intervalInteractionSelf == null)
+        if (_intervalInteractionSelf == null || _intervalInteractionSelf.Count == 0)
         {
             return;
         }
@@ -54,6 +55,7 @@ public class GameEntity : SerializedMonoBehaviour
         TeamId = teamID;
         _entitySO = entitySO;
         _statHandler = new StatHandler(entitySO.Stats.ToArray());
+        _intervalInteractionSelf = entitySO.IntervalInteractionSelf.Select(x => new TimeLoopInteraction(x)).ToList();
         
         transform.position = position;
         transform.rotation = rotation;
@@ -64,7 +66,12 @@ public class GameEntity : SerializedMonoBehaviour
         
         try
         {
-            foreach (var interaction in _spawnInteractionSelf)
+            if (_entitySO.SpawnInteractionSelf == null)
+            {
+                return;
+            }
+            
+            foreach (var interaction in _entitySO.SpawnInteractionSelf)
             {
                 await interaction.Interact(this);
             }

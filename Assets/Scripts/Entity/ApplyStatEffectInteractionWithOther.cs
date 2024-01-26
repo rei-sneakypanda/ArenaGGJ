@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [Serializable]
@@ -29,9 +30,9 @@ public class ApplyStatEffectInteractionWithOther : IInteractionWithOther
         [SerializeField] private StatType _statType;
 
         [SerializeField] private bool _useExistingValueAsValue;
-        [SerializeField] private StatType _statTypeValue;
+        [SerializeField,ShowIf("_useExistingValueAsValue")] private StatType _statTypeValue;
         
-        [SerializeField] private float _value;
+        [SerializeField, HideIf("_useExistingValueAsValue")] private float _value;
 
         [SerializeField, Range(0, 1f)] private float _probablity = 1f;
         

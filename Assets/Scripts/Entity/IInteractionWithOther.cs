@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public interface IInteractionWithOther
 {
@@ -15,15 +16,27 @@ public interface IInteractionOnSelf
 }
 
 [Serializable]
+public class TimeLoopInteractionTemplate
+{
+     public StatType StatIntervalType;
+    [SerializeField] private List<IInteractionOnSelf> _interactionOnSelves;
+    public IReadOnlyList<IInteractionOnSelf> InteractionOnSelves => _interactionOnSelves;
+}
+
+
 public class TimeLoopInteraction
 {
-    public StatType StatTimeType;
-    [SerializeField] private List<IInteractionOnSelf> _interactionOnSelves;
+private readonly TimeLoopInteractionTemplate _timeLoopInteractionTemplate;
+
+public TimeLoopInteraction(TimeLoopInteractionTemplate timeLoopInteractionTemplate)
+{
+    _timeLoopInteractionTemplate = timeLoopInteractionTemplate;
+}
     private float _counter = 0;
 
     public async UniTask Tick(float tickTime, GameEntity entity)
     {
-        if (_counter < entity.StatHandler[StatTimeType].StatValue.Value)
+        if (_counter < entity.StatHandler[_timeLoopInteractionTemplate.StatIntervalType].StatValue.Value)
         {
             _counter += tickTime;
             return;
@@ -35,11 +48,11 @@ public class TimeLoopInteraction
 
     private async UniTask Interaction(GameEntity gameEntity)
     {
-        if (_interactionOnSelves != null)
+        if (_timeLoopInteractionTemplate.InteractionOnSelves != null)
         {
             try
             {
-                foreach (var interaction in _interactionOnSelves)
+                foreach (var interaction in _timeLoopInteractionTemplate.InteractionOnSelves)
                 {
                     await interaction.Interact(gameEntity);
                 }

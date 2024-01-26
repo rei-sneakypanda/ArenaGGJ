@@ -75,8 +75,15 @@ public class InteractingContainer : MonoBehaviour
 
     private void Scan()
     {
-        var allEntities = GameEntities.Instance.GetGameEntitiesCollection(_gameEntity);
         var entityInteractionPackage = _gameEntity.EntitySO.InteractionPackage;
+
+        if (entityInteractionPackage == null || !entityInteractionPackage.Any())
+        {
+            return;
+        }
+        
+        var allEntities = GameEntities.Instance.GetGameEntitiesCollection(_gameEntity);
+        
         var transformPosition = transform.position;
         
         foreach (var entity in allEntities)

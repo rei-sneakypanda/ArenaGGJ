@@ -8,22 +8,35 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Entity", menuName = "ArenaGGJ/New Entity Config")]
 public class EntitySO : TagSO
 {
+    [TabGroup("General")]
     public TagGroupSO Tags;
+    [TabGroup("General")]
     [PreviewField(75f)] public Sprite Image;
+    [TabGroup("General")]
     [PreviewField(75f)] public GameEntity Prefab;
-
+    [TabGroup("Spawn")]
     public float TimeTillCanInteract = 1.25f;
-    
-    
+    [TabGroup("General")]
     public string Name;
-    [TextArea]
+    [TextArea]    [TabGroup("General")]
     public string Description;
 
+[TabGroup("Stats")]
     public List<StatTemplate> Stats;
-
-    [OdinSerialize]
+    
+    [TabGroup("Spawn")]
+    [SerializeField] List<IInteractionOnSelf> _spawnInteractionSelf;
+    [TabGroup("Interval")]
+    [OdinSerialize] List<TimeLoopInteractionTemplate> _intervalInteractionSelf;
+    [TabGroup("Destroy")]
+    [SerializeField] List<IInteractionOnSelf> _destroyInteractionSelf;
+    
+    [OdinSerialize][TabGroup("Interactions")]
     private List<InteractionPackage> _interactionPackage;
     public IReadOnlyList<InteractionPackage> InteractionPackage => _interactionPackage;
+    public IReadOnlyList<IInteractionOnSelf> SpawnInteractionSelf => _spawnInteractionSelf;
+    public IReadOnlyList<IInteractionOnSelf> DestroyInteractionSelf => _destroyInteractionSelf;
+    public IReadOnlyList<TimeLoopInteractionTemplate> IntervalInteractionSelf => _intervalInteractionSelf;
 
     private void Reset()
     {
@@ -38,6 +51,8 @@ public class EntitySO : TagSO
             Stats.Add(new StatTemplate() { StatType = statType, StartingValue = 0 });
         }
     }
+    
+    
     
     public static bool operator ==(TagSO tag, EntitySO entity)
     {
