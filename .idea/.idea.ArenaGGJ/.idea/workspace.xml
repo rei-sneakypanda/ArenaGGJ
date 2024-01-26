@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41fac6e8-1deb-4b5a-b8ad-21b70fa05af8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArenaGGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArenaGGJ/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/AddScoreInteractionWithOther.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/AddScoreInteractionWithOther.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/EntitySO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/EntitySO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +127,7 @@
       <updated>1706210760436</updated>
       <workItem from="1706210763106" duration="10057000" />
       <workItem from="1706221400454" duration="20780000" />
-      <workItem from="1706261431532" duration="26412000" />
+      <workItem from="1706261431532" duration="27525000" />
     </task>
     <servers />
   </component>
@@ -149,60 +156,30 @@
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="23" containingFunctionPresentation="Method 'Init'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/InputController.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\InputController.cs" initialLine="21" containingFunctionPresentation="Method 'Update'">
             <startOffsets>
-              <option value="532" />
-              <option value="604" />
+              <option value="698" />
             </startOffsets>
             <endOffsets>
-              <option value="685" />
-              <option value="610" />
+              <option value="726" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="110" />
+          <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/InteractingContainer.cs</url>
-          <line>99</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\InteractingContainer.cs" initialLine="99" containingFunctionPresentation="Method 'Scan'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/EntitySO.cs</url>
+          <line>89</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\EntitySO.cs" initialLine="73" containingFunctionPresentation="">
             <startOffsets>
-              <option value="2939" />
-              <option value="3002" />
+              <option value="2656" />
             </startOffsets>
             <endOffsets>
-              <option value="3038" />
-              <option value="3036" />
+              <option value="2684" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/InteractingContainer.cs</url>
-          <line>100</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\InteractingContainer.cs" initialLine="100" containingFunctionPresentation="Method 'Scan'">
-            <startOffsets>
-              <option value="3051" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3075" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="27" containingFunctionPresentation="Method 'DestroySelf'">
-            <startOffsets>
-              <option value="746" />
-            </startOffsets>
-            <endOffsets>
-              <option value="756" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="115" />
+          <option name="timeStamp" value="119" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

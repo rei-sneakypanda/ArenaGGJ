@@ -59,19 +59,35 @@ public class EntitySO : TagSO
             Stats.Add(new StatTemplate() { StatType = statType, StartingValue = 0 });
         }
     }
-    
-    
-    
+
+
+
     public static bool operator ==(TagSO tag, EntitySO entity)
     {
-        if (ReferenceEquals(tag, entity)) 
+        if (ReferenceEquals(tag, entity))
             return true;
-        if (ReferenceEquals(tag, null)) 
+        if (ReferenceEquals(tag, null))
             return false;
         if (ReferenceEquals(entity, null))
             return false;
+
+
+        bool containTag = false;
+        bool isSame = tag.GetInstanceID() == entity.GetInstanceID();
         
-        return tag == entity || tag != entity.Tags;
+        if (entity.Tags.Tags.Any() && !isSame)
+        {
+            foreach (var t in entity.Tags.Tags)
+            {
+                containTag |= tag == t;
+                if (containTag)
+                {
+                    break;
+                }
+            }
+        }
+
+        return isSame || containTag;
     }
 
     public static bool operator !=(TagSO tag, EntitySO entity)
@@ -82,8 +98,22 @@ public class EntitySO : TagSO
             return true;
         if (ReferenceEquals(entity, null))
             return true;
+
+        var isNotSame =tag.GetInstanceID() != entity.GetInstanceID();
+        var doesNotContainTag = true;
+        if (isNotSame && entity.Tags.Tags.Any())
+        {
+            foreach (var t in entity.Tags.Tags)
+            {
+                doesNotContainTag &= tag != t;
+                if (!doesNotContainTag)
+                {
+                    break;
+                }
+            }
+        }
         
-        return tag != entity && tag != entity.Tags;
+        return isNotSame && doesNotContainTag;
     }
 }
 

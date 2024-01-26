@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UniRx;
 
 public class Stat : IStat
 {
+    [ShowInInspector,ReadOnly]
     public StatType StatType { get; private set; }
+    [ShowInInspector,ReadOnly]
     private float _startingValue;
+    [ShowInInspector,ReadOnly]
     private ReactiveProperty<float> _value = new();
     public IReadOnlyReactiveProperty<float> StatValue => _value;
 
@@ -31,6 +35,7 @@ public class Stat : IStat
 
 public class StatHandler : IStatHandler
     {
+        [ShowInInspector,ReadOnly]
         private readonly Dictionary<StatType, IStat> _statDictionary;
         public StatHandler(params StatTemplate[] statEditor)
         {
