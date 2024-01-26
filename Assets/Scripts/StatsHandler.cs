@@ -1,41 +1,35 @@
 using System;
 using System.Collections.Generic;
-    public class Stat : IStat
+using UniRx;
+
+public class Stat : IStat
+{
+    public StatType StatType { get; private set; }
+    private float _startingValue;
+    private ReactiveProperty<float> _value = new();
+    public IReadOnlyReactiveProperty<float> StatValue => _value;
+
+    public Stat(StatType stat, float val)
     {
-        public event Action OnReset;
-        public event Action<float> OnValueChanged;
-
-        public StatType StatType { get;private set; }
-        private float _startingValue;
-        private float _value;
-        public Stat(StatType stat, float val)
-        { StatType = stat;
-            _startingValue = val;
-            Value = StartValue;
-        }
-        public float StartValue => _startingValue;
-
-        public float Value
-        {
-            get => _value;
-            set
-            {
-                if (_value == value)
-                    return;
-
-                _value = value;
-                OnValueChanged?.Invoke(Value);
-            }
-        }
-
-        public void Reset()
-        {
-            OnReset?.Invoke();
-            _value = _startingValue;
-        }
+        StatType = stat;
+        _startingValue = val;
+        _value.Value = StartValue;
     }
 
-    public class StatHandler : IStatHandler
+    public float StartValue => _startingValue;
+
+    public void SetValue(float val)
+    {
+        _value.Value = val;
+    }
+
+    public void Reset()
+    {
+        _value.Value = _startingValue;
+    }
+}
+
+public class StatHandler : IStatHandler
     {
         private readonly Dictionary<StatType, IStat> _statDictionary;
         public StatHandler(params StatTemplate[] statEditor)
@@ -61,22 +55,20 @@ using System.Collections.Generic;
     public enum StatType
     {
         MovementSpeed = 0,
-       Score = 1,
-       HP = 2,
-       RotationSpeed = 3,
+        Score = 1,
+        HP = 2,
+        RotationSpeed = 3,
         Mass = 4,
         Scale = 5,
-        SpawnTime
-
+        SpawnTime,
+ScoreOverTime
     }
     public interface IStat
     {
-        event Action OnReset;
-        event Action<float> OnValueChanged;
-
         StatType StatType { get; }
         float StartValue { get; }
-        float Value { get; set; }
+        void SetValue(float val);
+        IReadOnlyReactiveProperty<float> StatValue { get; }
         void Reset();
     }
     public interface IStatHandler

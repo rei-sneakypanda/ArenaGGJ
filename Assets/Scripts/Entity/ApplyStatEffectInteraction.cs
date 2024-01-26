@@ -12,10 +12,10 @@ public class ApplyStatEffectInteraction : IBaseInteraction
     public UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
         if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
-            entity.StatHandler[_statType].Value += _value;
+            entity.StatHandler[_statType].SetValue(entity.StatHandler[_statType].StatValue.Value + _value);
 
         if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other)
-            otherEntity.StatHandler[_statType].Value += _value;
+            otherEntity.StatHandler[_statType].SetValue(entity.StatHandler[_statType].StatValue.Value + _value);
 
         return UniTask.CompletedTask;
     }

@@ -6,24 +6,28 @@ using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameEntity : SerializedMonoBehaviour
 {
     public int TeamId { get; set; }
+    [SerializeField] private AnimatorController _animatorController;
     
     private EntitySO _entitySO;
-    private StatHandler _statHandler;
+    private StatHandler _statHandler = new();
     public InteractingContainer InteractingObjects { get; } = new ();
     public StatHandler StatHandler => _statHandler;
     public EntitySO EntitySO => _entitySO;
     
-    public void Init(int teamID, Vector3 position, Quaternion rotation, EntitySO entitySO)
+    public async UniTask Init(int teamID, Vector3 position, Quaternion rotation, EntitySO entitySO)
     {
         TeamId = teamID;
         _entitySO = entitySO;
         _statHandler = new StatHandler(entitySO.Stats.ToArray());
         transform.position = position;
         transform.rotation = rotation;
+        
+        await _animatorController.PlaySpawnAnimation();
     }
     
 }
@@ -37,7 +41,7 @@ public class DestroyHandler : MonoBehaviour
     [SerializeField] private EntitySO entity;
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private float _particleSystemDuration;
-
+    [SerializeField] private AnimatorController _animatorController;
     public CancellationTokenSource CancellationTokenSource => _cancellationTokenSource;
 
     public async UniTask DestroySelf()
@@ -48,7 +52,7 @@ public class DestroyHandler : MonoBehaviour
         }
 
         _flag = true;
-        
+        await _animatorController.PlayDestroyAnimation();
         GameEntities.Instance.RemoveEntity(_gameEntity);
         
         Destroy(gameObject);
@@ -61,6 +65,11 @@ public class DestroyHandler : MonoBehaviour
         _cancellationTokenSource = null;
     }
 
+    private void Reset()
+    {
+        _animatorController = GetComponent<AnimatorController>();
+        _gameEntity = GetComponent<GameEntity>(); 
+    }
 }
 
 public class InteractingContainer
