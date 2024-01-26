@@ -124,22 +124,9 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: _spawnInteractionSelf
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: _intervalInteractionSelf
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[TimeLoopInteraction, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.List`1[[TimeLoopInteraction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -155,6 +142,9 @@ MonoBehaviour:
   _destroyHandler: {fileID: 4223850118041544789}
   _spawnLocation: {fileID: 1907155736547246179}
   _forwardTransform: {fileID: 1907155736547246179}
+  _teamOneMat: {fileID: 2100000, guid: 1237af68035db9c40a1eed59e4d7a4a9, type: 2}
+  _teamTwoMat: {fileID: 2100000, guid: dbb51fea64b36794aa6bc32417301223, type: 2}
+  SkinnedMeshRenderers: []
   InteractingObjects: {fileID: 8855709599156361827}
 --- !u!114 &1938647222419256391
 MonoBehaviour:
@@ -416,22 +406,8 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: _destroyInteractionSelf
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   _gameEntity: {fileID: 42126372561479382}
-  entity: {fileID: 0}
   _particleSystem: {fileID: 0}
   _particleSystemDuration: 0
   entityAnimator: {fileID: 3803137578658648635}
