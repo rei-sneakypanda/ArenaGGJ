@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41fac6e8-1deb-4b5a-b8ad-21b70fa05af8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Nappin/PhysicsCharacterController/Scripts/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nappin/PhysicsCharacterController/Scripts/CharacterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/MovementHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/MovementHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/PushObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/PushObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -119,7 +120,7 @@
       <updated>1706210760436</updated>
       <workItem from="1706210763106" duration="10057000" />
       <workItem from="1706221400454" duration="20780000" />
-      <workItem from="1706261431532" duration="13948000" />
+      <workItem from="1706261431532" duration="15174000" />
     </task>
     <servers />
   </component>
@@ -135,47 +136,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/GameEntities.cs</url>
-          <line>30</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\GameEntities.cs" initialLine="27" containingFunctionPresentation="Method 'Update'">
-            <startOffsets>
-              <option value="799" />
-              <option value="881" />
-            </startOffsets>
-            <endOffsets>
-              <option value="881" />
-              <option value="881" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>54</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="72" containingFunctionPresentation="Method 'Spawn'">
-            <startOffsets>
-              <option value="1602" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1700" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
-          <line>58</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="78" containingFunctionPresentation="Method 'Spawn'">
-            <startOffsets>
-              <option value="1710" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1744" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/Spawner.cs</url>
           <line>60</line>
           <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\Spawner.cs" initialLine="79" containingFunctionPresentation="Method 'Spawn'">
@@ -189,30 +149,58 @@
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
           <line>37</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\GameEntity.cs" initialLine="30" containingFunctionPresentation="Method 'Init'">
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="28" containingFunctionPresentation="Method 'DestroySelf'">
             <startOffsets>
-              <option value="1495" />
+              <option value="959" />
             </startOffsets>
             <endOffsets>
-              <option value="1583" />
+              <option value="1334" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="99" />
+          <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/PushObject.cs</url>
-          <line>37</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\PushObject.cs" initialLine="37" containingFunctionPresentation="Method 'Interact'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyInteractionWithOther.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyInteractionWithOther.cs" initialLine="33" containingFunctionPresentation="Method 'Interact'">
             <startOffsets>
-              <option value="1048" />
+              <option value="1040" />
             </startOffsets>
             <endOffsets>
-              <option value="1155" />
+              <option value="1082" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="102" />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="23" containingFunctionPresentation="Method 'Init'">
+            <startOffsets>
+              <option value="658" />
+              <option value="730" />
+            </startOffsets>
+            <endOffsets>
+              <option value="811" />
+              <option value="736" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="30" containingFunctionPresentation="Method 'DestroySelf'">
+            <startOffsets>
+              <option value="876" />
+            </startOffsets>
+            <endOffsets>
+              <option value="886" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

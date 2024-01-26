@@ -16,9 +16,7 @@ public class InteractionPackage
     
     public float BlockDuration;
     
-    [SerializeField] private List<IInteractionWithOther> StartInteraction;
     [SerializeField] private List<IInteractionWithOther> MainInteraction;
-    [SerializeField] private List<IInteractionWithOther> EndInteraction;
 
     public bool CanInteract(GameEntity entity, GameEntity otherEntity)
     {
@@ -35,20 +33,12 @@ public class InteractionPackage
         
         try
         {
-            if (StartInteraction != null && StartInteraction.Any())
-            {
-                await Interact(StartInteraction, entity, otherEntity);
-            }
 
             if (MainInteraction != null && MainInteraction.Any())
             {
                 await Interact(MainInteraction, entity, otherEntity);
             }
 
-            if (EndInteraction != null && EndInteraction.Any())
-            {
-                await Interact(EndInteraction, entity, otherEntity);
-            }
         }
         catch (Exception e)
         {

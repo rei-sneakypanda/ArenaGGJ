@@ -61,7 +61,10 @@ public class StatHandler : IStatHandler
         Scale = 5,
         SpawnTime,
         ScoreOverTime,
-        DamageReductionOverTime,
+        DamageOverTime,
+        DamageInterval,
+        ScoreInterval,
+        
     }
     public interface IStat
     {

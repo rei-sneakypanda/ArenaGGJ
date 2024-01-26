@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 public class GameEntity : SerializedMonoBehaviour
@@ -16,6 +17,7 @@ public class GameEntity : SerializedMonoBehaviour
     [SerializeField] private Transform _spawnLocation;
     [SerializeField] private Transform _forwardTransform;
     [SerializeField] private List<IInteractionOnSelf> _spawnInteractionSelf;
+    [OdinSerialize] private List<TimeLoopInteraction> _intervalInteractionSelf;
     public Transform ForwardTransform => _forwardTransform ? _forwardTransform : transform;
     public Transform SpawnLocation => _spawnLocation ? _spawnLocation : transform;
     public MovementHandler MovementHandler  => _movementHandler;
@@ -23,8 +25,29 @@ public class GameEntity : SerializedMonoBehaviour
     public InteractingContainer InteractingObjects;
     public StatHandler StatHandler => _statHandler;
     public EntitySO EntitySO => _entitySO;
-    
-    
+
+    private void Update()
+    {
+        if (_intervalInteractionSelf == null)
+        {
+            return;
+        }
+
+        try
+        {
+            var delatTime = Time.deltaTime;
+            foreach (var interaction in _intervalInteractionSelf)
+            {
+                interaction.Tick(delatTime, this)
+                    .Forget();
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+
     public async UniTask Init(int teamID, Vector3 position, Quaternion rotation, EntitySO entitySO)
     {
         TeamId = teamID;
@@ -33,7 +56,7 @@ public class GameEntity : SerializedMonoBehaviour
         
         transform.position = position;
         transform.rotation = rotation;
-        
+        _destroyHandler.Init();
         _movementHandler.Init();
         InteractingObjects.BlockForDuration(entitySO.TimeTillCanInteract)
             .Forget();

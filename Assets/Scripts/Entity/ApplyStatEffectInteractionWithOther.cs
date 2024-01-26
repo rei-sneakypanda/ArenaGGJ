@@ -27,6 +27,9 @@ public class ApplyStatEffectInteractionWithOther : IInteractionWithOther
     public class ApplyStatEffectInteraction : IInteractionOnSelf
     {
         [SerializeField] private StatType _statType;
+
+        [SerializeField] private bool _useExistingValueAsValue;
+        [SerializeField] private StatType _statTypeValue;
         
         [SerializeField] private float _value;
 
@@ -34,7 +37,21 @@ public class ApplyStatEffectInteractionWithOther : IInteractionWithOther
         
         public UniTask Interact(GameEntity entity)
         {
-            entity.StatHandler[_statType].SetValue(entity.StatHandler[_statType].StatValue.Value + _value);
+            if (!_probablity.GenerateRNDOption())
+            {
+                return UniTask.CompletedTask;
+            }
+     
+            if (_useExistingValueAsValue)
+            {
+                entity.StatHandler[_statType].SetValue(entity.StatHandler[_statType].StatValue.Value +
+                                                       entity.StatHandler[_statTypeValue].StatValue.Value);
+            }
+            else
+            {
+                entity.StatHandler[_statType].SetValue(entity.StatHandler[_statType].StatValue.Value + _value);
+            }
+
             return UniTask.CompletedTask;
         }
     }

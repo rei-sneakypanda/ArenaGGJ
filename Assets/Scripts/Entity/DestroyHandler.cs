@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
+using UniRx;
 using UnityEngine;
 
 public class DestroyHandler : SerializedMonoBehaviour
@@ -17,6 +18,14 @@ public class DestroyHandler : SerializedMonoBehaviour
     [SerializeField] private float _particleSystemDuration;
     [SerializeField] private EntityAnimator entityAnimator;
 
+    private IDisposable _disposable;
+    public void Init()
+    {
+        _disposable = _gameEntity.StatHandler[StatType.HP].StatValue.Where(x => x <= 0)
+            .Take(1)
+            .Subscribe(_ => DestroySelf().Forget());
+    }
+    
     public async UniTask DestroySelf()
     {
         if (_flag)
@@ -41,7 +50,7 @@ public class DestroyHandler : SerializedMonoBehaviour
         {
             Console.WriteLine(e);
         }
-
+        _disposable?.Dispose();
         Destroy(gameObject);
     }
 
@@ -50,7 +59,4 @@ public class DestroyHandler : SerializedMonoBehaviour
         entityAnimator = GetComponent<EntityAnimator>();
         _gameEntity = GetComponent<GameEntity>(); 
     }
-    
-    
-    
 }

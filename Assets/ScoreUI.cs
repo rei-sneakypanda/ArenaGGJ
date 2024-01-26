@@ -14,6 +14,9 @@ public class ScoreUI : MonoBehaviour
 
     private void Update()
     {
+        if(PlayersManager.Instance == null)
+            return;
+        
         if (PlayersManager.Instance.PlayerOne == null)
         {
             return;
