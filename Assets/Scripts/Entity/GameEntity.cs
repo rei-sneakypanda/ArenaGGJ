@@ -1,22 +1,19 @@
-using System.Threading;
 using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.Triggers;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameEntity : SerializedMonoBehaviour
 {
     public int TeamId { get; set; }
-    [FormerlySerializedAs("_animatorController"),SerializeField] private EntityAnimator entityAnimator;
+    [SerializeField] private EntityAnimator entityAnimator;
     
     private EntitySO _entitySO;
     private StatHandler _statHandler = new();
     [SerializeField] private MovementHandler _movementHandler;
-    
+    [SerializeField] private DestroyHandler _destroyHandler;
     
     public MovementHandler MovementHandler  => _movementHandler;
-
+public DestroyHandler DestroyHandler => _destroyHandler;
     public InteractingContainer InteractingObjects;
     public StatHandler StatHandler => _statHandler;
     public EntitySO EntitySO => _entitySO;
@@ -34,36 +31,5 @@ public class GameEntity : SerializedMonoBehaviour
         InteractingObjects.BlockForDuration(entitySO.TimeTillCanInteract)
             .Forget();
         await entityAnimator.PlaySpawnAnimation();
-    }
-}
-
-public class DestroyHandler : MonoBehaviour
-{
-    [SerializeField] private GameEntity _gameEntity;
-    private bool _flag;
-    
-    [SerializeField] private EntitySO entity;
-    [SerializeField] private ParticleSystem _particleSystem;
-    [SerializeField] private float _particleSystemDuration;
-    [SerializeField] private EntityAnimator entityAnimator;
-    
-    public async UniTask DestroySelf()
-    {
-        if (_flag)
-        {
-            return;
-        }
-
-        _flag = true;
-        await entityAnimator.PlayDestroyAnimation();
-        GameEntities.Instance.RemoveEntity(_gameEntity);
-        
-        Destroy(gameObject);
-    }
-
-    private void Reset()
-    {
-        entityAnimator = GetComponent<EntityAnimator>();
-        _gameEntity = GetComponent<GameEntity>(); 
     }
 }

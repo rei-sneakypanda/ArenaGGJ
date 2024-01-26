@@ -49,44 +49,45 @@ MonoBehaviour:
       Data: 
     - Name: IsInteractingOther
       Entry: 5
-      Data: false
+      Data: true
     - Name: BlockDuration
       Entry: 4
       Data: 10
     - Name: StartInteraction
-      Entry: 6
-      Data: 
-    - Name: MainInteraction
       Entry: 7
       Data: 3|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 4|ApplyStatEffectInteraction, Assembly-CSharp
-    - Name: _effectTarget
+      Data: 4|SpawnInteraction, Assembly-CSharp
+    - Name: _spawnAmount
       Entry: 3
       Data: 1
-    - Name: _statType
-      Entry: 3
+    - Name: _probablity
+      Entry: 4
+      Data: 0.685
+    - Name: _entityToSpawn
+      Entry: 10
       Data: 0
-    - Name: _value
-      Entry: 4
-      Data: 10
     - Name: 
       Entry: 8
       Data: 
     - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: MainInteraction
       Entry: 7
-      Data: 5|WaitDelayBetweenInteractions, Assembly-CSharp
-    - Name: _duration
-      Entry: 4
-      Data: 8.31
+      Data: 5|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+        mscorlib
     - Name: 
-      Entry: 8
-      Data: 
+      Entry: 12
+      Data: 3
     - Name: 
       Entry: 7
       Data: 6|ApplyStatEffectInteraction, Assembly-CSharp
@@ -98,7 +99,37 @@ MonoBehaviour:
       Data: 0
     - Name: _value
       Entry: 4
+      Data: 20
+    - Name: _probablity
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|WaitDelayBetweenInteractions, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|ApplyStatEffectInteraction, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 1
+    - Name: _statType
+      Entry: 3
+      Data: 0
+    - Name: _value
+      Entry: 4
       Data: -10
+    - Name: _probablity
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -110,19 +141,19 @@ MonoBehaviour:
       Data: 
     - Name: EndInteraction
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
+      Data: 9|System.Collections.Generic.List`1[[IBaseInteraction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 8|SpawnInteraction, Assembly-CSharp
-    - Name: _spawnAmount
+      Data: 10|DestroyInteraction, Assembly-CSharp
+    - Name: _effectTarget
       Entry: 3
-      Data: 3
-    - Name: _entityToSpawn
-      Entry: 10
+      Data: 0
+    - Name: _probablity
+      Entry: 4
       Data: 0
     - Name: 
       Entry: 8
@@ -145,7 +176,7 @@ MonoBehaviour:
   Tags: {fileID: 11400000, guid: 9537d04850e42ae4ab3334433035cbcc, type: 2}
   Image: {fileID: 0}
   Prefab: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f, type: 3}
-  TimeTillCanInteract: 1.25
+  TimeTillCanInteract: 2
   Name: Test
   Description: 
   Stats:

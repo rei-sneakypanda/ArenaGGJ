@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Sirenix.Utilities;
 using UniRx;
@@ -14,26 +15,24 @@ public class InteractingContainer : MonoBehaviour
     private HashSet<GameEntity> _interactingEntities = new();
     public IReadOnlyCollection<GameEntity> InteractingEntities => _interactingEntities;
 
-    private bool _forceBlock = true;
+    public bool IsInteractiveable = false;
     
-    
-    
-    public async UniTask Add(GameEntity gameEntity, float delay)
+    public IDisposable Add(GameEntity gameEntity)
     {
-        using var d = Disposable.Create(() => _interactingEntities.Remove(gameEntity));
-        await UniTask.Delay(TimeSpan.FromSeconds(delay));
+        _interactingEntities.Add(gameEntity);
+        return Disposable.Create(() => _interactingEntities.Remove(gameEntity));
     }
 
     public async UniTask BlockForDuration(float delay)
     {
-        _forceBlock = true;
-        using var d = Disposable.Create(() => _forceBlock = false);
+        IsInteractiveable = false;
+        using var d = Disposable.Create(() => IsInteractiveable = true);
         await UniTask.Delay(TimeSpan.FromSeconds(delay));
     }
     
     private void Update()
     {
-        if (_forceBlock)
+        if (!IsInteractiveable)
         {
             return;
         }
@@ -45,13 +44,13 @@ public class InteractingContainer : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (!_toDrawGizmos  || GameEntities.Instance == null)
+        if (!_toDrawGizmos || GameEntities.Instance == null)
         {
             return;
         }
             Gizmos.DrawSphere(transform.position, _interactionRadius);
 
-        var allEntities = GameEntities.Instance.GameEntitiesCollection;
+        var allEntities = GameEntities.Instance.GetGameEntitiesCollection((_gameEntity));
         var transformPosition = transform.position;
         bool isHit = false;
 
@@ -76,15 +75,16 @@ public class InteractingContainer : MonoBehaviour
 
     private void Scan()
     {
-        
-        var allEntities = GameEntities.Instance.GameEntitiesCollection;
+        var allEntities = GameEntities.Instance.GetGameEntitiesCollection(_gameEntity);
         var entityInteractionPackage = _gameEntity.EntitySO.InteractionPackage;
         var transformPosition = transform.position;
         
         foreach (var entity in allEntities)
         {
-            if (entity|| _interactingEntities.Contains(entity) ||
-                entity.gameObject == null ||
+            if (entity == null ||
+                _interactingEntities.Contains(entity) ||
+                entity.gameObject == null || 
+                !entity.InteractingObjects.IsInteractiveable ||
                 Vector3.Distance(entity.transform.position, transformPosition) <= _interactionRadius)
             {
                 continue;
@@ -96,12 +96,55 @@ public class InteractingContainer : MonoBehaviour
                 continue;
             }
             
-            Add(entity, interaction.BlockDuration)
-                .Forget();
-
-            interaction.Interact(_gameEntity, entity)
+            StartInteraction(interaction, entity)
                 .Forget();
         }
     }
-    
+
+    private async UniTask StartInteraction(InteractionPackage interaction, GameEntity entity)
+    {
+        using CompositeDisposable d = new();
+        
+        var cts = new CancellationTokenSource();
+        d.Add(Add(entity));
+        d.Add(entity.InteractingObjects.Add(_gameEntity));
+        d.Add(entity.destroyCancellationToken.Register(Cancel));
+        d.Add(destroyCancellationToken.Register(Cancel));
+        d.Add(cts);
+
+        try
+        {
+            await interaction.Interact(_gameEntity, entity);
+            
+            if (entity != null && entity.gameObject != null)
+            {
+                entity.InteractingObjects.BlockForDuration(interaction.BlockDuration)
+                    .Forget();
+            }
+
+            if (_gameEntity != null && _gameEntity.gameObject != null)
+            {
+                await UniTask.Delay(TimeSpan.FromSeconds(interaction.BlockDuration),
+                    cancellationToken: cts.Token);
+            }
+            
+       
+        }
+        catch (Exception e)
+        {
+            //ignored
+        }
+        
+        void Cancel()
+        {
+            if (cts == null)
+            {
+                return;
+            }
+
+            cts.Cancel();
+            cts.Dispose();
+            cts = null;
+        }
+    }
 }

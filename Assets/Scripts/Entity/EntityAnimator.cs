@@ -7,6 +7,7 @@ public class EntityAnimator : MonoBehaviour
     private static readonly int IsSpawning = Animator.StringToHash("Spawn");
     private static readonly int IsDestroyed = Animator.StringToHash("Destroyed");
     private static readonly int IsInteracting = Animator.StringToHash("Interacting");
+    private static readonly int IsReacting = Animator.StringToHash("Reacting");
     
     [SerializeField] private GameEntity _gameEntity;
     [SerializeField] private Animator Animator;
@@ -17,6 +18,7 @@ public class EntityAnimator : MonoBehaviour
 
     public async UniTask PlaySpawnAnimation()
     {
+        return;
         try
         {
             Animator.SetBool(IsSpawning, true);
@@ -53,6 +55,25 @@ public class EntityAnimator : MonoBehaviour
         }
     }
     
+    public async UniTask PlayReactingAnimation()
+    {
+        try
+        {
+            Animator.SetBool(IsReacting, true);
+            var cancel = await UniTask.Delay(TimeSpan.FromSeconds(_interactingAnimationDuration), cancellationToken: _gameEntity.destroyCancellationToken).SuppressCancellationThrow();
+            if (cancel)
+            {
+                return;
+            }
+
+            Animator.SetBool(IsReacting, false);
+        }
+        catch (Exception e)
+        {
+            // ignored
+        }
+    }
+    
     public async UniTask PlayDestroyAnimation()
     {
         try
@@ -71,7 +92,7 @@ public class EntityAnimator : MonoBehaviour
             // ignored
         }
     }
-    
+   
     private void Reset()
     {
         Animator = GetComponent<Animator>();
