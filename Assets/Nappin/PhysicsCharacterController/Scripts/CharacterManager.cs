@@ -155,9 +155,8 @@ namespace PhysicsCharacterController
         [Space(15)]
 
         [SerializeField] UnityEvent OnCrouch;
-        [Space(15)]
 
-
+        [Space(15)] [SerializeField] private bool _toResetExtraForce = true;
 
         private Vector3 forward;
         private Vector3 globalForward;
@@ -247,8 +246,13 @@ namespace PhysicsCharacterController
             UpdateEvents();
             
             //add velocity
+
+            if (_toResetExtraForce)
+            {
             rigidbody.velocity += _internalVelocityAdd;
             _internalVelocityAdd = Vector3.zero;
+            }else
+                rigidbody.velocity = _internalVelocityAdd;
         }
 
 

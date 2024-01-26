@@ -253,6 +253,16 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1938647222419256391, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _toResetExtraForce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938647222419256391, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: frictionAgainstFloor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4223850118041544789, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: serializationData.Prefab
