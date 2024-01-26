@@ -352,7 +352,7 @@ Material:
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.2794144, g: 0.3254773, b: 0.8584906, a: 1}
+    - _MainColor: {r: 0.13710396, g: 0.18641597, b: 0.745283, a: 1}
     - _OutlineColor: {r: 0.03773582, g: 0.020113904, b: 0.03479884, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}
