@@ -17,6 +17,7 @@ public class EntitySO : TagSO
     public string Name;
     [TextArea]    [TabGroup("General")]
     public string Description;
+    
     [TabGroup("General")]
     [Min(1)] [SerializeField] private int _spawnAmount;
     
