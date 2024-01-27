@@ -13,11 +13,17 @@ public class PlayAnimationInteraction : IInteractionWithOther
     {
         try
         {
-            if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
-                await _playAnimationOnSelf.Interact(entity);
+            if (_playAnimationOnSelf != null)
+            {
+                if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
+                    await _playAnimationOnSelf.Interact(entity);
+            }
 
-            if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other)
-                await _playAnimationOnOther.Interact(otherEntity);
+            if (_playAnimationOnOther != null)
+            {
+                if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other)
+                    await _playAnimationOnOther.Interact(otherEntity);
+            }
         }
         catch (Exception e)
         {
@@ -34,14 +40,20 @@ public class ChangeTeamInteraction : IInteractionWithOther
 
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
-        if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
+        if (_changeTeamOnSelf != null)
         {
-            await _changeTeamOnSelf.Interact(entity);
+            if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
+            {
+                await _changeTeamOnSelf.Interact(entity);
+            }
         }
 
-        if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other)
+        if (_changeTeamOnOther != null)
         {
-            await _changeTeamOnOther.Interact(otherEntity);
+            if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other)
+            {
+                await _changeTeamOnOther.Interact(otherEntity);
+            }
         }
     }
 }

@@ -14,12 +14,12 @@ public class PushObjects : IInteractionWithOther
     {
         if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
         {
-            _pushObjectSelf.Interact(entity);
+            _pushObjectSelf?.Interact(entity);
         }
 
         if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other)
         {
-            _pushObjectOther.Interact(otherEntity);
+            _pushObjectOther?.Interact(otherEntity);
         }
 
         return UniTask.CompletedTask;

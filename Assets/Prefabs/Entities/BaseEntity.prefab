@@ -169,7 +169,7 @@ MonoBehaviour:
   jumpVelocity: 20
   fallMultiplier: 1.7
   holdJumpMultiplier: 5
-  frictionAgainstFloor: 0.189
+  frictionAgainstFloor: 0.029
   frictionAgainstWall: 0.01
   canLongJump: 0
   groundCheckerThrashold: 0.54
@@ -281,6 +281,7 @@ MonoBehaviour:
   OnCrouch:
     m_PersistentCalls:
       m_Calls: []
+  _toResetExtraForce: 1
   AxisInput: {x: 0, y: 0}
   targetAngle: 47.939434
 --- !u!114 &3803137578658648635

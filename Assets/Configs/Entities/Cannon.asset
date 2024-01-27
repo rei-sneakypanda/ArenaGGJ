@@ -183,7 +183,10 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Tags: {fileID: 11400000, guid: 9537d04850e42ae4ab3334433035cbcc, type: 2}
+  Tags:
+  - {fileID: 11400000, guid: 2cf1c6ab7159dc448b6ce4df7884d029, type: 2}
+  - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
+  - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
   Image: {fileID: 21300000, guid: 4e643de38b5ceae4ab3e5eec336dbc40, type: 3}
   Name: Test
   Description: 

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c0e9ee99ce4fef8dcf3662e33bcb59, type: 3}
-  m_Name: Consumables
+  m_Script: {fileID: 11500000, guid: d16ff1b8ea0940c590f5ebaa934d1243, type: 3}
+  m_Name: Weapons Tag
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,5 +21,3 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _tags:
-  - {fileID: 11400000, guid: 2e6aa05d958744c41b012a8eb8763a27, type: 2}

@@ -47,7 +47,8 @@ public class MovementHandler : MonoBehaviour
     }    
     private void Update()
     {
-        if (_isTurning)
+        if (_isTurning
+            || _characterController.movementSpeed == 0)
         {
             return;
         }
@@ -123,8 +124,20 @@ float hasGroundAheadCheckDuration = 1f;
     {
         var transform1 = transform;
         var direction = (transform1.forward * 2) - transform1.up;
-        return Physics.Raycast(transform1.position + Vector3.up, direction, out var hit, _rayDistance,
+        
+        var hasGroundAhead = Physics.Raycast(transform1.position + Vector3.up, direction, out var hit, _rayDistance,
             layerMask: _layerMask);
+
+        if (hasGroundAhead)
+        {
+            return hasGroundAhead;
+        }
+
+        direction = (transform1.forward) - transform1.up;
+        hasGroundAhead |= Physics.Raycast(transform1.position + Vector3.up, direction, out hit, _rayDistance,
+            layerMask: _layerMask);
+
+        return hasGroundAhead;
     }
     private void Reset()
     {

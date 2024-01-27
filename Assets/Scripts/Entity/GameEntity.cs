@@ -78,10 +78,20 @@ public class GameEntity : SerializedMonoBehaviour
     
     private void InitMaterials()
     {
+        if (SkinnedMeshRenderers == null)
+        {
+            return;
+        }
+        
        var mat = TeamId == 1 ? _teamOneMat : _teamTwoMat;
         
         foreach (var sMR in SkinnedMeshRenderers)
         {
+
+            if (sMR == null)
+            {
+                continue;
+            }
             sMR.material = mat;
         }
     }
