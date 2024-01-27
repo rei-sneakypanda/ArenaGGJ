@@ -14,10 +14,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform _teamOneParent;
     [SerializeField] private Transform _teamTwoParent;
     
-    [SerializeField]
-    private Transform _firstPlayerCannon;
-    [SerializeField]
-    private Transform _secondPlayerCannon;
+        [SerializeField] private float _spawnInterval = .3f;
     
     [SerializeField]
     private Transform _firstPlayerCannonTarget;
@@ -26,15 +23,10 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private GameEntities _gameEntities;
 
-    [SerializeField] private PhysicsMover _shootingObject;
-    private ObjectPool<PhysicsMover> _cannonBalls;
-
-    [SerializeField] private float _shootingForce= 100f;
     
     private void Awake()
     {
         Instance = this;
-        _cannonBalls = new(GenerateCannotBall);
     }
 
     private void OnDestroy()
@@ -50,6 +42,24 @@ public class Spawner : MonoBehaviour
 
     public async UniTask Spawn(EntitySO entitySO, int teamID, Vector3 position, Quaternion rotation)
     {
+        var t = TimeSpan.FromSeconds(_spawnInterval);
+        
+        for (var i = 0; i < entitySO.SpawnAmount; i++)
+        {
+            if (destroyCancellationToken.IsCancellationRequested)
+            {
+                break;
+            }
+            
+            Spawn(entitySO, teamID, position, rotation)
+                .Forget();
+            
+            await UniTask.Delay(t);
+        }
+    }
+
+    private async UniTask Spawn(EntitySO entitySO, Transform parent, int teamID, Vector3 position, Quaternion rotation)
+    {
         var instance = Instantiate(
             original: entitySO.Prefab,
             position: position,
@@ -57,16 +67,11 @@ public class Spawner : MonoBehaviour
             parent: teamID == 1 ? _teamOneParent : _teamTwoParent);
 
         _gameEntities.AddEntity(instance);
-        
+
         instance.Init(teamID, position, rotation, entitySO)
             .Forget();
     }
     
-    private PhysicsMover GenerateCannotBall()
-    {
-        return Instantiate(_shootingObject);
-    }
-
     private void Reset()
     {
         _gameEntities = FindObjectOfType<GameEntities>();
