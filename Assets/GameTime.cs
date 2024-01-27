@@ -47,7 +47,7 @@ public class GameTime : MonoBehaviour
         {
             _remainingTime.Value -= Time.deltaTime;
 
-            if (_timeToDrop.Count > 1)
+            if (_timeToDrop.Count > 0)
             {
                 if (_remainingTime.Value <= _timeToDrop.First())
                 {
