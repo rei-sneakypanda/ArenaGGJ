@@ -64,7 +64,7 @@ public class GameTime : MonoBehaviour
                         .Forget();
                 }
             }
-            _timerText.SetText(TimeSpan.FromSeconds((int)_remainingTime.Value).GetTimeSpanString(useTwoDigit: true));
+            _timerText.SetText(TimeSpan.FromSeconds((int)_remainingTime.Value).GetTimeSpanString(useTwoDigit: true, useLetter: false));
             await UniTask.DelayFrame(1, cancellationToken: destroyCancellationToken);
         }
 

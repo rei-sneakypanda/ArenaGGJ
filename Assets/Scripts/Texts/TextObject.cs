@@ -2,7 +2,6 @@ using System;
 using CardMaga.Tools.Pools;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TextObject : MonoBehaviour, IPoolableMB<TextObject>
 {
