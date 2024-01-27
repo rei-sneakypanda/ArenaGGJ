@@ -194,7 +194,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
   - {fileID: 11400000, guid: 56078cf0b42c3e74d83a4d76ffc8ba4c, type: 2}
   - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
-  Image: {fileID: 21300000, guid: 38e851c4ae323d3439cbe55bc0abf70f, type: 3}
+  Image: {fileID: 21300000, guid: 683d1301404d14f3bbfa924703bd10f1, type: 3}
   Name: Cook
   Description: 
   _spawnAmount: 2

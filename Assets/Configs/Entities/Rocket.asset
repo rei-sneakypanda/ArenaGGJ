@@ -188,7 +188,7 @@ MonoBehaviour:
   Tags:
   - {fileID: 11400000, guid: c16351aa6cb311944ab356e79f3f0008, type: 2}
   - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
-  Image: {fileID: 21300000, guid: 9873cc868bdc1db418ed20ca3febc7d6, type: 3}
+  Image: {fileID: 21300000, guid: 02e5084058703437282a499f2fdb9949, type: 3}
   Name: Runner
   Description: 
   _spawnAmount: 1
