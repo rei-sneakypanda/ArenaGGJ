@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
@@ -33,7 +34,21 @@ public class PlayerInputController : MonoBehaviour
         
         _player.CurrentEntity.Subscribe(OnCurrentEntityChange);
     }
-    
+
+    private void OnDestroy()
+    {
+        if (_player.TeamID == TeamType.TeamRed)
+        {
+            InputController.OnPlayerRedReroll -= OnRerollRequested;
+            InputController.OnPlayerRedSpawn  -= OnSpawnRequested;
+        }
+        else
+        {
+            InputController.OnPlayerBlueReroll-= OnRerollRequested;
+            InputController.OnPlayerBlueSpawn -=OnSpawnRequested;
+        }
+    }
+
     private void Update()
     {
         if (_player == null)
