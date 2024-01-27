@@ -15,7 +15,7 @@ public class PlayerInputController : MonoBehaviour
     
     [SerializeField] private AudioSource _redSpawnAudioSource;
     [SerializeField] private AudioSource _blueSpawnAudioSource;
-    
+    [SerializeField] private AudioSource _rerollAudioSource;
     public void Init(Player player)
     {
         _player = player;
@@ -43,7 +43,7 @@ public class PlayerInputController : MonoBehaviour
         
         _currentRerollTime += Time.deltaTime;
         _slider.value = Mathf.Clamp01(_currentRerollTime / _allowedRerollTime);
-        
+        _rerollAudioSource.Play();
         _animator.SetBool("IsLocked", _currentRerollTime > _allowedRerollTime);
     }
 
