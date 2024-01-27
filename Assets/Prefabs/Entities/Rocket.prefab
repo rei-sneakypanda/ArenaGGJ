@@ -9833,7 +9833,7 @@ PrefabInstance:
     - target: {fileID: 1921741683032333462, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1921741683032333462, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
@@ -9864,7 +9864,7 @@ PrefabInstance:
     - target: {fileID: 8855709599156361827, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: _interactionRadius
-      value: 0.8
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
