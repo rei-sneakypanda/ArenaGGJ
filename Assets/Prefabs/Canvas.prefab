@@ -308,6 +308,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c3df8ad5db6a5564088117e233fa0d2f,
         type: 3}
+    - target: {fileID: 3597506500962089063, guid: afda6fc3c807b1f4ea2616eda6b76604,
+        type: 3}
+      propertyPath: m_text
+      value: Press "O" to <color=#ffdd53>Reroll
+      objectReference: {fileID: 0}
     - target: {fileID: 3800014631713798432, guid: afda6fc3c807b1f4ea2616eda6b76604,
         type: 3}
       propertyPath: m_Sprite
@@ -318,6 +323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948146745201507070, guid: afda6fc3c807b1f4ea2616eda6b76604,
+        type: 3}
+      propertyPath: m_text
+      value: Press "P" to <color=#61d139>Deploy
       objectReference: {fileID: 0}
     - target: {fileID: 4389198282461537294, guid: afda6fc3c807b1f4ea2616eda6b76604,
         type: 3}
@@ -657,11 +667,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Red Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3840821240688414649, guid: afda6fc3c807b1f4ea2616eda6b76604,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4375497847195604071, guid: afda6fc3c807b1f4ea2616eda6b76604,
         type: 3}
