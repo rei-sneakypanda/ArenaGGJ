@@ -6,11 +6,29 @@ using UnityEngine;
 [Serializable]
 public class ApplyStatEffectInteractionWithOther : IInteractionWithOther
 {
-    [SerializeField] private EffectTarget _effectTarget;
-    [SerializeField] private ApplyStatEffectInteraction _effectIntercationSelf;
-    [SerializeField] private ApplyStatEffectInteraction _effectIntercationOther;
-
-
+    [SerializeField] [OnValueChanged("Reset")] private EffectTarget _effectTarget;
+    [SerializeField, ShowIf("ShowSelf")]  private ApplyStatEffectInteraction _effectIntercationSelf;
+    [SerializeField, ShowIf("ShowOther")] private ApplyStatEffectInteraction _effectIntercationOther;
+    private void Reset()
+    {
+        switch (_effectTarget)
+        {
+            case EffectTarget.Self:
+                _effectIntercationOther = null;
+                break;
+            case EffectTarget.Other:
+                _effectIntercationSelf = null;
+                break;
+        }
+    }
+    private bool ShowOther()
+    {
+        return _effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both;
+    }
+    private bool ShowSelf()
+    {
+        return _effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both;
+    }
     public UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
         if (_effectIntercationSelf != null)

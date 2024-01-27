@@ -137,7 +137,7 @@ MonoBehaviour:
     - Name: Tag
       Entry: 10
       Data: 0
-    - Name: _targetEffect
+    - Name: _affectingTeam
       Entry: 3
       Data: 2
     - Name: BlockDuration
@@ -155,7 +155,7 @@ MonoBehaviour:
       Data: 10|ApplyStatEffectInteractionWithOther, Assembly-CSharp
     - Name: _effectTarget
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: _effectIntercationSelf
       Entry: 6
       Data: 
@@ -197,7 +197,7 @@ MonoBehaviour:
       Data: 13|PushObjectSelf, Assembly-CSharp
     - Name: _force
       Entry: 4
-      Data: 200
+      Data: 7
     - Name: _transformDirectionType
       Entry: 3
       Data: 0

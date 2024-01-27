@@ -1,14 +1,35 @@
 using System;
 using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [Serializable]
 public class PlayAnimationInteraction : IInteractionWithOther
 {
-    [SerializeField] private EffectTarget _effectTarget;
-    [SerializeField] private PlayAnimationOnSelf _playAnimationOnSelf;
-    [SerializeField] private PlayAnimationOnSelf _playAnimationOnOther;
-
+    [SerializeField] [OnValueChanged("Reset")] private EffectTarget _effectTarget;
+     [SerializeField, ShowIf("ShowSelf")] private PlayAnimationOnSelf _playAnimationOnSelf;
+     [SerializeField, ShowIf("ShowOther")]private PlayAnimationOnSelf _playAnimationOnOther;
+     
+     private void Reset()
+     {
+         switch (_effectTarget)
+         {
+             case EffectTarget.Self:
+                 _playAnimationOnOther = null;
+                 break;
+             case EffectTarget.Other:
+                 _playAnimationOnSelf = null;
+                 break;
+         }
+     }
+    private bool ShowOther()
+    {
+        return _effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both;
+    }
+    private bool ShowSelf()
+    {
+        return _effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both;
+    }
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
         try
@@ -34,10 +55,31 @@ public class PlayAnimationInteraction : IInteractionWithOther
 [Serializable]
 public class ChangeTeamInteraction : IInteractionWithOther
 {
-    [SerializeField] private EffectTarget _effectTarget;
-    [SerializeField] private ChangeTeamOnSelf _changeTeamOnSelf;
-    [SerializeField] private ChangeTeamOnSelf _changeTeamOnOther;
-
+    [SerializeField] [OnValueChanged("Reset")] private EffectTarget _effectTarget;
+     [SerializeField, ShowIf("ShowSelf")]  private ChangeTeamOnSelf _changeTeamOnSelf;
+     [SerializeField, ShowIf("ShowOther")] private ChangeTeamOnSelf _changeTeamOnOther;
+     
+     private void Reset()
+     {
+         switch (_effectTarget)
+         {
+             case EffectTarget.Self:
+                 _changeTeamOnOther = null;
+                 break;
+             case EffectTarget.Other:
+                 _changeTeamOnSelf = null;
+                 break;
+         }
+     }
+     
+     private bool ShowOther()
+     {
+         return _effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both;
+     }
+     private bool ShowSelf()
+     {
+         return _effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both;
+     }
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
         if (_changeTeamOnSelf != null)

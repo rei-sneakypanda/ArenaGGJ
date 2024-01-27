@@ -12,7 +12,7 @@ public class InteractionPackage
 {
     public TagSO Tag;
 
-    public EffectTarget _targetEffect;
+    [FormerlySerializedAs("_targetEffect")] public EffectTarget _affectingTeam;
     
     public float BlockDuration;
     
@@ -22,7 +22,7 @@ public class InteractionPackage
     {
         var canInteractWithSameTeam = false;
 
-        switch (_targetEffect)
+        switch (_affectingTeam)
         {
             case EffectTarget.Both:
                 canInteractWithSameTeam = true;

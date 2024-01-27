@@ -138,7 +138,7 @@ MonoBehaviour:
     - Name: Tag
       Entry: 10
       Data: 0
-    - Name: _targetEffect
+    - Name: _affectingTeam
       Entry: 3
       Data: 0
     - Name: BlockDuration
@@ -179,9 +179,6 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: _spawnInteractionSelf
-      Entry: 6
-      Data: 
-    - Name: _spawnInteractionOther
       Entry: 7
       Data: 13|SpawnInteraction, Assembly-CSharp
     - Name: _spawnAmount
@@ -195,6 +192,9 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 8
+      Data: 
+    - Name: _spawnInteractionOther
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8

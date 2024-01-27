@@ -1,15 +1,36 @@
 using System;
 using Cysharp.Threading.Tasks;
 using MoreMountains.Tools;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [Serializable]
 public class PushObjects : IInteractionWithOther
 {
-    [SerializeField] private EffectTarget _effectTarget;
-    [SerializeField] PushObjectSelf _pushObjectSelf;
-    [SerializeField] PushObjectSelf _pushObjectOther;
-
+    [SerializeField] [OnValueChanged("Reset")] private EffectTarget _effectTarget;
+     [SerializeField, ShowIf("ShowSelf")]  PushObjectSelf _pushObjectSelf;
+     [SerializeField, ShowIf("ShowOther")] PushObjectSelf _pushObjectOther;
+     
+     private void Reset()
+     {
+         switch (_effectTarget)
+         {
+             case EffectTarget.Self:
+                 _pushObjectOther = null;
+                 break;
+             case EffectTarget.Other:
+                 _pushObjectSelf = null;
+                 break;
+         }
+     }
+    private bool ShowOther()
+    {
+        return _effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both;
+    }
+    private bool ShowSelf()
+    {
+        return _effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both;
+    }
     public UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
         if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)

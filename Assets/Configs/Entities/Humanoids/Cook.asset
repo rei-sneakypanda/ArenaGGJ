@@ -136,7 +136,7 @@ MonoBehaviour:
     - Name: Tag
       Entry: 6
       Data: 
-    - Name: _targetEffect
+    - Name: _affectingTeam
       Entry: 3
       Data: 2
     - Name: BlockDuration
@@ -197,7 +197,7 @@ MonoBehaviour:
     - Name: Tag
       Entry: 6
       Data: 
-    - Name: _targetEffect
+    - Name: _affectingTeam
       Entry: 3
       Data: 2
     - Name: BlockDuration

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -115,6 +116,31 @@ public class EntitySO : TagSO
         
         return isNotSame && doesNotContainTag;
     }
+    
+    [ContextMenu("CleanHiddenReferences")]
+    public void CleanHiddenReferences()
+    {
+        foreach (var interaction in _interactionPackage)
+        {
+            var val = interaction.GetType().GetField("MainInteraction", BindingFlags.NonPublic | BindingFlags.Instance);
+            
+            if(val == null)
+                continue;
+
+            var interactionList = val.GetValue(interaction);
+            if (interactionList == null)
+            {
+                return;
+            }
+            
+            foreach (var interactionPackage in (List<IInteractionWithOther>)interactionList)
+            {
+                var method = interactionPackage.GetType().GetMethod("Reset", BindingFlags.NonPublic | BindingFlags.Instance);
+                method?.Invoke(interactionPackage, null);
+            }
+        }
+    }
+    
 }
 
 public enum EffectTarget

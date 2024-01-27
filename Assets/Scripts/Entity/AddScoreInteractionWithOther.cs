@@ -6,10 +6,32 @@ using UnityEngine;
 [Serializable]
 public class AddScoreInteractionWithOther : IInteractionWithOther
 {
-    [SerializeField] private EffectTarget _effectTarget;
-    [SerializeField] private AddScoreInteraction _addScoreInteractionSelf;
-    [SerializeField] private AddScoreInteraction _addScoreInteractionOther;
+    [SerializeField] [OnValueChanged("Reset")] private EffectTarget _effectTarget;
+    [SerializeField, ShowIf("ShowSelf")]  private AddScoreInteraction _addScoreInteractionSelf;
+    [SerializeField, ShowIf("ShowOther")] private AddScoreInteraction _addScoreInteractionOther;
 
+
+    private void Reset()
+    {
+        switch (_effectTarget)
+        {
+            case EffectTarget.Self:
+                _addScoreInteractionOther = null;
+                break;
+            case EffectTarget.Other:
+                _addScoreInteractionSelf = null;
+                break;
+        }
+    }
+    
+    private bool ShowOther()
+    {
+        return _effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both;
+    }
+    private bool ShowSelf()
+    {
+        return _effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both;
+    }
     public UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
         if (_addScoreInteractionSelf != null)

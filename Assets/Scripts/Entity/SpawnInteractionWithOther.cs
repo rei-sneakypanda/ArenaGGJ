@@ -1,19 +1,40 @@
 using System;
 using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [Serializable]
 public class SpawnInteractionWithOther : IInteractionWithOther
 {
-    [SerializeField] private EffectTarget _effectTarget;
-    [SerializeField] private SpawnInteraction _spawnInteractionSelf;
-    [SerializeField] private SpawnInteraction _spawnInteractionOther;
-
+    [SerializeField]  [OnValueChanged("Reset")]private EffectTarget _effectTarget;
+    [SerializeField, ShowIf("ShowSelf")] private SpawnInteraction _spawnInteractionSelf;
+    [SerializeField, ShowIf("ShowOther")] private SpawnInteraction _spawnInteractionOther;
+    private void Reset()
+    {
+        switch (_effectTarget)
+        {
+            case EffectTarget.Self:
+                _spawnInteractionOther = null;
+                break;
+            case EffectTarget.Other:
+                _spawnInteractionSelf = null;
+                break;
+        }
+    }
+    private bool ShowOther()
+    {
+        return _effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both;
+    }
+    private bool ShowSelf()
+    {
+        return _effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both;
+    }
+    
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
         if (_spawnInteractionSelf != null)
         {
-            if (_effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both)
+            if (ShowSelf())
                 await _spawnInteractionSelf.Interact(entity);
         }
 
@@ -22,7 +43,7 @@ public class SpawnInteractionWithOther : IInteractionWithOther
             return;
         }
 
-        if (_effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both)
+        if (ShowOther())
             await _spawnInteractionOther.Interact(otherEntity);
     }
 }

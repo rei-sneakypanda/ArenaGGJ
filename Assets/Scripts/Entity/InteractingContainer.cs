@@ -88,11 +88,15 @@ public class InteractingContainer : MonoBehaviour
         
         foreach (var entity in allEntities)
         {
-            if (entity == null ||
-                _interactingEntities.Contains(entity) ||
-                entity.gameObject == null || 
+            
+            if(entity ==null || entity.gameObject == null)
+                continue;
+
+            var distance = Vector3.Distance(entity.transform.position, transformPosition);
+            
+            if (_interactingEntities.Contains(entity) ||
                 !entity.InteractingObjects.IsInteractiveable ||
-                Vector3.Distance(entity.transform.position, transformPosition) <= _interactionRadius)
+                distance >= _interactionRadius)
             {
                 continue;
             }
