@@ -104,6 +104,11 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3803137578658648635, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 1529462554699126713}
     - target: {fileID: 4223850118041544789, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: serializationData.Prefab

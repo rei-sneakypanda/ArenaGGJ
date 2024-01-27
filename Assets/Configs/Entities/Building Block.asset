@@ -10,44 +10,53 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999007d016934530b8d0b4a11749d025, type: 3}
-  m_Name: Builder
+  m_Name: Building Block
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: ef337c1993214734fb77e535c50a2d7c, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _spawnInteractionSelf
-      Entry: 6
-      Data: 
-    - Name: _intervalInteractionSelf
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[TimeLoopInteractionTemplate, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _intervalInteractionSelf
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[TimeLoopInteractionTemplate, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 1|TimeLoopInteractionTemplate, Assembly-CSharp
+      Data: 2|TimeLoopInteractionTemplate, Assembly-CSharp
     - Name: StatIntervalType
       Entry: 3
       Data: 9
     - Name: _interactionOnSelves
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|ApplyStatEffectInteraction, Assembly-CSharp
+      Data: 4|ApplyStatEffectInteraction, Assembly-CSharp
     - Name: _statType
       Entry: 3
       Data: 2
@@ -77,20 +86,20 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|TimeLoopInteractionTemplate, Assembly-CSharp
+      Data: 5|TimeLoopInteractionTemplate, Assembly-CSharp
     - Name: StatIntervalType
       Entry: 3
       Data: 10
     - Name: _interactionOnSelves
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+      Data: 6|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|AddScoreInteraction, Assembly-CSharp
+      Data: 7|AddScoreInteraction, Assembly-CSharp
     - Name: _useExistingStatAsValue
       Entry: 5
       Data: true
@@ -116,61 +125,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 7|TimeLoopInteractionTemplate, Assembly-CSharp
-    - Name: StatIntervalType
-      Entry: 3
-      Data: 6
-    - Name: _interactionOnSelves
-      Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 9|PlayAnimationOnSelf, Assembly-CSharp
-    - Name: _animationType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|WaitDelayBetweenInteractions, Assembly-CSharp
-    - Name: _duration
-      Entry: 4
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 11|SpawnInteraction, Assembly-CSharp
-    - Name: _spawnAmount
-      Entry: 3
-      Data: 1
-    - Name: _probablity
-      Entry: 4
-      Data: 1
-    - Name: _entityToSpawn
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -181,7 +135,7 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 12|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 8|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -194,23 +148,21 @@ MonoBehaviour:
       Data: 
   Tags:
   - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
-  - {fileID: 11400000, guid: 56078cf0b42c3e74d83a4d76ffc8ba4c, type: 2}
-  - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
-  Image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  Name: Builder
+  Image: {fileID: 21300000, guid: 9873cc868bdc1db418ed20ca3febc7d6, type: 3}
+  Name: Building Block
   Description: 
-  _spawnAmount: 2
-  Prefab: {fileID: 2358648096638413424, guid: 55a5d2e3db54156468b7bfed395e6878, type: 3}
+  _spawnAmount: 1
+  Prefab: {fileID: 2358648096638413424, guid: e558cd7a463a0584e9087f714895efb5, type: 3}
   TimeTillCanInteract: 2
   Stats:
   - StatType: 0
-    StartingValue: 2
+    StartingValue: 0
   - StatType: 2
     StartingValue: 50
   - StatType: 6
-    StartingValue: 2
+    StartingValue: 0
   - StatType: 7
-    StartingValue: 1
+    StartingValue: 5
   - StatType: 10
     StartingValue: 1
   - StatType: 8
