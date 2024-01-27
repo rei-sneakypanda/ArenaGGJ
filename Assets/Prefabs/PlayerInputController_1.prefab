@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press "W" to <color=#61d139>Deploy
+  m_text: Press "E" to <color=#61d139>Deploy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fba05e4d0cb949c4c9d83b23ae6fa252, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d42adeda20564664eaf2955961628dd2, type: 2}
