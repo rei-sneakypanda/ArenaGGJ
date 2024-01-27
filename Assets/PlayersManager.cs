@@ -1,5 +1,11 @@
 using UnityEngine;
 
+public enum TeamType
+{
+    TeamRed = 1,
+    TeamBlue = 2
+}
+
 public class PlayersManager : MonoBehaviour
 {
     public static PlayersManager Instance { get; private set; }
@@ -22,12 +28,12 @@ public class PlayersManager : MonoBehaviour
 
     private void Start()
     {
-        _playerInputController1.Init(PlayerOne = new Player(1));
-        _playerInputController2.Init(PlayerTwo = new Player(2));
+        _playerInputController1.Init(PlayerOne = new Player(TeamType.TeamRed));
+        _playerInputController2.Init(PlayerTwo = new Player(TeamType.TeamBlue));
     }
 
-    public void AddScore(int teamID, int score)
+    public void AddScore(TeamType teamID, int score)
     {
-        (teamID == 1 ? PlayerOne : PlayerTwo).AddScore(score);
+        (teamID == TeamType.TeamRed ? PlayerOne : PlayerTwo).AddScore(score);
     }
 }

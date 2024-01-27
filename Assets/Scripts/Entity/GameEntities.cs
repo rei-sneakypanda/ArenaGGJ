@@ -30,12 +30,12 @@ public class GameEntities : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Spawner.Instance.Spawn( _entitySO1,1, Vector3.zero, Quaternion.identity).Forget();
+            Spawner.Instance.Spawn( _entitySO1,TeamType.TeamRed, Vector3.zero, Quaternion.identity).Forget();
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Spawner.Instance.Spawn( _entitySO2,2, Vector3.zero, Quaternion.identity).Forget();
+            Spawner.Instance.Spawn( _entitySO2,TeamType.TeamBlue, Vector3.zero, Quaternion.identity).Forget();
         }
     }
     

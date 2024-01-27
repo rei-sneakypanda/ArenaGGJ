@@ -5,14 +5,14 @@ using UnityEngine;
 public class Player
 {
     private ReactiveProperty<int> _playerScore = new(0);
-    private int _teamID;
+    private TeamType _teamID;
     private ReactiveProperty<EntitySO> _currentEntity = new();
     public IReadOnlyReactiveProperty<EntitySO> CurrentEntity => _currentEntity;
     public IReadOnlyReactiveProperty<int> PlayerScore => _playerScore;
     
-    public int TeamID => _teamID;
+    public TeamType TeamID => _teamID;
     
-    public Player(int id)
+    public Player(TeamType id)
     {
         _teamID = id;
         SetRandomEntity();

@@ -5,12 +5,13 @@ using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameEntity : SerializedMonoBehaviour
 {
-    private int _teamId;
+    private TeamType _teamId;
 
-    public int TeamId
+    public TeamType TeamId
     {
         get => _teamId;
         set
@@ -31,8 +32,8 @@ public class GameEntity : SerializedMonoBehaviour
     [SerializeField] private DestroyHandler _destroyHandler;
     [SerializeField] private Transform _spawnLocation;
     [SerializeField] private Transform _forwardTransform;
-    [SerializeField] private Material _teamOneMat;
-    [SerializeField] private Material _teamTwoMat;
+    [FormerlySerializedAs("_teamOneMat"),SerializeField] private Material _teamRedMat;
+    [FormerlySerializedAs("_teamTwoMat"),SerializeField] private Material _teamBlueMat;
 
     public SkinnedMeshRenderer[] SkinnedMeshRenderers;
 
@@ -89,7 +90,7 @@ public class GameEntity : SerializedMonoBehaviour
             return;
         }
 
-        var mat = TeamId == 1 ? _teamOneMat : _teamTwoMat;
+        var mat = TeamId == TeamType.TeamRed ? _teamRedMat : _teamBlueMat;
 
         foreach (var sMR in SkinnedMeshRenderers)
         {
@@ -108,7 +109,7 @@ public class GameEntity : SerializedMonoBehaviour
         _entitySO = entitySO;
     }
     
-    public async UniTask Init(int teamID, Vector3 position, Quaternion rotation, EntitySO entitySO)
+    public async UniTask Init(TeamType teamID, Vector3 position, Quaternion rotation, EntitySO entitySO)
     {
         TeamId = teamID;
         SetEntitySO(entitySO);

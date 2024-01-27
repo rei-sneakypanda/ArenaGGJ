@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
@@ -20,15 +17,15 @@ public class PlayerInputController : MonoBehaviour
     {
         _player = player;
 
-        if (_player.TeamID == 1)
+        if (_player.TeamID == TeamType.TeamBlue)
         {
-            InputController.OnPlayerOneReroll += OnRerollRequested;
-            InputController.OnPlayerOneSpawn += OnSpawnRequested;
+            InputController.OnPlayerRedReroll += OnRerollRequested;
+            InputController.OnPlayerRedSpawn += OnSpawnRequested;
         }
         else
         {
-            InputController.OnPlayerTwoReroll += OnRerollRequested;
-            InputController.OnPlayerTwoSpawn += OnSpawnRequested;
+            InputController.OnPlayerBlueReroll += OnRerollRequested;
+            InputController.OnPlayerBlueSpawn += OnSpawnRequested;
         }
         
         _player.CurrentEntity.Subscribe(OnCurrentEntityChange);

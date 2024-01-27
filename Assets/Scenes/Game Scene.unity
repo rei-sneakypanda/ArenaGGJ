@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 580718382}
   m_Layer: 0
-  m_Name: Team Two
+  m_Name: Team Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986632969}
   m_Layer: 0
-  m_Name: Team One
+  m_Name: Team Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -861,12 +861,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _playerInputController1
       value: 
-      objectReference: {fileID: 828890981}
+      objectReference: {fileID: 1520935906}
     - target: {fileID: 5400479511046216888, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _playerInputController2
       value: 
-      objectReference: {fileID: 1520935906}
+      objectReference: {fileID: 828890981}
     - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _gameEntities
@@ -879,9 +879,29 @@ PrefabInstance:
       objectReference: {fileID: 986632969}
     - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
+      propertyPath: _teamRedParent
+      value: 
+      objectReference: {fileID: 986632969}
+    - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
       propertyPath: _teamTwoParent
       value: 
       objectReference: {fileID: 580718382}
+    - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _teamBlueParent
+      value: 
+      objectReference: {fileID: 580718382}
+    - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _redPlayerCannonTarget
+      value: 
+      objectReference: {fileID: 7072997185698827101}
+    - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _bluePlayerCannonTarget
+      value: 
+      objectReference: {fileID: 7072997185698827102}
     - target: {fileID: 7224713759826892175, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _firstPlayerCannonTarget

@@ -122,6 +122,9 @@ MonoBehaviour:
     - Name: _statTypeValue
       Entry: 3
       Data: 7
+    - Name: _isIntervalScoreText
+      Entry: 5
+      Data: false
     - Name: _probablity
       Entry: 4
       Data: 1
@@ -193,6 +196,9 @@ MonoBehaviour:
     - Name: _statTypeValue
       Entry: 3
       Data: 0
+    - Name: _isIntervalScoreText
+      Entry: 5
+      Data: false
     - Name: _probablity
       Entry: 4
       Data: 1
@@ -279,7 +285,7 @@ MonoBehaviour:
   Description: 
   _spawnAmount: 1
   Prefab: {fileID: 2358648096638413424, guid: 866de4aa9c8071f4b8caa04f46b1f66b, type: 3}
-  TimeTillCanInteract: 2
+  TimeTillCanInteract: 0.3
   Stats:
   - StatType: 0
     StartingValue: 0
