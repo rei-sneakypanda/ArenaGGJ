@@ -100,10 +100,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 7959981960591920664, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8855709599156361827, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: _interactionRadius
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -229,11 +234,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7601226680800833775, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: -6877481245417288963, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: -6034480803058315714, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: -4856746350265117782, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: -4090093673525734353, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: -1352133966584931148, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: -884104258197911889, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: 200094257905237674, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d089c712db855c4c901f1fa9127c187,
         type: 3}
       propertyPath: m_Name
       value: Spike Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 1541998606474349963, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: 1864702327275310442, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: 1971907240972008233, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: 4221842993903392474, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: 4397287199591522876, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
+    - target: {fileID: 5430658036889254419, guid: 6d089c712db855c4c901f1fa9127c187,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18eac1a134ce82243aa6dbe2abd25fbb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

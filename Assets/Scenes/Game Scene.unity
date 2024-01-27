@@ -750,7 +750,7 @@ PrefabInstance:
     - target: {fileID: 1099288488205906818, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _allPossibleEntities.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1099288488205906818, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
@@ -792,13 +792,13 @@ PrefabInstance:
         type: 3}
       propertyPath: _allPossibleEntities.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: cb83beec4f3177c48b4d4986512c8875,
+      objectReference: {fileID: 11400000, guid: 9a8c7882de8deba48b68a82899e39c37,
         type: 2}
     - target: {fileID: 1099288488205906818, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _allPossibleEntities.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 9a8c7882de8deba48b68a82899e39c37,
+      objectReference: {fileID: 11400000, guid: ffb8f0beee280964a850585eab44a9b9,
         type: 2}
     - target: {fileID: 1099288488205906818, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
@@ -839,12 +839,12 @@ PrefabInstance:
     - target: {fileID: 3541005097751263848, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _timeTillGameEnd
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3541005097751263848, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _timeToDrop.Array.data[0]
-      value: 80
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3541005097751263848, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
