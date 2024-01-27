@@ -54,6 +54,16 @@ PrefabInstance:
       propertyPath: SkinnedMeshRenderers.Array.data[3]
       value: 
       objectReference: {fileID: 1108978699946303431}
+    - target: {fileID: 1838784006060231285, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _turningTime.x
+      value: 0.04743833
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838784006060231285, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _turningTime.y
+      value: 0.16129032
+      objectReference: {fileID: 0}
     - target: {fileID: 1907155736547246179, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: m_RootOrder
@@ -123,6 +133,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938647222419256391, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: groundCheckerThrashold
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 3803137578658648635, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}

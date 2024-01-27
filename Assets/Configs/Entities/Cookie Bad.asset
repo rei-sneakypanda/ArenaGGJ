@@ -164,10 +164,10 @@ MonoBehaviour:
       Data: 0
     - Name: _affectingTeam
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: BlockDuration
       Entry: 4
-      Data: 1
+      Data: 0.2
     - Name: MainInteraction
       Entry: 7
       Data: 11|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
