@@ -246,7 +246,7 @@ MonoBehaviour:
   TimeTillCanInteract: 0.2
   Stats:
   - StatType: 0
-    StartingValue: 0
+    StartingValue: -8
   - StatType: 2
     StartingValue: 60
   - StatType: 6
