@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999007d016934530b8d0b4a11749d025, type: 3}
-  m_Name: Cookie
+  m_Name: Cookie Bad
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -171,7 +171,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 12|AddScoreInteractionWithOther, Assembly-CSharp
@@ -189,7 +189,7 @@ MonoBehaviour:
       Data: false
     - Name: _addAmount
       Entry: 3
-      Data: 30
+      Data: -30
     - Name: _statTypeValue
       Entry: 3
       Data: 0
@@ -204,13 +204,46 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 14|DestroyInteractionWithOther, Assembly-CSharp
+      Data: 14|ApplyStatEffectInteractionWithOther, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 2
+    - Name: _effectIntercationSelf
+      Entry: 6
+      Data: 
+    - Name: _effectIntercationOther
+      Entry: 7
+      Data: 15|ApplyStatEffectInteraction, Assembly-CSharp
+    - Name: _statType
+      Entry: 3
+      Data: 2
+    - Name: _useExistingValueAsValue
+      Entry: 5
+      Data: false
+    - Name: _statTypeValue
+      Entry: 3
+      Data: 0
+    - Name: _value
+      Entry: 4
+      Data: -30
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|DestroyInteractionWithOther, Assembly-CSharp
     - Name: _effectTarget
       Entry: 3
       Data: 1
     - Name: _destroyInteractionSelf
       Entry: 7
-      Data: 15|DestroyInteractionSelf, Assembly-CSharp
+      Data: 17|DestroyInteractionSelf, Assembly-CSharp
     - Name: _probablity
       Entry: 4
       Data: 1
