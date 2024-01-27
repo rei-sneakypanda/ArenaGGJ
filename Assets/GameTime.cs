@@ -5,7 +5,6 @@ using System.Text;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using TMPro;
-using UniRx;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,7 +15,7 @@ public class GameTime : MonoBehaviour
     public static GameTime Instance { get; private set; }
     [SerializeField] private float _explodingForce=30f;
     [SerializeField] public List<float> _timeToDrop;
-    [SerializeField] public List<Rigidbody> _groundObjects;
+    [SerializeField] public List<Animator> _groundObjects;
     [SerializeField] private float _timeTillGameEnd;
     [SerializeField] private GameHandler _gameHandler;
     [ShowInInspector] [Sirenix.OdinInspector.ReadOnly]
@@ -56,10 +55,7 @@ public class GameTime : MonoBehaviour
                     var groundObjectIndex = Random.Range(0, _groundObjects.Count - 1);
                     var ground = _groundObjects.ElementAt(groundObjectIndex);
                     _groundObjects.RemoveAt(groundObjectIndex);
-
-                    ground.useGravity = true;
-                    ground.isKinematic = false;
-                    ground.AddForce((ground.position - Vector3.zero) * _explodingForce, ForceMode.Impulse);
+                    ground.enabled = true;
                     DestroyFallingObject(ground)
                         .Forget();
                 }
@@ -73,16 +69,16 @@ public class GameTime : MonoBehaviour
         GameEnded?.Invoke();
     }
 
-    private async UniTask DestroyFallingObject(Rigidbody rigidbody)
+    private async UniTask DestroyFallingObject(Animator animator)
     {
-        while (rigidbody != null
-               && rigidbody.gameObject != null)
+        while (animator != null
+               && animator.gameObject != null)
         {
-            var distance = Vector3.Distance(rigidbody.position, Vector3.zero);
+            var distance = Vector3.Distance(animator.transform.position, Vector3.zero);
 
             if (distance > 50f)
             {
-                Destroy(rigidbody.gameObject);
+                Destroy(animator.gameObject);
                 break;
             }
 
