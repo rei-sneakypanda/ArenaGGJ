@@ -4856,6 +4856,16 @@ PrefabInstance:
       propertyPath: SkinnedMeshRenderers.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1838784006060231285, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _turningTime.x
+      value: 0.04743833
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838784006060231285, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _turningTime.y
+      value: 0.10436432
+      objectReference: {fileID: 0}
     - target: {fileID: 1907155736547246179, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: m_RootOrder
@@ -4926,6 +4936,11 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1938647222419256391, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: groundCheckerThrashold
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4223850118041544789, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -4940,7 +4955,7 @@ PrefabInstance:
     - target: {fileID: 8855709599156361827, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: _interactionRadius
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

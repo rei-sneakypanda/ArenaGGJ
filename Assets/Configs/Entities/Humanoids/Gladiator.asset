@@ -100,6 +100,9 @@ MonoBehaviour:
     - Name: _statTypeValue
       Entry: 3
       Data: 7
+    - Name: _isIntervalScoreText
+      Entry: 5
+      Data: false
     - Name: _probablity
       Entry: 4
       Data: 1
@@ -173,7 +176,7 @@ MonoBehaviour:
       Data: 0
     - Name: _value
       Entry: 4
-      Data: -50
+      Data: -500
     - Name: _probablity
       Entry: 4
       Data: 1

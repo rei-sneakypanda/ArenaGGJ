@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298a7666750243f4a7f96cd5d2cfa49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerOneRerollKey: 119
-  _playerOneSpawnKey: 101
-  _playerTwoRerollKey: 111
-  _playerTwoSpawnKey: 112
+  _playerRedRerollKey: 119
+  _playerRedSpawnKey: 101
+  _playerBlueRerollKey: 111
+  _playerBlueSpawnKey: 112
 --- !u!114 &5400479511046216888
 MonoBehaviour:
   m_ObjectHideFlags: 0
