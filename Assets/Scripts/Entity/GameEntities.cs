@@ -9,7 +9,7 @@ public class GameEntities : MonoBehaviour
 {
     [SerializeField] private float _maximumDistanceFromCenter;
     [SerializeField] private List<EntitySO> _allPossibleEntities;
-    
+    [SerializeField] private GameHandler _gameHandler;
     public IReadOnlyList<EntitySO> AllPossibleEntities => _allPossibleEntities;
     
     public static GameEntities Instance { get; private set; }
@@ -28,6 +28,11 @@ public class GameEntities : MonoBehaviour
     
     public void Update()
     {
+        if(_gameHandler.CurrentGameState != GameStateType.Game)
+        {
+            return;
+        }
+        
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Spawner.Instance.Spawn( _entitySO1,TeamType.TeamRed, Vector3.zero, Quaternion.identity).Forget();
