@@ -19,7 +19,11 @@ public class GameTime : MonoBehaviour
     [SerializeField] private GameHandler _gameHandler;
     [ShowInInspector] [Sirenix.OdinInspector.ReadOnly]
     private float _remainingTime = new();
-    
+
+    [SerializeField]
+    private AnimationCurve _animationSpeedCurve;
+
+    [SerializeField] private Animator[] _spawnerAnimator; 
     private void Awake()
     {
         Instance = this;
@@ -44,6 +48,12 @@ public class GameTime : MonoBehaviour
         while (_remainingTime > 0)
         {
             _remainingTime -= Time.deltaTime;
+            
+            var speed = _animationSpeedCurve.Evaluate(1 - (_remainingTime / _timeTillGameEnd));
+            foreach (var animator in _spawnerAnimator)
+            {
+                animator.speed = speed;
+            }
 
             if (_timeToDrop.Count > 0)
             {
