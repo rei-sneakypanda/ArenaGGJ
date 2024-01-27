@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5400479511046216888}
   - component: {fileID: 3541005097751263848}
   - component: {fileID: 7099068613046508378}
+  - component: {fileID: 4000351593117178043}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -149,3 +150,21 @@ MonoBehaviour:
   _poolStaterPacks:
   - EntityTagSO: {fileID: 11400000, guid: bb468b50299e3a4469b224feaba4a406, type: 2}
     Amount: 5
+--- !u!114 &4000351593117178043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061876917592494012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7f35a24962438c9dbf4c6360de2568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intervalInteractionPrefab: {fileID: 2353787379598139832, guid: efd2c3f72fcf52741a9794fd00993057,
+    type: 3}
+  _interactionPrefab: {fileID: 7323374822823844061, guid: 86c54df080ef4a2468d3fb2f4ff5584f,
+    type: 3}
+  _delayTillIntervalObjectReturn: 1
+  _delayTillInteractionReturn: 1

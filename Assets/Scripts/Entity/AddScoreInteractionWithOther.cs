@@ -59,7 +59,8 @@ public class AddScoreInteraction : IInteractionOnSelf
     
     [SerializeField, HideIf( "_useExistingStatAsValue")] private int _addAmount;
     [SerializeField, ShowIf("_useExistingStatAsValue")] private StatType _statTypeValue;
-    
+
+    [SerializeField] private bool _isIntervalScoreText;
     
     [SerializeField, Range(0, 1f)] private float _probablity = 1f;
         
@@ -71,8 +72,19 @@ public class AddScoreInteraction : IInteractionOnSelf
         var teamId = entity.TeamId;
         var amount = _useExistingStatAsValue ? (int)entity.StatHandler[_statTypeValue].StatValue.Value : _addAmount;
         
-            PlayersManager.Instance.AddScore(teamId, amount);
-        // Add Score;
+        PlayersManager.Instance.AddScore(teamId, amount);
+        
+        if (_isIntervalScoreText)
+        {
+            TextManager.Instance.PlayIntervalScoreInteraction(entity, amount, entity.transform.position)
+                .Forget();
+        }
+        else
+        {
+            TextManager.Instance.PlayScoreInteraction(entity, amount, entity.transform.position)
+                .Forget();
+        }
+
         return UniTask.CompletedTask;
     }
 }
