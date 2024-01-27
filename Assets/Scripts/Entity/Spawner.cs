@@ -25,8 +25,6 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private GameEntities _gameEntities;
 
-    [SerializeField] private AudioSource _redSpawnAudioSource;
-    [SerializeField] private AudioSource _blueSpawnAudioSource;
     
     
     private void Awake()
@@ -70,15 +68,6 @@ public class Spawner : MonoBehaviour
         instance.transform.SetParent(parent);
         instance.gameObject.SetActive(true);
         _gameEntities.AddEntity(instance);
-
-        if (teamID == TeamType.TeamRed)
-        {
-            _redSpawnAudioSource.Play();
-        }
-        else
-        {
-            _blueSpawnAudioSource.Play();
-        }
 
         instance.Init(teamID, position, rotation, entitySO)
             .Forget();

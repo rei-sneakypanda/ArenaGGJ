@@ -13,6 +13,9 @@ public class PlayerInputController : MonoBehaviour
     private float _currentRerollTime;
     private Player _player;
     
+    [SerializeField] private AudioSource _redSpawnAudioSource;
+    [SerializeField] private AudioSource _blueSpawnAudioSource;
+    
     public void Init(Player player)
     {
         _player = player;
@@ -60,6 +63,15 @@ public class PlayerInputController : MonoBehaviour
         if (_currentRerollTime < _allowedRerollTime)
         {
             return;
+        }
+        
+        if ( _player.TeamID == TeamType.TeamRed)
+        {
+            _redSpawnAudioSource.Play();
+        }
+        else
+        {
+            _blueSpawnAudioSource.Play();
         }
         
         Spawner.Instance.Spawn(_player.CurrentEntity.Value, _player.TeamID).Forget();

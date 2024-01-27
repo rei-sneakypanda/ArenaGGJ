@@ -60,6 +60,7 @@ public class GameHandler : MonoBehaviour
     
     public async UniTask ShowGameOverTask()
     {
+        
         _entitiesUI.SetBool(StartGame, false);
         var winnerScreen = PlayersManager.Instance.GetWinner() == TeamType.TeamRed ? _redWinScreen : _blueWinScreen;
 
