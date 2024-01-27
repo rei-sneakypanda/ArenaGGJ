@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999007d016934530b8d0b4a11749d025, type: 3}
-  m_Name: Cannon
+  m_Name: Piano
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 78debec9c5867e341a9968f523cae167, type: 2}
+    - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -59,7 +59,7 @@ MonoBehaviour:
       Data: 8
     - Name: _value
       Entry: 4
-      Data: 1
+      Data: 0
     - Name: _probablity
       Entry: 4
       Data: 1
@@ -100,9 +100,6 @@ MonoBehaviour:
     - Name: _statTypeValue
       Entry: 3
       Data: 7
-    - Name: _isIntervalScoreText
-      Entry: 5
-      Data: false
     - Name: _probablity
       Entry: 4
       Data: 1
@@ -123,35 +120,20 @@ MonoBehaviour:
       Data: 7|TimeLoopInteractionTemplate, Assembly-CSharp
     - Name: StatIntervalType
       Entry: 3
-      Data: 6
+      Data: 11
     - Name: _interactionOnSelves
       Entry: 7
       Data: 8|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 9|PlayAnimationOnSelf, Assembly-CSharp
-    - Name: _animationType
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|SpawnInteraction, Assembly-CSharp
-    - Name: _spawnAmount
-      Entry: 3
       Data: 1
+    - Name: 
+      Entry: 7
+      Data: 9|DestroyInteractionSelf, Assembly-CSharp
     - Name: _probablity
       Entry: 4
       Data: 1
-    - Name: _entityToSpawn
-      Entry: 10
-      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -175,11 +157,72 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 10|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|InteractionPackage, Assembly-CSharp
+    - Name: Tag
+      Entry: 10
       Data: 0
+    - Name: _affectingTeam
+      Entry: 3
+      Data: 0
+    - Name: BlockDuration
+      Entry: 4
+      Data: 0
+    - Name: MainInteraction
+      Entry: 7
+      Data: 12|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 13|ApplyStatEffectInteractionWithOther, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 2
+    - Name: _effectIntercationSelf
+      Entry: 6
+      Data: 
+    - Name: _effectIntercationOther
+      Entry: 7
+      Data: 14|ApplyStatEffectInteraction, Assembly-CSharp
+    - Name: _statType
+      Entry: 3
+      Data: 5
+    - Name: _useExistingValueAsValue
+      Entry: 5
+      Data: false
+    - Name: _statTypeValue
+      Entry: 3
+      Data: 0
+    - Name: _value
+      Entry: 4
+      Data: 0
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -187,27 +230,28 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Tags:
-  - {fileID: 11400000, guid: 2cf1c6ab7159dc448b6ce4df7884d029, type: 2}
+  - {fileID: 11400000, guid: c16351aa6cb311944ab356e79f3f0008, type: 2}
   - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
-  - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
-  Image: {fileID: 21300000, guid: 4e643de38b5ceae4ab3e5eec336dbc40, type: 3}
-  Name: Test
+  Image: {fileID: 21300000, guid: f95c4991e6ab344f3a198a160aa12ab8, type: 3}
+  Name: Runner
   Description: 
   _spawnAmount: 1
-  Prefab: {fileID: 2358648096638413424, guid: 3d7900976dbb7c64a980093385e22b1d, type: 3}
-  TimeTillCanInteract: 2
+  Prefab: {fileID: 2358648096638413424, guid: b29d0c8c1be0c5741a311672b19a1457, type: 3}
+  TimeTillCanInteract: 0.2
   Stats:
   - StatType: 0
     StartingValue: 0
   - StatType: 2
-    StartingValue: 100
+    StartingValue: 80
   - StatType: 6
+    StartingValue: 0
+  - StatType: 7
     StartingValue: 2
-  - StatType: 8
+  - StatType: 10
     StartingValue: 1
+  - StatType: 8
+    StartingValue: 5
   - StatType: 9
     StartingValue: 1
-  - StatType: 7
-    StartingValue: 1
-  - StatType: 10
+  - StatType: 11
     StartingValue: 1

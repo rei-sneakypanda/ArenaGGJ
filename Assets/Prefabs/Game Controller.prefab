@@ -162,9 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7f35a24962438c9dbf4c6360de2568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _intervalInteractionPrefab: {fileID: 2353787379598139832, guid: efd2c3f72fcf52741a9794fd00993057,
+  _intervalInteractionPrefab: {fileID: 7323374822823844061, guid: 86c54df080ef4a2468d3fb2f4ff5584f,
     type: 3}
-  _interactionPrefab: {fileID: 7323374822823844061, guid: 86c54df080ef4a2468d3fb2f4ff5584f,
+  _interactionPrefab: {fileID: 2353787379598139832, guid: efd2c3f72fcf52741a9794fd00993057,
     type: 3}
   _delayTillIntervalObjectReturn: 1
   _delayTillInteractionReturn: 1
