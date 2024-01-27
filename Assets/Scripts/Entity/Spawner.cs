@@ -50,8 +50,9 @@ public class Spawner : MonoBehaviour
             {
                 break;
             }
-            
-            Spawn(entitySO, teamID, position, rotation)
+
+            var transform = teamID == 1 ? _teamOneParent : _teamTwoParent;
+            Spawn(entitySO, transform, teamID, position, rotation)
                 .Forget();
             
             await UniTask.Delay(t);
@@ -64,7 +65,7 @@ public class Spawner : MonoBehaviour
             original: entitySO.Prefab,
             position: position,
             rotation,
-            parent: teamID == 1 ? _teamOneParent : _teamTwoParent);
+            parent: parent);
 
         _gameEntities.AddEntity(instance);
 
