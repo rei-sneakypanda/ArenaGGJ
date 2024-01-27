@@ -87,12 +87,12 @@ PrefabInstance:
     - target: {fileID: 1921741683032333462, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: m_Height
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1921741683032333462, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: m_Radius
-      value: 0.71
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1921741683032333462, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
@@ -101,8 +101,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938647222419256391, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
+      propertyPath: stepCheckerThrashold
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938647222419256391, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: slopeCheckerThrashold
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938647222419256391, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
       propertyPath: groundCheckerThrashold
-      value: 1.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4223850118041544789, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}

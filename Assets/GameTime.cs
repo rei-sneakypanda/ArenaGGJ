@@ -20,14 +20,19 @@ public class GameTime : MonoBehaviour
     [SerializeField] private float _timeTillGameEnd;
     [SerializeField] private GameHandler _gameHandler;
     [ShowInInspector] [Sirenix.OdinInspector.ReadOnly]
-    private ReactiveProperty<float> _remainingTime = new();
-    public IReadOnlyReactiveProperty<float> RemainingTime => _remainingTime;
+    private float _remainingTime = new();
     
     private void Awake()
     {
         Instance = this;
-        _remainingTime.Value = _timeTillGameEnd;
+
         _gameHandler.OnGameStarted += GameStartedHandler;
+    }
+
+    private void Start()
+    {
+        _remainingTime = _timeTillGameEnd;
+        _timerText.SetText(TimeSpan.FromSeconds((int)_remainingTime).GetTimeSpanString(useTwoDigit: true, useLetter: false));
     }
 
     private void GameStartedHandler()
@@ -38,13 +43,13 @@ public class GameTime : MonoBehaviour
 
     private async UniTask StartCountDown()
     {
-        while (_remainingTime.Value > 0)
+        while (_remainingTime > 0)
         {
-            _remainingTime.Value -= Time.deltaTime;
+            _remainingTime -= Time.deltaTime;
 
             if (_timeToDrop.Count > 0)
             {
-                if (_remainingTime.Value <= _timeToDrop.First())
+                if (_remainingTime <= _timeToDrop.First())
                 {
                     _timeToDrop.RemoveAt(0);
 
@@ -59,11 +64,12 @@ public class GameTime : MonoBehaviour
                         .Forget();
                 }
             }
-            _timerText.SetText(TimeSpan.FromSeconds((int)_remainingTime.Value).GetTimeSpanString(useTwoDigit: true, useLetter: false));
+            _timerText.SetText(TimeSpan.FromSeconds((int)_remainingTime).GetTimeSpanString(useTwoDigit: true, useLetter: false));
             await UniTask.DelayFrame(1, cancellationToken: destroyCancellationToken);
         }
 
-        _remainingTime.Value = 0;
+        _remainingTime = 0;
+        _timerText.SetText(TimeSpan.FromSeconds((int)_remainingTime).GetTimeSpanString(useTwoDigit: true, useLetter: false));
         GameEnded?.Invoke();
     }
 
