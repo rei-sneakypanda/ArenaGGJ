@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class InputController : MonoBehaviour
 {
@@ -9,30 +10,30 @@ public class InputController : MonoBehaviour
     public static event Action OnPlayerRedSpawn;
     public static event Action OnPlayerBlueSpawn;
 
-    [SerializeField] KeyCode _playerOneRerollKey = KeyCode.W;
-    [SerializeField] KeyCode _playerOneSpawnKey = KeyCode.E;
+    [FormerlySerializedAs("_playerOneRerollKey"),SerializeField] KeyCode _playerRedRerollKey = KeyCode.W;
+    [FormerlySerializedAs("_playerOneSpawnKey"),SerializeField] KeyCode _playerRedSpawnKey = KeyCode.E;
 
-    [SerializeField] KeyCode _playerTwoRerollKey = KeyCode.U;
-    [SerializeField] KeyCode _playerTwoSpawnKey = KeyCode.I;
+    [FormerlySerializedAs("_playerTwoRerollKey"),SerializeField] KeyCode _playerBlueRerollKey = KeyCode.U;
+    [FormerlySerializedAs("_playerTwoSpawnKey"),SerializeField] KeyCode _playerBlueSpawnKey = KeyCode.I;
 
     private void Update()
     {
-        if (Input.GetKeyDown(_playerOneRerollKey))
+        if (Input.GetKeyDown(_playerRedRerollKey))
         {
             OnPlayerRedReroll?.Invoke();
         }
 
-        if (Input.GetKeyDown(_playerOneSpawnKey))
+        if (Input.GetKeyDown(_playerRedSpawnKey))
         {
             OnPlayerRedSpawn?.Invoke();
         }
 
-        if (Input.GetKeyDown(_playerTwoRerollKey))
+        if (Input.GetKeyDown(_playerBlueRerollKey))
         {
             OnPlayerBlueReroll?.Invoke();
         }
 
-        if (Input.GetKeyDown(_playerTwoSpawnKey))
+        if (Input.GetKeyDown(_playerBlueSpawnKey))
         {
             OnPlayerBlueSpawn?.Invoke();
         }
