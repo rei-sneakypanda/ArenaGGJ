@@ -177,13 +177,13 @@ MonoBehaviour:
       Data: false
     - Name: _addAmount
       Entry: 3
-      Data: 500
+      Data: 50
     - Name: _statTypeValue
       Entry: 3
       Data: 0
     - Name: _isIntervalScoreText
       Entry: 5
-      Data: false
+      Data: true
     - Name: _probablity
       Entry: 4
       Data: 1
