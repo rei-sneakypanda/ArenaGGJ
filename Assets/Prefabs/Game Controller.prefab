@@ -71,11 +71,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b4699e714f47bcb5c2429f39112dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _teamOneParent: {fileID: 0}
-  _teamTwoParent: {fileID: 0}
+  _teamRedParent: {fileID: 0}
+  _teamBlueParent: {fileID: 0}
   _spawnInterval: 0.3
-  _firstPlayerCannonTarget: {fileID: 0}
-  _secondPlayerCannonTarget: {fileID: 0}
+  _redPlayerCannonTarget: {fileID: 0}
+  _bluePlayerCannonTarget: {fileID: 0}
   _gameEntities: {fileID: 0}
 --- !u!114 &1849627395645837606
 MonoBehaviour:
@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298a7666750243f4a7f96cd5d2cfa49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerOneRerollKey: 111
-  _playerOneSpawnKey: 111
-  _playerTwoRerollKey: 119
-  _playerTwoSpawnKey: 119
+  _playerOneRerollKey: 119
+  _playerOneSpawnKey: 101
+  _playerTwoRerollKey: 111
+  _playerTwoSpawnKey: 112
 --- !u!114 &5400479511046216888
 MonoBehaviour:
   m_ObjectHideFlags: 0
