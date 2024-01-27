@@ -110,8 +110,8 @@ public class ChangeTeamOnSelf : IInteractionOnSelf
         return UniTask.CompletedTask;
     }
 
-    private int GetOppositeTeam(int team)
+    private TeamType GetOppositeTeam(TeamType team)
     {
-        return team == 1 ? 1 : 2;
+        return team == TeamType.TeamBlue ? TeamType.TeamRed : TeamType.TeamBlue;
     }
 }
