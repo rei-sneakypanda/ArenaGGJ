@@ -25,6 +25,9 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private GameEntities _gameEntities;
 
+    [SerializeField] private AudioSource _redSpawnAudioSource;
+    [SerializeField] private AudioSource _blueSpawnAudioSource;
+    
     
     private void Awake()
     {
@@ -54,30 +57,33 @@ public class Spawner : MonoBehaviour
             }
 
             var transform = teamID == TeamType.TeamRed ? _teamRedParent : _teamBlueParent;
-            Spawn(entitySO, transform, teamID, position, rotation)
-                .Forget();
+            Spawn(entitySO, transform, teamID, position, rotation);
             
             await UniTask.Delay(t);
         }
     }
 
-    private async UniTask Spawn(EntitySO entitySO, Transform parent, TeamType teamID, Vector3 position, Quaternion rotation)
+    private void Spawn(EntitySO entitySO, Transform parent, TeamType teamID, Vector3 position,
+        Quaternion rotation)
     {
-        // = Instantiate(
-        //     original: entitySO.Prefab,
-        //     position: position,
-        //     rotation,
-        //     parent: parent);
-        
         var instance = PoolManager.Instance.Pull(entitySO, position: position, rotation: rotation);
         instance.transform.SetParent(parent);
         instance.gameObject.SetActive(true);
         _gameEntities.AddEntity(instance);
 
+        if (teamID == TeamType.TeamRed)
+        {
+            _redSpawnAudioSource.Play();
+        }
+        else
+        {
+            _blueSpawnAudioSource.Play();
+        }
+
         instance.Init(teamID, position, rotation, entitySO)
             .Forget();
     }
-    
+
     private void Reset()
     {
         _gameEntities = FindObjectOfType<GameEntities>();
