@@ -30,7 +30,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|TimeLoopInteractionTemplate, Assembly-CSharp
@@ -115,6 +115,37 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 7|TimeLoopInteractionTemplate, Assembly-CSharp
+    - Name: StatIntervalType
+      Entry: 3
+      Data: 11
+    - Name: _interactionOnSelves
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 9|DestroyInteractionSelf, Assembly-CSharp
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -125,14 +156,14 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 10|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 8|InteractionPackage, Assembly-CSharp
+      Data: 11|InteractionPackage, Assembly-CSharp
     - Name: Tag
       Entry: 6
       Data: 
@@ -161,20 +192,22 @@ MonoBehaviour:
   Name: Runner
   Description: 
   _spawnAmount: 1
-  Prefab: {fileID: 2358648096638413424, guid: 0db368bf482727d488a1300fc366fcb1, type: 3}
-  TimeTillCanInteract: 2
+  Prefab: {fileID: 2358648096638413424, guid: 9e0eacc457f489c4ea9a02e655d58351, type: 3}
+  TimeTillCanInteract: 0.2
   Stats:
   - StatType: 0
-    StartingValue: 6
+    StartingValue: 0
   - StatType: 2
     StartingValue: 60
   - StatType: 6
     StartingValue: 0
   - StatType: 7
-    StartingValue: 2
+    StartingValue: 0
   - StatType: 10
     StartingValue: 1
   - StatType: 8
-    StartingValue: 1
+    StartingValue: 0
   - StatType: 9
+    StartingValue: 1
+  - StatType: 11
     StartingValue: 1
