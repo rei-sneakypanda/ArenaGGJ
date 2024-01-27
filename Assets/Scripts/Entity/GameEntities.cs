@@ -23,6 +23,7 @@ public class GameEntities : MonoBehaviour
     }
     
     #if UNITY_EDITOR
+    
     [SerializeField] private EntitySO _entitySO1;
     [SerializeField] private EntitySO _entitySO2;
     
