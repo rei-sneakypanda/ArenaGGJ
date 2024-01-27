@@ -47,18 +47,21 @@ public class GameTime : MonoBehaviour
         {
             _remainingTime.Value -= Time.deltaTime;
 
-            if (_timeToDrop.Any())
+            if (_timeToDrop.Count > 1)
             {
                 if (_remainingTime.Value <= _timeToDrop.First())
                 {
                     _timeToDrop.RemoveAt(0);
 
-                    var ground = _groundObjects.First();
-                    _groundObjects.RemoveAt(Random.Range(0, _groundObjects.Count - 1));
+                    var groundObjectIndex = Random.Range(0, _groundObjects.Count - 1);
+                    var ground = _groundObjects.ElementAt(groundObjectIndex);
+                    _groundObjects.RemoveAt(groundObjectIndex);
 
                     ground.useGravity = true;
                     ground.isKinematic = false;
                     ground.AddForce((ground.position - Vector3.zero) * _explodingForce, ForceMode.Impulse);
+                    DestroyFallingObject(ground)
+                        .Forget();
                 }
             }
             _timerText.SetText(TimeSpan.FromSeconds((int)_remainingTime.Value).GetTimeSpanString(useTwoDigit: true));
@@ -68,7 +71,24 @@ public class GameTime : MonoBehaviour
         _remainingTime.Value = 0;
         GameEnded?.Invoke();
     }
-    
+
+    private async UniTask DestroyFallingObject(Rigidbody rigidbody)
+    {
+        while (rigidbody != null
+               && rigidbody.gameObject != null)
+        {
+            var distance = Vector3.Distance(rigidbody.position, Vector3.zero);
+
+            if (distance > 50f)
+            {
+                Destroy(rigidbody.gameObject);
+                break;
+            }
+
+            await UniTask.Yield();
+        }
+    }
+
     private void OnDestroy()
     {
         Instance = null;
