@@ -36,14 +36,14 @@ public class DestroyInteractionWithOther : IInteractionWithOther
         if (_destroyInteractionSelf != null)
         {
             
-        if (_effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both)
+        if (ShowSelf())
             await _destroyInteractionSelf.Interact(entity);
         }
 
         if (_destroyInteractionOther != null)
         {
             
-        if (_effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both)
+        if (ShowOther())
             await _destroyInteractionOther.Interact(otherEntity);
         }
     }

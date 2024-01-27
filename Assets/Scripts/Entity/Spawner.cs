@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using KinematicCharacterController;
+using Midbaryom.Pool;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -61,12 +62,15 @@ public class Spawner : MonoBehaviour
 
     private async UniTask Spawn(EntitySO entitySO, Transform parent, int teamID, Vector3 position, Quaternion rotation)
     {
-        var instance = Instantiate(
-            original: entitySO.Prefab,
-            position: position,
-            rotation,
-            parent: parent);
-
+        // = Instantiate(
+        //     original: entitySO.Prefab,
+        //     position: position,
+        //     rotation,
+        //     parent: parent);
+        
+        var instance = PoolManager.Instance.Pull(entitySO, position: position, rotation: rotation);
+        instance.transform.SetParent(parent);
+        instance.gameObject.SetActive(true);
         _gameEntities.AddEntity(instance);
 
         instance.Init(teamID, position, rotation, entitySO)

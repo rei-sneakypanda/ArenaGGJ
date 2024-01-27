@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7224713759826892175}
   - component: {fileID: 1849627395645837606}
   - component: {fileID: 5400479511046216888}
+  - component: {fileID: 3541005097751263848}
+  - component: {fileID: 7099068613046508378}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -70,13 +72,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _teamOneParent: {fileID: 0}
   _teamTwoParent: {fileID: 0}
-  _firstPlayerCannon: {fileID: 0}
-  _secondPlayerCannon: {fileID: 0}
+  _spawnInterval: 0.3
   _firstPlayerCannonTarget: {fileID: 0}
   _secondPlayerCannonTarget: {fileID: 0}
   _gameEntities: {fileID: 0}
-  _shootingObject: {fileID: 0}
-  _shootingForce: 100
 --- !u!114 &1849627395645837606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,3 +106,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInputController1: {fileID: 0}
   _playerInputController2: {fileID: 0}
+--- !u!114 &3541005097751263848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061876917592494012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d807f5037a4f9186ca66ddb2a87c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerText: {fileID: 0}
+  _explodingForce: 100
+  _timeToDrop:
+  - 40
+  - 30
+  - 25
+  - 20
+  - 15
+  _groundObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _timeTillGameEnd: 50
+  _timeTillGameStart: 5
+--- !u!114 &7099068613046508378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061876917592494012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659d1142a19d4f3c8d91ef9693350d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _poolStaterPacks:
+  - EntityTagSO: {fileID: 11400000, guid: bb468b50299e3a4469b224feaba4a406, type: 2}
+    Amount: 5

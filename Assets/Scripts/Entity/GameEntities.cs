@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using Midbaryom.Pool;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -65,7 +66,7 @@ public class GameEntities : MonoBehaviour
 
             if (Vector3.Distance(gameEntity.transform.position, centerPos) > _maximumDistanceFromCenter)
             {
-                Destroy(gameEntity.gameObject);
+               PoolManager.Instance.Return(gameEntity);
             }
         }
     }

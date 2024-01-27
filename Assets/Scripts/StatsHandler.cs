@@ -69,7 +69,7 @@ public class StatHandler : IStatHandler
         DamageOverTime,
         DamageInterval,
         ScoreInterval,
-        
+        LifeTimeInterval,
     }
     public interface IStat
     {

@@ -1,12 +1,12 @@
 using System;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UniRx;
 using UnityEngine;
 
-public class DestroyHandler : SerializedMonoBehaviour
+public class DestroyHandler : SerializedMonoBehaviour, IDisposable
 {
+    public event Action<GameEntity> OnDisposed; 
     [SerializeField] private GameEntity _gameEntity;
     private bool _flag;
 
@@ -21,6 +21,11 @@ public class DestroyHandler : SerializedMonoBehaviour
         _disposable = _gameEntity.StatHandler[StatType.HP].StatValue.Where(x => x <= 0)
             .Take(1)
             .Subscribe(_ => DestroySelf().Forget());
+    }
+
+    public void Dispose()
+    {
+        _disposable?.Dispose();
     }
 
     public async UniTask DestroySelf()
@@ -49,13 +54,21 @@ public class DestroyHandler : SerializedMonoBehaviour
             Console.WriteLine(e);
         }
 
-        _disposable?.Dispose();
-        Destroy(gameObject);
+        ReturnToPool();
     }
 
     private void Reset()
     {
         entityAnimator = GetComponent<EntityAnimator>();
         _gameEntity = GetComponent<GameEntity>();
+    }
+    public void ReturnToPool()
+    {
+        OnDisposed?.Invoke(_gameEntity);
+    }
+    
+    private void OnDestroy()
+    {
+        OnDisposed?.Invoke(_gameEntity);
     }
 }
