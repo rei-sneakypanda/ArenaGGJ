@@ -212,12 +212,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _teamRedMat
       value: 
-      objectReference: {fileID: 2100000, guid: a48fdea53bd48554b8767da077592615, type: 2}
+      objectReference: {fileID: 2100000, guid: c207b8e139f2ee246879f441dbeb3d19, type: 2}
     - target: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: _teamBlueMat
       value: 
-      objectReference: {fileID: 2100000, guid: c207b8e139f2ee246879f441dbeb3d19, type: 2}
+      objectReference: {fileID: 2100000, guid: a48fdea53bd48554b8767da077592615, type: 2}
     - target: {fileID: 42126372561479382, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: serializationData.Prefab

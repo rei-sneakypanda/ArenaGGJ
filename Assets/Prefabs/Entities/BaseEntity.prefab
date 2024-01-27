@@ -142,8 +142,8 @@ MonoBehaviour:
   _destroyHandler: {fileID: 4223850118041544789}
   _spawnLocation: {fileID: 1907155736547246179}
   _forwardTransform: {fileID: 1907155736547246179}
-  _teamOneMat: {fileID: 2100000, guid: 1237af68035db9c40a1eed59e4d7a4a9, type: 2}
-  _teamTwoMat: {fileID: 2100000, guid: dbb51fea64b36794aa6bc32417301223, type: 2}
+  _teamRedMat: {fileID: 2100000, guid: dbb51fea64b36794aa6bc32417301223, type: 2}
+  _teamBlueMat: {fileID: 2100000, guid: 1237af68035db9c40a1eed59e4d7a4a9, type: 2}
   SkinnedMeshRenderers: []
   InteractingObjects: {fileID: 8855709599156361827}
 --- !u!114 &1938647222419256391
