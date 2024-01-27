@@ -152,7 +152,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 10|ApplyStatEffectInteractionWithOther, Assembly-CSharp
@@ -182,6 +182,39 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|AddScoreInteractionWithOther, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 1
+    - Name: _addScoreInteractionSelf
+      Entry: 7
+      Data: 13|AddScoreInteraction, Assembly-CSharp
+    - Name: _useExistingStatAsValue
+      Entry: 5
+      Data: false
+    - Name: _addAmount
+      Entry: 3
+      Data: 50
+    - Name: _statTypeValue
+      Entry: 3
+      Data: 0
+    - Name: _isIntervalScoreText
+      Entry: 5
+      Data: true
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _addScoreInteractionOther
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8

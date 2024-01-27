@@ -198,7 +198,7 @@ MonoBehaviour:
       Data: 0
     - Name: _isIntervalScoreText
       Entry: 5
-      Data: false
+      Data: true
     - Name: _probablity
       Entry: 4
       Data: 1
