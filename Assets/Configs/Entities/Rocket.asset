@@ -30,7 +30,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|TimeLoopInteractionTemplate, Assembly-CSharp
@@ -79,7 +79,7 @@ MonoBehaviour:
       Data: 4|TimeLoopInteractionTemplate, Assembly-CSharp
     - Name: StatIntervalType
       Entry: 3
-      Data: 10
+      Data: 11
     - Name: _interactionOnSelves
       Entry: 7
       Data: 5|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
@@ -89,47 +89,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|AddScoreInteraction, Assembly-CSharp
-    - Name: _useExistingStatAsValue
-      Entry: 5
-      Data: true
-    - Name: _addAmount
-      Entry: 3
-      Data: 0
-    - Name: _statTypeValue
-      Entry: 3
-      Data: 7
-    - Name: _probablity
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|TimeLoopInteractionTemplate, Assembly-CSharp
-    - Name: StatIntervalType
-      Entry: 3
-      Data: 11
-    - Name: _interactionOnSelves
-      Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 9|DestroyInteractionSelf, Assembly-CSharp
+      Data: 6|DestroyInteractionSelf, Assembly-CSharp
     - Name: _probablity
       Entry: 4
       Data: 1
@@ -156,14 +116,14 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 11|InteractionPackage, Assembly-CSharp
+      Data: 8|InteractionPackage, Assembly-CSharp
     - Name: Tag
       Entry: 6
       Data: 
@@ -210,4 +170,4 @@ MonoBehaviour:
   - StatType: 9
     StartingValue: 1
   - StatType: 11
-    StartingValue: 1
+    StartingValue: 4
