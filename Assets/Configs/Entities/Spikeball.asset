@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999007d016934530b8d0b4a11749d025, type: 3}
-  m_Name: Rocket
+  m_Name: Spikeball
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,31 +23,53 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: _spawnInteractionSelf
-      Entry: 6
-      Data: 
-    - Name: _intervalInteractionSelf
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[TimeLoopInteractionTemplate, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|TimeLoopInteractionTemplate, Assembly-CSharp
-    - Name: StatIntervalType
-      Entry: 3
-      Data: 9
-    - Name: _interactionOnSelves
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+      Data: 0|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|ApplyStatEffectInteraction, Assembly-CSharp
+      Data: 1|PushObjectSelf, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 50
+    - Name: _transformDirectionType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _intervalInteractionSelf
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[TimeLoopInteractionTemplate, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 3|TimeLoopInteractionTemplate, Assembly-CSharp
+    - Name: StatIntervalType
+      Entry: 3
+      Data: 9
+    - Name: _interactionOnSelves
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|ApplyStatEffectInteraction, Assembly-CSharp
     - Name: _statType
       Entry: 3
       Data: 2
@@ -77,20 +99,20 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|TimeLoopInteractionTemplate, Assembly-CSharp
+      Data: 6|TimeLoopInteractionTemplate, Assembly-CSharp
     - Name: StatIntervalType
       Entry: 3
       Data: 11
     - Name: _interactionOnSelves
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|DestroyInteractionSelf, Assembly-CSharp
+      Data: 8|DestroyInteractionSelf, Assembly-CSharp
     - Name: _probablity
       Entry: 4
       Data: 1
@@ -117,14 +139,14 @@ MonoBehaviour:
       Data: 
     - Name: _interactionPackage
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+      Data: 9|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 8|InteractionPackage, Assembly-CSharp
+      Data: 10|InteractionPackage, Assembly-CSharp
     - Name: Tag
       Entry: 10
       Data: 0
@@ -133,17 +155,50 @@ MonoBehaviour:
       Data: 0
     - Name: BlockDuration
       Entry: 4
-      Data: 0.2
+      Data: 0
     - Name: MainInteraction
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
+      Data: 11|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 10|PushObjects, Assembly-CSharp
+      Data: 12|AddScoreInteractionWithOther, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 1
+    - Name: _addScoreInteractionSelf
+      Entry: 7
+      Data: 13|AddScoreInteraction, Assembly-CSharp
+    - Name: _useExistingStatAsValue
+      Entry: 5
+      Data: false
+    - Name: _addAmount
+      Entry: 3
+      Data: 500
+    - Name: _statTypeValue
+      Entry: 3
+      Data: 0
+    - Name: _isIntervalScoreText
+      Entry: 5
+      Data: false
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _addScoreInteractionOther
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|PushObjects, Assembly-CSharp
     - Name: _effectTarget
       Entry: 3
       Data: 2
@@ -152,10 +207,10 @@ MonoBehaviour:
       Data: 
     - Name: _pushObjectOther
       Entry: 7
-      Data: 11|PushObjectSelf, Assembly-CSharp
+      Data: 15|PushObjectSelf, Assembly-CSharp
     - Name: _force
       Entry: 4
-      Data: 300
+      Data: 70
     - Name: _transformDirectionType
       Entry: 3
       Data: 0
@@ -183,11 +238,11 @@ MonoBehaviour:
   Tags:
   - {fileID: 11400000, guid: c16351aa6cb311944ab356e79f3f0008, type: 2}
   - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
-  Image: {fileID: 21300000, guid: 02e5084058703437282a499f2fdb9949, type: 3}
+  Image: {fileID: -2239278724076068761, guid: 72f7a32ac9c7676409eb438757bc6b4a, type: 3}
   Name: Runner
   Description: 
   _spawnAmount: 1
-  Prefab: {fileID: 2358648096638413424, guid: 9e0eacc457f489c4ea9a02e655d58351, type: 3}
+  Prefab: {fileID: 2358648096638413424, guid: 1f1e6e4c9fff18a4bb2237e7173218af, type: 3}
   TimeTillCanInteract: 0.2
   Stats:
   - StatType: 0
@@ -197,7 +252,7 @@ MonoBehaviour:
   - StatType: 6
     StartingValue: 0
   - StatType: 7
-    StartingValue: 0
+    StartingValue: 3
   - StatType: 10
     StartingValue: 1
   - StatType: 8
