@@ -127,8 +127,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -240,5 +240,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 6179825564147254212}
-  _team2Color: {r: 0.23529413, g: 0.43137258, b: 0.83921576, a: 1}
-  _team1Color: {r: 0.9960785, g: 0.40784317, b: 0.40784317, a: 1}
+  _teamBlueColor: {r: 0.23529413, g: 0.43137258, b: 0.83921576, a: 1}
+  _teamRedColor: {r: 0.98039216, g: 0.1254902, b: 0.1254902, a: 1}
