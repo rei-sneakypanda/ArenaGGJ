@@ -43,7 +43,7 @@ public class PlayerInputController : MonoBehaviour
         
         _currentRerollTime += Time.deltaTime;
         _slider.value = Mathf.Clamp01(_currentRerollTime / _allowedRerollTime);
-        _rerollAudioSource.Play();
+
         _animator.SetBool("IsLocked", _currentRerollTime > _allowedRerollTime);
     }
 
@@ -54,6 +54,7 @@ public class PlayerInputController : MonoBehaviour
             return;
         }
         
+        _rerollAudioSource.Play();
         _player.SetRandomEntity();
         _animator.SetTrigger("Reroll");
     }
