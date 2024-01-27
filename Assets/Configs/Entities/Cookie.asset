@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 1|PushObjectSelf, Assembly-CSharp
     - Name: _force
       Entry: 4
-      Data: 30
+      Data: 50
     - Name: _transformDirectionType
       Entry: 3
       Data: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
       Data: 0
     - Name: _affectingTeam
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: BlockDuration
       Entry: 4
       Data: 1
