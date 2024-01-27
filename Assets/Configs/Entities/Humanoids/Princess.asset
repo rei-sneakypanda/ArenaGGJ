@@ -1,0 +1,258 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999007d016934530b8d0b4a11749d025, type: 3}
+  m_Name: Princess
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 56078cf0b42c3e74d83a4d76ffc8ba4c, type: 2}
+    - {fileID: 11400000, guid: e55ce01d1a90c7a4ba869622e6829e74, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _spawnInteractionSelf
+      Entry: 6
+      Data: 
+    - Name: _intervalInteractionSelf
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[TimeLoopInteractionTemplate, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|TimeLoopInteractionTemplate, Assembly-CSharp
+    - Name: StatIntervalType
+      Entry: 3
+      Data: 9
+    - Name: _interactionOnSelves
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|ApplyStatEffectInteraction, Assembly-CSharp
+    - Name: _statType
+      Entry: 3
+      Data: 2
+    - Name: _useExistingValueAsValue
+      Entry: 5
+      Data: true
+    - Name: _statTypeValue
+      Entry: 3
+      Data: 8
+    - Name: _value
+      Entry: 4
+      Data: 0
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|TimeLoopInteractionTemplate, Assembly-CSharp
+    - Name: StatIntervalType
+      Entry: 3
+      Data: 10
+    - Name: _interactionOnSelves
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[IInteractionOnSelf, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|AddScoreInteraction, Assembly-CSharp
+    - Name: _useExistingStatAsValue
+      Entry: 5
+      Data: true
+    - Name: _addAmount
+      Entry: 3
+      Data: 0
+    - Name: _statTypeValue
+      Entry: 3
+      Data: 7
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _destroyInteractionSelf
+      Entry: 6
+      Data: 
+    - Name: _interactionPackage
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[InteractionPackage, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|InteractionPackage, Assembly-CSharp
+    - Name: Tag
+      Entry: 10
+      Data: 0
+    - Name: _targetEffect
+      Entry: 3
+      Data: 0
+    - Name: BlockDuration
+      Entry: 4
+      Data: 2
+    - Name: MainInteraction
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 10|PlayAnimationInteraction, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 1
+    - Name: _playAnimationOnSelf
+      Entry: 7
+      Data: 11|PlayAnimationOnSelf, Assembly-CSharp
+    - Name: _animationType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _playAnimationOnOther
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|SpawnInteractionWithOther, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 2
+    - Name: _spawnInteractionSelf
+      Entry: 6
+      Data: 
+    - Name: _spawnInteractionOther
+      Entry: 7
+      Data: 13|SpawnInteraction, Assembly-CSharp
+    - Name: _spawnAmount
+      Entry: 3
+      Data: 1
+    - Name: _probablity
+      Entry: 4
+      Data: 1
+    - Name: _entityToSpawn
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|ChangeTeamInteraction, Assembly-CSharp
+    - Name: _effectTarget
+      Entry: 3
+      Data: 2
+    - Name: _changeTeamOnSelf
+      Entry: 6
+      Data: 
+    - Name: _changeTeamOnOther
+      Entry: 7
+      Data: 15|ChangeTeamOnSelf, Assembly-CSharp
+    - Name: _probability
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  Tags: {fileID: 11400000, guid: 9537d04850e42ae4ab3334433035cbcc, type: 2}
+  Image: {fileID: 21300000, guid: 3ee5fe91e0ad5d342a16a7696780a2f9, type: 3}
+  Name: Runner
+  Description: 
+  Prefab: {fileID: 2358648096638413424, guid: 41aed341c9599d347a784433bba16c1e, type: 3}
+  TimeTillCanInteract: 2
+  Stats:
+  - StatType: 0
+    StartingValue: 1
+  - StatType: 2
+    StartingValue: 150
+  - StatType: 6
+    StartingValue: 0
+  - StatType: 7
+    StartingValue: 4
+  - StatType: 10
+    StartingValue: 1
+  - StatType: 8
+    StartingValue: 1
+  - StatType: 9
+    StartingValue: 1
