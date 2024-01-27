@@ -858,6 +858,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb8208044820f24883eac2a1660c545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1521258401 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 200292663624243568, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1521258402 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2355157534149906828, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651765344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,6 +1709,16 @@ PrefabInstance:
       propertyPath: _endScreen
       value: 
       objectReference: {fileID: 4470727813495913956}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _entitiesUI
+      value: 
+      objectReference: {fileID: 1521258402}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _logoScreen
+      value: 
+      objectReference: {fileID: 1521258401}
     - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: _startScreen

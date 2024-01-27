@@ -13,7 +13,6 @@ public class GameTime : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _timerText;
     public static event Action GameEnded;
     public static GameTime Instance { get; private set; }
-    [SerializeField] private float _explodingForce=30f;
     [SerializeField] public List<float> _timeToDrop;
     [SerializeField] public List<Animator> _groundObjects;
     [SerializeField] private float _timeTillGameEnd;

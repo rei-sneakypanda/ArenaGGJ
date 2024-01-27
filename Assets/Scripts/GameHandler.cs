@@ -15,20 +15,22 @@ public class GameHandler : MonoBehaviour
    public GameStateType CurrentGameState { get; private set; }
     
     public event Action OnGameStarted;
-    [SerializeField] private GameObject _startScreen;
+    [SerializeField] private Animator _logoScreen;
+    [SerializeField] private Animator _entitiesUI;
     
     
     [SerializeField] private GameObject _endScreen;
     [SerializeField] private GameObject[] _redWinScreen;
     [SerializeField] private GameObject[] _blueWinScreen;
-    
-    
+    private static readonly int StartGame = Animator.StringToHash("StartGame");
+
     private void Awake()
     {
         CurrentGameState = GameStateType.PreGame;
         
         InputController.OnGameStart += HandleGameState;
         GameTime.GameEnded += ShowGameOver;
+        _entitiesUI.SetBool(StartGame, false);
     }
 
     private void HandleGameState()
@@ -41,7 +43,8 @@ public class GameHandler : MonoBehaviour
         if (CurrentGameState == GameStateType.PreGame)
         {
             CurrentGameState = GameStateType.Game;
-            _startScreen.SetActive(false);
+            _logoScreen.SetBool(StartGame, true);
+            _entitiesUI.SetBool(StartGame, true);
             OnGameStarted?.Invoke();
          return;
         }
@@ -57,6 +60,7 @@ public class GameHandler : MonoBehaviour
     
     public async UniTask ShowGameOverTask()
     {
+        _entitiesUI.SetBool(StartGame, false);
         var winnerScreen = PlayersManager.Instance.GetWinner() == TeamType.TeamRed ? _redWinScreen : _blueWinScreen;
 
         foreach (var winnerObject in winnerScreen)
