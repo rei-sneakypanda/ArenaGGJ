@@ -32,7 +32,8 @@ public class ApplicationManager : MonoBehaviour
   public async UniTask Restart()
   {
     await SceneHandler.UnloadScene(SceneConst.GAME);
-    SceneHandler.LoadSceneSingle(SceneConst.GAME)
+    await UniTask.DelayFrame(1);
+    SceneHandler.LoadSceneAdditive(SceneConst.GAME)
       .Forget();
   }
 

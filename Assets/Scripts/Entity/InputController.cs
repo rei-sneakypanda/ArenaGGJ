@@ -9,6 +9,10 @@ public class InputController : MonoBehaviour
     public static event Action OnPlayerBlueReroll;
     public static event Action OnPlayerRedSpawn;
     public static event Action OnPlayerBlueSpawn;
+    
+    [SerializeField] private GameHandler _gameHandler;
+
+    public static event Action OnGameStart; 
 
     [FormerlySerializedAs("_playerOneRerollKey"),SerializeField] KeyCode _playerRedRerollKey = KeyCode.W;
     [FormerlySerializedAs("_playerOneSpawnKey"),SerializeField] KeyCode _playerRedSpawnKey = KeyCode.E;
@@ -18,6 +22,16 @@ public class InputController : MonoBehaviour
 
     private void Update()
     {
+        if (_gameHandler.CurrentGameState != GameStateType.Game)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                OnGameStart?.Invoke();
+            }
+
+            return;
+        }
+
         if (Input.GetKeyDown(_playerRedRerollKey))
         {
             OnPlayerRedReroll?.Invoke();

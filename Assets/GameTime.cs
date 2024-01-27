@@ -6,22 +6,19 @@ using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using TMPro;
 using UniRx;
-using Unity.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class GameTime : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _timerText;
-    public static event Action GameStarted;
     public static event Action GameEnded;
     public static GameTime Instance { get; private set; }
     [SerializeField] private float _explodingForce=30f;
     [SerializeField] public List<float> _timeToDrop;
     [SerializeField] public List<Rigidbody> _groundObjects;
     [SerializeField] private float _timeTillGameEnd;
-    [SerializeField] private float _timeTillGameStart;
-    
+    [SerializeField] private GameHandler _gameHandler;
     [ShowInInspector] [Sirenix.OdinInspector.ReadOnly]
     private ReactiveProperty<float> _remainingTime = new();
     public IReadOnlyReactiveProperty<float> RemainingTime => _remainingTime;
@@ -30,9 +27,10 @@ public class GameTime : MonoBehaviour
     {
         Instance = this;
         _remainingTime.Value = _timeTillGameEnd;
+        _gameHandler.OnGameStarted += GameStartedHandler;
     }
 
-    private void Start()
+    private void GameStartedHandler()
     {
         StartCountDown()
             .Forget();
@@ -40,9 +38,6 @@ public class GameTime : MonoBehaviour
 
     private async UniTask StartCountDown()
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(_timeTillGameStart), cancellationToken: destroyCancellationToken);
-        GameStarted?.Invoke();
-
         while (_remainingTime.Value > 0)
         {
             _remainingTime.Value -= Time.deltaTime;
@@ -91,6 +86,7 @@ public class GameTime : MonoBehaviour
 
     private void OnDestroy()
     {
+        _gameHandler.OnGameStarted -= GameStartedHandler;
         Instance = null;
     }
 }
