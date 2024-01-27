@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685001271482963933}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 1.34, y: 0.62, z: 4.58}
+  m_LocalRotation: {x: -0.34051585, y: -0, z: 0.94023883, w: 0}
+  m_LocalPosition: {x: 9.7, y: 24.4, z: -15.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 63808297786791211}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: -219.817, z: 0}
 --- !u!198 &3045514387832188313
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -49,8 +49,8 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
   looping: 1
-  prewarm: 0
-  playOnAwake: 0
+  prewarm: 1
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -672,7 +672,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 4, y: 2, z: 1}
+    m_Scale: {x: 50.65, y: 2, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1500,7 +1500,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -1557,7 +1557,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -4
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4798,8 +4798,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 20fc8178216bc494d88051a9edaf1ed7, type: 2}
-  - {fileID: 2100000, guid: 20fc8178216bc494d88051a9edaf1ed7, type: 2}
+  - {fileID: 2100000, guid: f2c5fb137d33e48e388581e90c5832c0, type: 2}
+  - {fileID: 2100000, guid: f2c5fb137d33e48e388581e90c5832c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4947,6 +4947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
         type: 3}
+      propertyPath: SizeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 290
       objectReference: {fileID: 0}
@@ -4967,8 +4972,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
         type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 40
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228418873739207517, guid: f3a62541ea3554e73b817358068a3aa6,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4290065816805491229, guid: f3a62541ea3554e73b817358068a3aa6,
         type: 3}
@@ -4978,7 +4993,7 @@ PrefabInstance:
     - target: {fileID: 4290065816805491229, guid: f3a62541ea3554e73b817358068a3aa6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -67
+      value: -71
       objectReference: {fileID: 0}
     - target: {fileID: 4290065816805491229, guid: f3a62541ea3554e73b817358068a3aa6,
         type: 3}
