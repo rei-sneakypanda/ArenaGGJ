@@ -32,6 +32,11 @@ public class PlayersManager : MonoBehaviour
         _playerInputController2.Init(PlayerTwo = new Player(TeamType.TeamBlue));
     }
 
+    public TeamType GetWinner()
+    {
+        return PlayerOne.PlayerScore.Value >= PlayerTwo.PlayerScore.Value ? TeamType.TeamRed : TeamType.TeamBlue;
+    }
+    
     public void AddScore(TeamType teamID, int score)
     {
         (teamID == TeamType.TeamRed ? PlayerOne : PlayerTwo).AddScore(score);
