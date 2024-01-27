@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 1921741683032333462, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 1921741683032333462, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
@@ -99,6 +99,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cookie Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855709599156361827, guid: b489631ca304faa468c9da9c1ee1304f,
+        type: 3}
+      propertyPath: _toDrawGizmos
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8855709599156361827, guid: b489631ca304faa468c9da9c1ee1304f,
         type: 3}
@@ -137,12 +142,24 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 478682, guid: c9ab074cce12abe4e829fd57c01b0389, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 478682, guid: c9ab074cce12abe4e829fd57c01b0389, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 478682, guid: c9ab074cce12abe4e829fd57c01b0389, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 478682, guid: c9ab074cce12abe4e829fd57c01b0389, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 478682, guid: c9ab074cce12abe4e829fd57c01b0389, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.245
+      value: -0.563
       objectReference: {fileID: 0}
     - target: {fileID: 478682, guid: c9ab074cce12abe4e829fd57c01b0389, type: 3}
       propertyPath: m_LocalPosition.z
