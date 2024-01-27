@@ -11,8 +11,16 @@ public class SpawnInteractionWithOther : IInteractionWithOther
 
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
-        if (_effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both)
-            await _spawnInteractionSelf.Interact(entity);
+        if (_spawnInteractionSelf != null)
+        {
+            if (_effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both)
+                await _spawnInteractionSelf.Interact(entity);
+        }
+
+        if (_spawnInteractionOther == null)
+        {
+            return;
+        }
 
         if (_effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both)
             await _spawnInteractionOther.Interact(otherEntity);

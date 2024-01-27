@@ -15,9 +15,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 1e2e43065903f804aabbb1c006dc27c4, type: 2}
-    - {fileID: 11400000, guid: 4ee1469371dfb1d488e548ed1a35b327, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -136,8 +134,8 @@ MonoBehaviour:
       Entry: 7
       Data: 8|InteractionPackage, Assembly-CSharp
     - Name: Tag
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: _targetEffect
       Entry: 3
       Data: 2
@@ -197,8 +195,8 @@ MonoBehaviour:
       Entry: 7
       Data: 12|InteractionPackage, Assembly-CSharp
     - Name: Tag
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: _targetEffect
       Entry: 3
       Data: 2
@@ -251,7 +249,10 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Tags: {fileID: 11400000, guid: 9537d04850e42ae4ab3334433035cbcc, type: 2}
+  Tags:
+  - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
+  - {fileID: 11400000, guid: 56078cf0b42c3e74d83a4d76ffc8ba4c, type: 2}
+  - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
   Image: {fileID: 21300000, guid: 22034381664b02b40a1289bb6bd4cbb0, type: 3}
   Name: Runner
   Description: 

@@ -9,7 +9,7 @@ using UnityEngine;
 public class EntitySO : TagSO
 {
     [TabGroup("General")]
-    public TagGroupSO Tags;
+    public TagSO[] Tags;
     [TabGroup("General")]
     [PreviewField(75f)] public Sprite Image;
     [TabGroup("General")]
@@ -75,9 +75,9 @@ public class EntitySO : TagSO
         bool containTag = false;
         bool isSame = tag.GetInstanceID() == entity.GetInstanceID();
         
-        if ((entity.Tags?.Tags?.Any() ?? false) && !isSame)
+        if ((entity.Tags?.Any() ?? false) && !isSame)
         {
-            foreach (var t in entity.Tags.Tags)
+            foreach (var t in entity.Tags)
             {
                 containTag |= tag == t;
                 if (containTag)
@@ -101,9 +101,9 @@ public class EntitySO : TagSO
 
         var isNotSame =tag.GetInstanceID() != entity.GetInstanceID();
         var doesNotContainTag = true;
-        if (isNotSame && (entity.Tags?.Tags?.Any() ?? false))
+        if (isNotSame && (entity.Tags?.Any() ?? false))
         {
-            foreach (var t in entity.Tags.Tags)
+            foreach (var t in entity.Tags)
             {
                 doesNotContainTag &= tag != t;
                 if (!doesNotContainTag)

@@ -12,10 +12,19 @@ public class DestroyInteractionWithOther : IInteractionWithOther
 
     public async UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
+        if (_destroyInteractionSelf != null)
+        {
+            
         if (_effectTarget == EffectTarget.Self || _effectTarget == EffectTarget.Both)
             await _destroyInteractionSelf.Interact(entity);
+        }
+
+        if (_destroyInteractionOther != null)
+        {
+            
         if (_effectTarget == EffectTarget.Other || _effectTarget == EffectTarget.Both)
             await _destroyInteractionOther.Interact(otherEntity);
+        }
     }
 }
 

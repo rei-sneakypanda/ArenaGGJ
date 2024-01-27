@@ -16,7 +16,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 1e2e43065903f804aabbb1c006dc27c4, type: 2}
+    - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -198,7 +198,10 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Tags: {fileID: 11400000, guid: 9537d04850e42ae4ab3334433035cbcc, type: 2}
+  Tags:
+  - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
+  - {fileID: 11400000, guid: 56078cf0b42c3e74d83a4d76ffc8ba4c, type: 2}
+  - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
   Image: {fileID: 21300000, guid: c53cdbd49501fb445821e9efda0ef7f4, type: 3}
   Name: Runner
   Description: 

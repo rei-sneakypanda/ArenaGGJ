@@ -16,8 +16,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 1e2e43065903f804aabbb1c006dc27c4, type: 2}
-    - {fileID: 11400000, guid: 4ee1469371dfb1d488e548ed1a35b327, type: 2}
+    - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -131,7 +130,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 8|InteractionPackage, Assembly-CSharp
@@ -150,7 +149,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 10|ApplyStatEffectInteractionWithOther, Assembly-CSharp
@@ -185,36 +184,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 7
-      Data: 12|InteractionPackage, Assembly-CSharp
-    - Name: Tag
-      Entry: 10
-      Data: 1
-    - Name: _targetEffect
-      Entry: 3
-      Data: 2
-    - Name: BlockDuration
-      Entry: 4
-      Data: 1
-    - Name: MainInteraction
-      Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 14|PushObjects, Assembly-CSharp
+      Data: 12|PushObjects, Assembly-CSharp
     - Name: _effectTarget
       Entry: 3
       Data: 2
@@ -223,7 +194,7 @@ MonoBehaviour:
       Data: 
     - Name: _pushObjectOther
       Entry: 7
-      Data: 15|PushObjectSelf, Assembly-CSharp
+      Data: 13|PushObjectSelf, Assembly-CSharp
     - Name: _force
       Entry: 4
       Data: 200
@@ -251,7 +222,10 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Tags: {fileID: 11400000, guid: 9537d04850e42ae4ab3334433035cbcc, type: 2}
+  Tags:
+  - {fileID: 11400000, guid: eef5f47d32b0bc24f92c3d242c8dd535, type: 2}
+  - {fileID: 11400000, guid: 56078cf0b42c3e74d83a4d76ffc8ba4c, type: 2}
+  - {fileID: 11400000, guid: 36f3b6c16a2f7fd43930367001f01c33, type: 2}
   Image: {fileID: 21300000, guid: 22034381664b02b40a1289bb6bd4cbb0, type: 3}
   Name: Runner
   Description: 

@@ -10,21 +10,27 @@ public class ApplyStatEffectInteractionWithOther : IInteractionWithOther
     [SerializeField] private ApplyStatEffectInteraction _effectIntercationSelf;
     [SerializeField] private ApplyStatEffectInteraction _effectIntercationOther;
 
-    
+
     public UniTask Interact(GameEntity entity, GameEntity otherEntity)
     {
+        if (_effectIntercationSelf != null)
+        {
+            if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
+                _effectIntercationSelf.Interact(entity);
 
-        if (_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Self)
-            _effectIntercationSelf.Interact(entity);
+        }
 
-        if ((_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other))
-            _effectIntercationOther.Interact(otherEntity);
+        if (_effectIntercationOther != null)
+        {
+            if ((_effectTarget == EffectTarget.Both || _effectTarget == EffectTarget.Other))
+                _effectIntercationOther.Interact(otherEntity);
+        }
 
         return UniTask.CompletedTask;
     }
-
 }
-    [Serializable]
+
+[Serializable]
     public class ApplyStatEffectInteraction : IInteractionOnSelf
     {
         [SerializeField] private StatType _statType;

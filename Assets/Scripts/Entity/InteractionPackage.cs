@@ -79,7 +79,7 @@ public class InteractionPackage
         }
         catch (Exception e)
         {
-            // ignored
+          Debug.Log(e);
         }
 
         void Cancel()
