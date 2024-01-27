@@ -17,6 +17,10 @@ public class EntitySO : TagSO
     public string Name;
     [TextArea]    [TabGroup("General")]
     public string Description;
+    [TabGroup("General")]
+    [Min(1)] [SerializeField] private int _spawnAmount;
+    
+    
     
     [TabGroup("General")]
     [PreviewField(75f)]
@@ -47,6 +51,7 @@ public class EntitySO : TagSO
     public IReadOnlyList<IInteractionOnSelf> DestroyInteractionSelf => _destroyInteractionSelf;
     public IReadOnlyList<TimeLoopInteractionTemplate> IntervalInteractionSelf => _intervalInteractionSelf;
 
+    public int SpawnAmount => _spawnAmount;
     private void Reset()
     {
         Stats ??= new();

@@ -30,10 +30,15 @@ public class MovementHandler : MonoBehaviour
     {
         _disposable = _gameEntity.StatHandler[StatType.MovementSpeed].StatValue.Subscribe(SetSpeed);
     }
+
+    public void Dispose()
+    {
+        _disposable?.Dispose();
+    }
     
     private void OnDestroy()
     {
-        _disposable?.Dispose();
+        Dispose();
     }
 
     private void SetSpeed(float val)

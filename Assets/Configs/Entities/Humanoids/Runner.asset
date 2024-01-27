@@ -229,6 +229,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 22034381664b02b40a1289bb6bd4cbb0, type: 3}
   Name: Runner
   Description: 
+  _spawnAmount: 3
   Prefab: {fileID: 2358648096638413424, guid: 0db368bf482727d488a1300fc366fcb1, type: 3}
   TimeTillCanInteract: 2
   Stats:
