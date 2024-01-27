@@ -52,8 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startScreen: {fileID: 0}
-  _redWinScreen: {fileID: 0}
-  _blueWinScreen: {fileID: 0}
+  _endScreen: {fileID: 0}
+  _redWinScreen:
+  - {fileID: 0}
+  _blueWinScreen:
+  - {fileID: 0}
 --- !u!114 &1099288488205906818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298a7666750243f4a7f96cd5d2cfa49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameHandler: {fileID: 0}
+  _gameHandler: {fileID: 7638469663318474868}
   _playerRedRerollKey: 119
   _playerRedSpawnKey: 101
   _playerBlueRerollKey: 111
@@ -152,7 +155,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _timeTillGameEnd: 50
-  _gameHandler: {fileID: 0}
+  _gameHandler: {fileID: 7638469663318474868}
 --- !u!114 &7099068613046508378
 MonoBehaviour:
   m_ObjectHideFlags: 0

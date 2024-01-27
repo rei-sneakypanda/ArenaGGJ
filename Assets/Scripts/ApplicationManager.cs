@@ -33,7 +33,7 @@ public class ApplicationManager : MonoBehaviour
   {
     await SceneHandler.UnloadScene(SceneConst.GAME);
     await UniTask.DelayFrame(1);
-    SceneHandler.LoadSceneSingle(SceneConst.GAME)
+    SceneHandler.LoadSceneAdditive(SceneConst.GAME)
       .Forget();
   }
 
