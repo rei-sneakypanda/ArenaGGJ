@@ -242,6 +242,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 3ee5fe91e0ad5d342a16a7696780a2f9, type: 3}
   Name: Princess Gal
   Description: 
+  _spawnAmount: 2
   Prefab: {fileID: 2358648096638413424, guid: 41aed341c9599d347a784433bba16c1e, type: 3}
   TimeTillCanInteract: 2
   Stats:

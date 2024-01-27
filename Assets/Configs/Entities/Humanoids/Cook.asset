@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 2e6aa05d958744c41b012a8eb8763a27, type: 2}
+    - {fileID: 11400000, guid: 26bb31376eb51fc4dab06efeaabef7c7, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -153,8 +154,8 @@ MonoBehaviour:
       Entry: 4
       Data: 0.2
     - Name: _entityToSpawn
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -182,120 +183,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 12|InteractionPackage, Assembly-CSharp
-    - Name: Tag
-      Entry: 6
-      Data: 
-    - Name: _affectingTeam
-      Entry: 3
-      Data: 2
-    - Name: BlockDuration
-      Entry: 4
-      Data: 1
-    - Name: MainInteraction
-      Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 14|ApplyStatEffectInteractionWithOther, Assembly-CSharp
-    - Name: _effectTarget
-      Entry: 3
       Data: 0
-    - Name: _effectIntercationSelf
-      Entry: 6
-      Data: 
-    - Name: _effectIntercationOther
-      Entry: 7
-      Data: 15|ApplyStatEffectInteraction, Assembly-CSharp
-    - Name: _statType
-      Entry: 3
-      Data: 2
-    - Name: _useExistingValueAsValue
-      Entry: 5
-      Data: false
-    - Name: _statTypeValue
-      Entry: 3
-      Data: 0
-    - Name: _value
-      Entry: 4
-      Data: -30
-    - Name: _probablity
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 16|InteractionPackage, Assembly-CSharp
-    - Name: Tag
-      Entry: 6
-      Data: 
-    - Name: _affectingTeam
-      Entry: 3
-      Data: 2
-    - Name: BlockDuration
-      Entry: 4
-      Data: 1
-    - Name: MainInteraction
-      Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 18|PushObjects, Assembly-CSharp
-    - Name: _effectTarget
-      Entry: 3
-      Data: 2
-    - Name: _pushObjectSelf
-      Entry: 6
-      Data: 
-    - Name: _pushObjectOther
-      Entry: 7
-      Data: 19|PushObjectSelf, Assembly-CSharp
-    - Name: _force
-      Entry: 4
-      Data: 200
-    - Name: _transformDirectionType
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -309,7 +197,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 38e851c4ae323d3439cbe55bc0abf70f, type: 3}
   Name: Cook
   Description: 
-  _spawnAmount: 5
+  _spawnAmount: 2
   Prefab: {fileID: 2358648096638413424, guid: 8ba9df79021167645aaded074bfd3c0e, type: 3}
   TimeTillCanInteract: 2
   Stats:
