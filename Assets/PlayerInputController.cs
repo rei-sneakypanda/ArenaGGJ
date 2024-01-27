@@ -17,7 +17,7 @@ public class PlayerInputController : MonoBehaviour
     {
         _player = player;
 
-        if (_player.TeamID == TeamType.TeamBlue)
+        if (_player.TeamID == TeamType.TeamRed)
         {
             InputController.OnPlayerRedReroll += OnRerollRequested;
             InputController.OnPlayerRedSpawn += OnSpawnRequested;
