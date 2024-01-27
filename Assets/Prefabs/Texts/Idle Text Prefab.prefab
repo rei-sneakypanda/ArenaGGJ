@@ -239,6 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fdec0aee5239a48829ce3dd02d2989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 0}
+  _text: {fileID: 6179825564147254212}
   _team2Color: {r: 0.23529413, g: 0.43137258, b: 0.83921576, a: 1}
   _team1Color: {r: 0.9960785, g: 0.40784317, b: 0.40784317, a: 1}
