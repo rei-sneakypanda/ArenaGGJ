@@ -286,7 +286,7 @@ MonoBehaviour:
   - StatType: 10
     StartingValue: 1
   - StatType: 8
-    StartingValue: 5
+    StartingValue: 15
   - StatType: 9
     StartingValue: 1
   - StatType: 11
