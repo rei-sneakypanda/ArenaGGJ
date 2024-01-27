@@ -164,7 +164,7 @@ MonoBehaviour:
       Data: 0
     - Name: BlockDuration
       Entry: 4
-      Data: 1
+      Data: 0.2
     - Name: MainInteraction
       Entry: 7
       Data: 11|System.Collections.Generic.List`1[[IInteractionWithOther, Assembly-CSharp]],
@@ -246,7 +246,7 @@ MonoBehaviour:
   Description: 
   _spawnAmount: 1
   Prefab: {fileID: 2358648096638413424, guid: 31d90314084a42641a2bb952c3e15b97, type: 3}
-  TimeTillCanInteract: 2
+  TimeTillCanInteract: 1
   Stats:
   - StatType: 0
     StartingValue: 0

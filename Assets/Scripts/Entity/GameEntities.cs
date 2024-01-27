@@ -66,6 +66,7 @@ public class GameEntities : MonoBehaviour
 
             if (Vector3.Distance(gameEntity.transform.position, centerPos) > _maximumDistanceFromCenter)
             {
+                gameEntity.transform.SetParent(PoolManager.Instance.transform);
                PoolManager.Instance.Return(gameEntity);
             }
         }

@@ -147,6 +147,7 @@ public class GameEntity : SerializedMonoBehaviour
     {
         _movementHandler.Dispose();
         _destroyHandler.Dispose();
+        IsAlive = false;
     }
 
     private void OnDestroy()

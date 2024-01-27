@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using Midbaryom.Pool;
 using Sirenix.OdinInspector;
 using UniRx;
 using UnityEngine;
@@ -53,7 +54,7 @@ public class DestroyHandler : SerializedMonoBehaviour, IDisposable
         {
             Console.WriteLine(e);
         }
-
+        _gameEntity.transform.SetParent(PoolManager.Instance.transform);
         ReturnToPool();
     }
 

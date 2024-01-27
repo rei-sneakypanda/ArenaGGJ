@@ -6,33 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="41fac6e8-1deb-4b5a-b8ad-21b70fa05af8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArenaGGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArenaGGJ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerInputController/Locked.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/PlayerInputController/Locked.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Cannon Ball.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Cannon Ball.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Cannon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Cannon.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Cookie.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Cookie.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Baby.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Baby.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Cook.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Cook.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Gladiator.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Gladiator.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Princess.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Princess.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Runner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Entities/Humanoids/Runner.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/All.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/All.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Consumables.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Consumables.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Generic Group.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Generic Group.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Humanoids.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Humanoids.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Pushables.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Tags/Pushables.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Entities/BaseEntity.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Entities/BaseEntity.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Entities/Cannon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Entities/Cannon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/EntitySO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/EntitySO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/MovementHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/MovementHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/TagGroupSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/TagGroupSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/InteractingContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/InteractingContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,19 +166,6 @@
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/MovementHandler.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\MovementHandler.cs" initialLine="45" containingFunctionPresentation="Method 'AddVelocity'">
-            <startOffsets>
-              <option value="1088" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1126" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Nappin/PhysicsCharacterController/Scripts/CharacterManager.cs</url>
           <line>218</line>
           <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Nappin\PhysicsCharacterController\Scripts\CharacterManager.cs" initialLine="218" containingFunctionPresentation="Method 'Update'">
@@ -214,32 +177,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/InteractionPackage.cs</url>
-          <line>24</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\InteractionPackage.cs" initialLine="24" containingFunctionPresentation="Method 'CanInteract'">
-            <startOffsets>
-              <option value="547" />
-            </startOffsets>
-            <endOffsets>
-              <option value="569" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/InteractionPackage.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\InteractionPackage.cs" initialLine="38" containingFunctionPresentation="Method 'CanInteract'">
-            <startOffsets>
-              <option value="1004" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1066" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/SpawnInteractionWithOther.cs</url>
@@ -266,6 +203,175 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyInteractionWithOther.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyInteractionWithOther.cs" initialLine="35" containingFunctionPresentation="Method 'Interact'">
+            <startOffsets>
+              <option value="1131" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1167" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/InteractionPackage.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\InteractionPackage.cs" initialLine="35" containingFunctionPresentation="Method 'CanInteract'">
+            <startOffsets>
+              <option value="1012" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1018" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyInteractionWithOther.cs</url>
+          <line>46</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyInteractionWithOther.cs" initialLine="46" containingFunctionPresentation="Method 'Interact'">
+            <startOffsets>
+              <option value="1392" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1445" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyInteractionWithOther.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyInteractionWithOther.cs" initialLine="39" containingFunctionPresentation="Method 'Interact'">
+            <startOffsets>
+              <option value="1227" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1274" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
+          <line>34</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="34" containingFunctionPresentation="Method 'DestroySelf'">
+            <startOffsets>
+              <option value="878" />
+            </startOffsets>
+            <endOffsets>
+              <option value="885" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
+          <line>37</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="37" containingFunctionPresentation="Method 'DestroySelf'">
+            <startOffsets>
+              <option value="905" />
+            </startOffsets>
+            <endOffsets>
+              <option value="918" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="49" containingFunctionPresentation="Method 'DestroySelf'">
+            <startOffsets>
+              <option value="1238" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1286" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
+          <line>56</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="56" containingFunctionPresentation="Method 'DestroySelf'">
+            <startOffsets>
+              <option value="1388" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1403" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/DestroyHandler.cs</url>
+          <line>66</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\DestroyHandler.cs" initialLine="66" containingFunctionPresentation="Method 'ReturnToPool'">
+            <startOffsets>
+              <option value="1600" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1632" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entity/GameEntity.cs</url>
+          <line>146</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\Entity\GameEntity.cs" initialLine="146" containingFunctionPresentation="Method 'Dispose'">
+            <startOffsets>
+              <option value="4009" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4010" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PoolManager.cs</url>
+          <line>86</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\PoolManager.cs" initialLine="86" containingFunctionPresentation="Method 'Return'">
+            <startOffsets>
+              <option value="2546" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2574" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PoolManager.cs</url>
+          <line>91</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\PoolManager.cs" initialLine="89" containingFunctionPresentation="Method 'Return'">
+            <startOffsets>
+              <option value="2783" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2812" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PoolManager.cs</url>
+          <line>67</line>
+          <properties documentPath="C:\Users\Rei\Documents\GitHub\ArenaGGJ\Assets\Scripts\PoolManager.cs" initialLine="67" containingFunctionPresentation="Method 'Pull'">
+            <startOffsets>
+              <option value="1919" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1938" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

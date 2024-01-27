@@ -32,7 +32,7 @@ public class InteractingContainer : MonoBehaviour
     
     private void Update()
     {
-        if (!IsInteractiveable)
+        if (!IsInteractiveable || !_gameEntity.IsAlive)
         {
             return;
         }

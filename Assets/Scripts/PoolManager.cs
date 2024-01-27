@@ -86,7 +86,12 @@ namespace Midbaryom.Pool
         {
             _activeEntities.Remove(obj);
             _notActiveEntities.Add(obj);
-            obj.transform.SetParent(transform);
+
+            if (obj.gameObject == null)
+            {
+                return;
+            }
+            obj.transform.position = Vector3.zero;
             obj.transform.gameObject.SetActive(false);
         }
 
