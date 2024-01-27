@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03493998, g: 0.025936767, b: 0.19335717, a: 1}
+  m_IndirectSpecularColor: {r: 0.034939982, g: 0.025936767, b: 0.19335717, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1560,7 +1560,7 @@ PrefabInstance:
     - target: {fileID: 4648391080510737572, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4648391080510737572, guid: fb0540a0c1b67464db1765fdbd890ad1,
         type: 3}
@@ -1657,6 +1657,46 @@ PrefabInstance:
       propertyPath: _secondPlayerCannonTarget
       value: 
       objectReference: {fileID: 7072997185698827101}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _endScreen
+      value: 
+      objectReference: {fileID: 4470727813495913956}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _startScreen
+      value: 
+      objectReference: {fileID: 4470727813495913957}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _redWinScreen.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _blueWinScreen.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _redWinScreen.Array.data[0]
+      value: 
+      objectReference: {fileID: 4470727813495913953}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _redWinScreen.Array.data[1]
+      value: 
+      objectReference: {fileID: 4470727813495913955}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _blueWinScreen.Array.data[0]
+      value: 
+      objectReference: {fileID: 4470727813495913952}
+    - target: {fileID: 7638469663318474868, guid: fb0540a0c1b67464db1765fdbd890ad1,
+        type: 3}
+      propertyPath: _blueWinScreen.Array.data[1]
+      value: 
+      objectReference: {fileID: 4470727813495913954}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1888,6 +1928,42 @@ PrefabInstance:
 --- !u!224 &4470727813495913951 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7370622055094153035, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4470727813495913952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7726603580786604616, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4470727813495913953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971975226705797885, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4470727813495913954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5547471385732151983, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4470727813495913955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2890063818852347150, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4470727813495913956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5479443623182693120, guid: 23aee4c28e31c3243952ab702f34e5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4470727813495913950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4470727813495913957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3553504080370422742, guid: 23aee4c28e31c3243952ab702f34e5c5,
     type: 3}
   m_PrefabInstance: {fileID: 4470727813495913950}
   m_PrefabAsset: {fileID: 0}

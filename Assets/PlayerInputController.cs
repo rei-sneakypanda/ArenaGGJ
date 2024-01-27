@@ -54,7 +54,7 @@ public class PlayerInputController : MonoBehaviour
         _player.SetRandomEntity();
         _animator.SetTrigger("Reroll");
     }
-    
+
     private void OnSpawnRequested()
     {
         if (_currentRerollTime < _allowedRerollTime)
